@@ -56,15 +56,26 @@
     font-weight: bold;
   }
   .anchor{
-    display: none;
+        display: none;
+  }
+  .visually-hidden {
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      padding:0 !important;
+      border:0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden;
   }
 </style>
 </head>
 <body>
+    <a class="anchor" href="#summary">Skip to summary</a>
     <div class="header">
         <h1><a name="information">Willian Massami Watanabe</a></h1>
         <p class="address">S&atilde;o Carlos - SP, Brazil. <span class="bold">E-mail: <a href="mailto:talk@watinha.com">talk@watinha.com</a></span></p>
-      <h2 class="anchor"><a name="summary">Summary</a></h2>
+        <h2 class="anchor"><a name="summary">Summary</a></h2>
         <ul class="anchor">
             <li><a href="#information">Information</a></li>
             <li><a href="#introduction">Introduction</a></li>
