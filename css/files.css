@@ -32,11 +32,11 @@
     border-radius: 15px;
 
     /* transitions */
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
     /* transforms */
     -moz-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
@@ -53,6 +53,8 @@
     -ms-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
     transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
 }
+
+/* open state */
 .files .open {
     cursor: text;
     height: 100%;
