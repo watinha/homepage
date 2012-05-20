@@ -40,6 +40,7 @@
     min-width: 300px;
     height: 80px;
     position: relative;
+    bottom: 50px;
     background-color: #FFFFFF;
 
     /* box shadow */
@@ -56,6 +57,14 @@
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
+    /* transforms */
+    -moz-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+    -webkit-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+    -o-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+    -ms-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+    transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+
 }
 
 .files .header {
@@ -64,6 +73,7 @@
     cursor: auto;
     margin-bottom: 13px;
     width: 100%;
+    bottom: 0;
 
     /* box shadow */
     -webkit-box-shadow:  0 0 0 0 rgba(0, 0, 0, 0.5);
@@ -72,4 +82,19 @@
     /* border radius */
     -webkit-border-radius: 0px;
     border-radius: 0px;
+
+    /* transitions */
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
 }
