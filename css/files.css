@@ -41,7 +41,6 @@
     cursor: pointer;
     margin-bottom: -30px;
     width: 40%;
-    min-width: 300px;
     height: 80px;
     position: relative;
     bottom: 30px;
@@ -76,8 +75,9 @@
     padding: 0 30px;
     cursor: auto;
     margin-bottom: 13px;
+    height: auto;
     width: 100%;
-    bottom: 0;
+    position: static;
 
     /* box shadow */
     -webkit-box-shadow:  0 0 0 0 rgba(0, 0, 0, 0.5);
