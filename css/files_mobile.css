@@ -15,6 +15,7 @@
     .files > div {
         top: 0px;
         bottom: 0px;
+        width: 100%;
     }
     .files > .header {
         top: 0px;
