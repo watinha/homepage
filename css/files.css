@@ -4,37 +4,14 @@
     min-width: 300px;
 }
 
+/* hidding elements to clean interface*/
 .files div p,
 .files div ul,
 .files div h4 {
     display: none;
 }
 
-.files .header p {
-    display: block;
-}
-
-.files hr {
-    display: none;
-}
-
-.files .headerLine {
-    display: block;
-    width: 50px;
-    margin-bottom: 20px;
-
-    /* transitions */
-    -webkit-transition: width 3s linear;
-    -moz-transition: width 3s linear;
-    -ms-transition: width 3s linear;
-    -o-transition: width 3s linear;
-    transition: width 3s linear;
-}
-
-.files .headerLongerLine {
-    width: 90%;
-}
-
+/* diagonal boxes specific styles */
 .files > div {
     border: medium solid rgb(187, 187, 187);
     padding: 0 30px;
@@ -76,7 +53,43 @@
     -ms-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
     transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
 }
+.files .hidden {
+    height: 0;
+    opacity: 0;
+}
+.files .open {
+    cursor: text;
+    height: 100%;
+    float: right;
+    position: relative;
+    bottom: 100px;
 
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.files .open:hover {
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.files .open p,
+.files .open ul,
+.files .open h4 {
+    display: block;
+}
+.files .columns {
+    width: 100%;
+    float: none;
+}
+
+/* header specific styles */
 .files .header {
     border: none;
     padding: 0 30px;
@@ -108,4 +121,37 @@
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 
+}
+.files > .header:hover {
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.files .header p {
+    display: block;
+}
+
+.files hr {
+    display: none;
+}
+
+.files .headerLine {
+    display: block;
+    width: 50px;
+    margin-bottom: 20px;
+
+    /* transitions */
+    -webkit-transition: width 3s linear;
+    -moz-transition: width 3s linear;
+    -ms-transition: width 3s linear;
+    -o-transition: width 3s linear;
+    transition: width 3s linear;
+}
+
+.files .headerLongerLine {
+    width: 90%;
 }
