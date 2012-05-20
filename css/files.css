@@ -1,9 +1,12 @@
 /* All selectors here should only alter .files children classes */
-
 .files {
     min-width: 300px;
 }
-
+.files .hidden {
+    height: 0;
+    opacity: 0;
+    margin-bottom: 0px;
+}
 /* hidding elements to clean interface*/
 .files div p,
 .files div ul,
@@ -78,11 +81,6 @@
     -o-transform: matrix(1, 0, 0, 1, 0, 0);
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
-}
-.files .hidden {
-    height: 0;
-    opacity: 0;
-    margin-bottom: 0px;
 }
 .files .open p,
 .files .open ul,
