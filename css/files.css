@@ -1,5 +1,9 @@
 /* All selectors here should only alter .files children classes */
 
+.files {
+    min-width: auto;
+}
+
 .files div p,
 .files div ul,
 .files div h4 {
@@ -40,7 +44,7 @@
     min-width: 300px;
     height: 80px;
     position: relative;
-    bottom: 50px;
+    bottom: 30px;
     background-color: #FFFFFF;
 
     /* box shadow */
