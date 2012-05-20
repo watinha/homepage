@@ -17,8 +17,7 @@
 }
 
 /* standard layout */
-.files > div,
-.files > div:hover {
+.files > div {
     border: medium solid rgb(187, 187, 187);
     padding: 0 30px;
     cursor: pointer;
@@ -49,6 +48,14 @@
     -o-transform: matrix(1, 0, 0, 1, 0, 0);
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.files > div:hover {
+    /* transforms */
+    -moz-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0);
+    transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0);
 }
 
 /* diagonal boxes specific styles */
