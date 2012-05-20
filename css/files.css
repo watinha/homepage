@@ -1,7 +1,7 @@
 /* All selectors here should only alter .files children classes */
 
 .files {
-    min-width: auto;
+    min-width: 300px;
 }
 
 .files div p,
