@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"0>
+        <title>QUnit testing for homepage</title>
+        <link rel="stylesheet" href="tests/qunit.css" type="text/css" media="screen" charset="utf-8" />
+        <script type="text/javascript" charset="utf-8" src="tests/qunit.js"></script>
+
+        <!-- Including test dependencies -->
+        <script type="text/javascript" charset="utf-8" src="js/files.js"></script>
+        <script type="text/javascript" charset="utf-8" src="tests/test_files.js"></script>
+    </head>
+    <body>
+        <h1 id="qunit-header">QUnit testing for homepage</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-fixture"></div>
+        <script type="text/javascript" charset="utf-8">
+            window.onload = function () {
+                var fixture = document.getElementById("qunit-fixture"),
+                    testSuites = [
+                    TestFiles(fixture)
+                ];
+
+                for (var cont = 0; cont < testSuites.length; cont++) {
+                    testSuites[cont].execute();
+                }
+            };
+        </script>
+    </body>
+</html>

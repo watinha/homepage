@@ -73,7 +73,7 @@
     <link rel="stylesheet" href="css/files.css" type="text/css" media="screen" charset="utf-8" \>
     <link rel="stylesheet" href="css/files_mobile.css" type="text/css" media="screen" charset="utf-8" \>
 </head>
-<body class="files">
+<body>
     <a class="anchor" href="#summary">Skip to summary</a>
     <div class="header">
         <h1><a name="information">Willian Massami Watanabe</a></h1>
@@ -245,5 +245,19 @@
         </ul>
      <a class="anchor" href="#summary">Back to summary</a>
     </div>
+    <script type="text/javascript" charset="utf-8" src="js/files.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        window.onload = function () {
+            if (document.querySelectorAll) {
+                var files = Files({
+                    body_element: document.body,
+                    base_elements: document.querySelectorAll("body > div:not(.header)"),
+                    first_line: document.querySelectorAll("body > div.header+hr")[0]
+                });
+                files.init();
+                files.standard_layout();
+            }
+        }
+    </script>
 </body>
 </html>

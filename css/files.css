@@ -1,4 +1,7 @@
 /* All selectors here should only alter .files children classes */
+.body > div {
+    opacity: 0;
+}
 .files {
     min-width: 300px;
 }
@@ -26,6 +29,7 @@
     height: 80px;
     position: relative;
     background-color: #FFFFFF;
+    opacity: 1;
 
     /* box shadow */
     -webkit-box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -190,7 +194,7 @@
 
 .files .header+hr {
     display: block;
-    width: 50px;
+    width: 0%;
     margin-bottom: 20px;
 
     /* transitions */
@@ -201,6 +205,6 @@
     transition: width 3s linear;
 }
 
-.files .headerLongerLine {
+.files .header+.headerLongerLine {
     width: 90%;
 }
