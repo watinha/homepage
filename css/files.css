@@ -9,6 +9,8 @@
 .files div ul,
 .files div h4 {
     display: none;
+    height: 0;
+    opacity: 0;
 }
 
 /* diagonal boxes specific styles */
@@ -86,6 +88,8 @@
 .files .open ul,
 .files .open h4 {
     display: block;
+    height: 100%;
+    opacity: 1;
 }
 .files .columns {
     width: 100%;
@@ -136,6 +140,8 @@
 
 .files .header p {
     display: block;
+    height: 100%;
+    opacity: 1;
 }
 
 .files hr {

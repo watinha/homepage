@@ -17,6 +17,10 @@
         bottom: 0px;
         width: 100%;
     }
+    .files .open {
+        float: none;
+        margin: 50px 0;
+    }
     .files > .header {
         top: 0px;
         bottom: 0px;
