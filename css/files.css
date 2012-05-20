@@ -16,8 +16,43 @@
     opacity: 0;
 }
 
+/* standard layout */
+.files > div,
+.files > div:hover {
+    border: medium solid rgb(187, 187, 187);
+    padding: 0 30px;
+    cursor: pointer;
+    margin-bottom: -30px;
+    width: 40%;
+    height: 80px;
+    position: relative;
+    background-color: #FFFFFF;
+
+    /* box shadow */
+    -webkit-box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+    /* border radius */
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+
+    /* transitions */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
 /* diagonal boxes specific styles */
-.files > div {
+.files > .diagonal {
     border: medium solid rgb(187, 187, 187);
     padding: 0 30px;
     cursor: pointer;
@@ -50,7 +85,7 @@
     -ms-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
     transform: matrix(1, 0.3, -0.3, 1, 0, 0);
 }
-.files > div:hover {
+.files > .diagonal:hover {
     /* transforms */
     -moz-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
     -webkit-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
@@ -146,7 +181,7 @@
     display: none;
 }
 
-.files .headerLine {
+.files .header+hr {
     display: block;
     width: 50px;
     margin-bottom: 20px;
