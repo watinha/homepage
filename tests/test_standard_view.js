@@ -4,44 +4,6 @@ var TestStandardView = function (fixture) {
     public.execute = function () {
         module('StandardView style class');
 
-        test('files should set body element class to "files" and set first hr with "headerLongerLine"', function () {
-            var standard, some_hr;
-            fixture.innerHTML = "<hr id=\"some_hr\" />";
-            some_hr = document.getElementById("some_hr");
-
-            standard = StandardView({
-                body_element: fixture,
-                first_line: some_hr
-            });
-            standard.init();
-
-            ok(fixture.className.split(" ").indexOf("files") >= 0, "must have class files");
-            ok(some_hr.className.split(" ").indexOf("headerLongerLine") >= 0, "must have class headerLongerLine");
-            fixture.className = "";
-            fixture.innerHTML = "";
-        });
-
-        test('files should include "files" in body element class', function () {
-            var standard, some_hr;
-
-            fixture.innerHTML = "<hr id=\"some_hr\" />";
-            some_hr = document.getElementById("some_hr");
-            fixture.className = "oi supimpa";
-            some_hr.className = "oi supimpa";
-
-            standard = StandardView({
-                body_element: fixture,
-                first_line: some_hr
-            });
-            standard.init();
-
-            equal(fixture.className, "oi supimpa files");
-            equal(some_hr.className, "oi supimpa headerLongerLine");
-
-            fixture.className = "";
-            fixture.innerHTML = "";
-        });
-
         test('Files standard_layout should set left positioning for elements and scale accordingly', function () {
             var stub = "<hr class=\"hr_stub\" />" +
                        "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
