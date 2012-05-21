@@ -43,20 +43,24 @@ var TestFiles = function (fixture) {
         });
 
         test('Files standard_layout should set left positioning for elements and scale accordingly', function () {
-            var stub = "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
+            var stub = "<hr class=\"hr_stub\" />" +
+                       "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">5 div</div>",
                 files,
                 stubElements,
-                transformAttribute; // browser dependent
+                transformAttribute,
+                hr_stub; // browser dependent
 
             fixture.innerHTML = stub;
             transformAttribute = Modernizr.prefixed('transform');
+            hr_stub = document.querySelectorAll(".hr_stub")[0];
 
             files = Files({
-                base_elements: document.querySelectorAll(".stub")
+                base_elements: document.querySelectorAll(".stub"),
+                first_line: hr_stub
             });
             files.standard_layout();
 
@@ -78,6 +82,8 @@ var TestFiles = function (fixture) {
             equal(stubElements[2].style.marginTop, "-4%");
             equal(stubElements[3].style.marginTop, "-4%");
             equal(stubElements[4].style.marginTop, "-4%");
+
+            equal(hr_stub.style.marginBottom, "3%");
 
             fixture.innerHTML = "";
         });

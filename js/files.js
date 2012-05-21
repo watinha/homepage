@@ -28,6 +28,7 @@ var Files = function (params) {
                 scale_factor + ") matrix(1, 0, 0, 1, 0, 0)";
             private.base_elements[i].style.marginTop = "-4%";
         };
+        private.first_line.style.marginBottom = "3%";
     };
 
     return public;
