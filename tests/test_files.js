@@ -42,16 +42,18 @@ var TestFiles = function (fixture) {
             fixture.innerHTML = "";
         });
 
-        test('Files standard_layout should set left positioning for elements', function () {
+        test('Files standard_layout should set left positioning for elements and scale accordingly', function () {
             var stub = "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">5 div</div>",
                 files,
-                stubElements;
+                stubElements,
+                transformAttribute; // browser dependent
 
             fixture.innerHTML = stub;
+            transformAttribute = Modernizr.prefixed('transform');
 
             files = Files({
                 base_elements: document.querySelectorAll(".stub")
@@ -60,10 +62,16 @@ var TestFiles = function (fixture) {
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "0%", "left element should be zero");
-            equal(stubElements[1].style.left, "12%", "left element should be 12.5%");
-            equal(stubElements[2].style.left, "25%", "left element should be 25%");
-            equal(stubElements[3].style.left, "37%", "left element should be 37.5%");
-            equal(stubElements[4].style.left, "50%", "left element should be 50%");
+            equal(stubElements[1].style.left, "10%", "left element should be 10%");
+            equal(stubElements[2].style.left, "20%", "left element should be 20%");
+            equal(stubElements[3].style.left, "30%", "left element should be 30%");
+            equal(stubElements[4].style.left, "40%", "left element should be 40%");
+
+            equal(stubElements[0].style[transformAttribute], "scale(0.6) matrix(1, 0, 0, 1, 0, 0)");
+            equal(stubElements[1].style[transformAttribute], "scale(0.7) matrix(1, 0, 0, 1, 0, 0)");
+            equal(stubElements[2].style[transformAttribute], "scale(0.8) matrix(1, 0, 0, 1, 0, 0)");
+            equal(stubElements[3].style[transformAttribute], "scale(0.9) matrix(1, 0, 0, 1, 0, 0)");
+            equal(stubElements[4].style[transformAttribute], "scale(1) matrix(1, 0, 0, 1, 0, 0)");
 
             fixture.innerHTML = "";
         });

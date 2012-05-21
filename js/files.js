@@ -18,9 +18,14 @@ var Files = function (params) {
     };
 
     public.standard_layout = function () {
+        var transform_attribute = Modernizr.prefixed("transform"),
+            scale_factor;
         for (var i = 0; i < private.base_elements.length; i++) {
             private.base_elements[i].style.left = Math.floor(
-                i*50/(private.base_elements.length - 1)) + "%";
+                i*40/(private.base_elements.length - 1)) + "%";
+            scale_factor = 0.6 + 4 * i / (private.base_elements.length - 1) / 10;
+            private.base_elements[i].style[transform_attribute] = "scale(" +
+                scale_factor + ") matrix(1, 0, 0, 1, 0, 0)";
         };
     };
 
