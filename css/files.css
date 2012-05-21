@@ -53,7 +53,7 @@
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.files > div:hover {
+.files > div:hover:not(.header) {
     /* transforms */
     -moz-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
     -webkit-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
