@@ -73,6 +73,12 @@ var TestFiles = function (fixture) {
             equal(stubElements[3].style[transformAttribute], "scale(0.9) matrix(1, 0, 0, 1, 0, 0)");
             equal(stubElements[4].style[transformAttribute], "scale(1) matrix(1, 0, 0, 1, 0, 0)");
 
+            equal(stubElements[0].style.marginTop, "-4%");
+            equal(stubElements[1].style.marginTop, "-4%");
+            equal(stubElements[2].style.marginTop, "-4%");
+            equal(stubElements[3].style.marginTop, "-4%");
+            equal(stubElements[4].style.marginTop, "-4%");
+
             fixture.innerHTML = "";
         });
     }

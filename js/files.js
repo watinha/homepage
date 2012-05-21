@@ -26,6 +26,7 @@ var Files = function (params) {
             scale_factor = 0.6 + 4 * i / (private.base_elements.length - 1) / 10;
             private.base_elements[i].style[transform_attribute] = "scale(" +
                 scale_factor + ") matrix(1, 0, 0, 1, 0, 0)";
+            private.base_elements[i].style.marginTop = "-4%";
         };
     };
 
