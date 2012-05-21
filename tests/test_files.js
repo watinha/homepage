@@ -87,6 +87,53 @@ var TestFiles = function (fixture) {
 
             fixture.innerHTML = "";
         });
+
+        test('Files remove_standard_layout should clear all previous inline settings', function () {
+            var stub = "<hr class=\"hr_stub\" />" +
+                       "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
+                       "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
+                       "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
+                       "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
+                       "<div class=\"stub\" style=\"position:relative\">5 div</div>",
+                files,
+                stubElements,
+                transformAttribute,
+                hr_stub; // browser dependent
+
+            fixture.innerHTML = stub;
+            transformAttribute = Modernizr.prefixed('transform');
+            hr_stub = document.querySelectorAll(".hr_stub")[0];
+
+            files = Files({
+                base_elements: document.querySelectorAll(".stub"),
+                first_line: hr_stub
+            });
+            files.standard_layout();
+            files.remove_standard_layout();
+
+            stubElements = document.querySelectorAll(".stub");
+            equal(stubElements[0].style.left, "");
+            equal(stubElements[1].style.left, "");
+            equal(stubElements[2].style.left, "");
+            equal(stubElements[3].style.left, "");
+            equal(stubElements[4].style.left, "");
+
+            equal(stubElements[0].style[transformAttribute], "");
+            equal(stubElements[1].style[transformAttribute], "");
+            equal(stubElements[2].style[transformAttribute], "");
+            equal(stubElements[3].style[transformAttribute], "");
+            equal(stubElements[4].style[transformAttribute], "");
+
+            equal(stubElements[0].style.marginTop, "");
+            equal(stubElements[1].style.marginTop, "");
+            equal(stubElements[2].style.marginTop, "");
+            equal(stubElements[3].style.marginTop, "");
+            equal(stubElements[4].style.marginTop, "");
+
+            equal(hr_stub.style.marginBottom, "");
+
+            fixture.innerHTML = "";
+        });
     }
 
     return public;

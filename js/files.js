@@ -31,5 +31,15 @@ var Files = function (params) {
         private.first_line.style.marginBottom = "3%";
     };
 
+    public.remove_standard_layout = function () {
+        var transform_attribute = Modernizr.prefixed("transform");
+        for (var i = 0; i < private.base_elements.length; i++) {
+            private.base_elements[i].style.left = "";
+            private.base_elements[i].style[transform_attribute] = "";
+            private.base_elements[i].style.marginTop = "";
+        };
+        private.first_line.style.marginBottom = "";
+    };
+
     return public;
 };
