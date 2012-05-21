@@ -62,7 +62,7 @@ var TestStandardView = function (fixture) {
                 base_elements: document.querySelectorAll(".stub"),
                 first_line: hr_stub
             });
-            standard.standard_layout();
+            standard.render();
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "0%", "left element should be zero");
@@ -108,8 +108,8 @@ var TestStandardView = function (fixture) {
                 base_elements: document.querySelectorAll(".stub"),
                 first_line: hr_stub
             });
-            standard.standard_layout();
-            standard.remove_standard_layout();
+            standard.render();
+            standard.clear();
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "");

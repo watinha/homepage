@@ -17,7 +17,7 @@ var StandardView = function (params) {
         private.addClass(private.first_line, "headerLongerLine");
     };
 
-    public.standard_layout = function () {
+    public.render = function () {
         var transform_attribute = Modernizr.prefixed("transform"),
             scale_factor;
         for (var i = 0; i < private.base_elements.length; i++) {
@@ -31,7 +31,7 @@ var StandardView = function (params) {
         private.first_line.style.marginBottom = "3%";
     };
 
-    public.remove_standard_layout = function () {
+    public.clear = function () {
         var transform_attribute = Modernizr.prefixed("transform");
         for (var i = 0; i < private.base_elements.length; i++) {
             private.base_elements[i].style.left = "";
