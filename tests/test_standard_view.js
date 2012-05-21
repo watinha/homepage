@@ -1,19 +1,19 @@
-var TestFiles = function (fixture) {
+var TestStandardView = function (fixture) {
     var public = {};
 
     public.execute = function () {
-        module('Files style class');
+        module('StandardView style class');
 
         test('files should set body element class to "files" and set first hr with "headerLongerLine"', function () {
-            var files, some_hr;
+            var standard, some_hr;
             fixture.innerHTML = "<hr id=\"some_hr\" />";
             some_hr = document.getElementById("some_hr");
 
-            files = Files({
+            standard = StandardView({
                 body_element: fixture,
                 first_line: some_hr
             });
-            files.init();
+            standard.init();
 
             ok(fixture.className.split(" ").indexOf("files") >= 0, "must have class files");
             ok(some_hr.className.split(" ").indexOf("headerLongerLine") >= 0, "must have class headerLongerLine");
@@ -22,18 +22,18 @@ var TestFiles = function (fixture) {
         });
 
         test('files should include "files" in body element class', function () {
-            var files, some_hr;
+            var standard, some_hr;
 
             fixture.innerHTML = "<hr id=\"some_hr\" />";
             some_hr = document.getElementById("some_hr");
             fixture.className = "oi supimpa";
             some_hr.className = "oi supimpa";
 
-            files = Files({
+            standard = StandardView({
                 body_element: fixture,
                 first_line: some_hr
             });
-            files.init();
+            standard.init();
 
             equal(fixture.className, "oi supimpa files");
             equal(some_hr.className, "oi supimpa headerLongerLine");
@@ -49,7 +49,7 @@ var TestFiles = function (fixture) {
                        "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">5 div</div>",
-                files,
+                standard,
                 stubElements,
                 transformAttribute,
                 hr_stub; // browser dependent
@@ -58,11 +58,11 @@ var TestFiles = function (fixture) {
             transformAttribute = Modernizr.prefixed('transform');
             hr_stub = document.querySelectorAll(".hr_stub")[0];
 
-            files = Files({
+            standard = StandardView({
                 base_elements: document.querySelectorAll(".stub"),
                 first_line: hr_stub
             });
-            files.standard_layout();
+            standard.standard_layout();
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "0%", "left element should be zero");
@@ -95,7 +95,7 @@ var TestFiles = function (fixture) {
                        "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
                        "<div class=\"stub\" style=\"position:relative\">5 div</div>",
-                files,
+                standard,
                 stubElements,
                 transformAttribute,
                 hr_stub; // browser dependent
@@ -104,12 +104,12 @@ var TestFiles = function (fixture) {
             transformAttribute = Modernizr.prefixed('transform');
             hr_stub = document.querySelectorAll(".hr_stub")[0];
 
-            files = Files({
+            standard = StandardView({
                 base_elements: document.querySelectorAll(".stub"),
                 first_line: hr_stub
             });
-            files.standard_layout();
-            files.remove_standard_layout();
+            standard.standard_layout();
+            standard.remove_standard_layout();
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "");
