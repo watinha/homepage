@@ -1,9 +1,9 @@
 var StandardView = function (params) {
     var public = {},
         private = {
-        base_elements: params.base_elements,
-        first_line: params.first_line
-    };
+            base_elements: params.base_elements,
+            first_line: params.first_line
+        };
 
     public.render = function () {
         var transform_attribute = Modernizr.prefixed("transform"),
