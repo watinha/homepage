@@ -90,19 +90,19 @@
     transition: all 0.3s ease;
 
     /* transforms */
-    -moz-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
+    -moz-transform: matrix(1,0.3, -0.7, 1, 0, 0);
     -webkit-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
     -o-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
     -ms-transform: matrix(1, 0.3, -0.3, 1, 0, 0);
     transform: matrix(1, 0.3, -0.3, 1, 0, 0);
 }
-.files > .diagonal:hover {
+.files > .diagonal:hover:not(.header) {
     /* transforms */
-    -moz-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
-    -webkit-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
-    -o-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
-    -ms-transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
-    transform: scale(1.1) matrix(1, 0.3, -0.3, 1, 0, 0);
+    -moz-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    -webkit-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    -o-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    -ms-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0);
 }
 
 /* open state */
