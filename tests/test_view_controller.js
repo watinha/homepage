@@ -41,6 +41,39 @@ var TestViewController = function (fixture) {
             fixture.className = "";
             fixture.innerHTML = "";
         });
+
+        test('method composite for changing layout', function () {
+            var controller, i,
+                layout_objs = [];
+
+            for (i = 0; i < 7; i++) {
+                var layout_mock = {
+                    clean: function () {
+                        this.clean_count = 1;
+                    },
+                    render: function () {
+                        this.render_count = 1;
+                    }
+                };
+                layout_objs.push(layout_mock);
+            };
+
+            controller = ViewController({
+                body_element: {},
+                first_line: {},
+                layout_objs: layout_objs
+            });
+
+            controller.render(6);
+            equal(layout_objs[1].clean_count, 1);
+            equal(layout_objs[2].clean_count, 1);
+            equal(layout_objs[3].clean_count, 1);
+            equal(layout_objs[4].clean_count, 1);
+            equal(layout_objs[5].clean_count, 1);
+            equal(layout_objs[6].render_count, 1);
+        });
+
     };
+
     return public;
 };
