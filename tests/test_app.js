@@ -44,6 +44,25 @@ var TestApp = function (fixture) {
             fixture.innerHTML = "";
         });
 
+        test('init should set removeClass', function () {
+            var divs, stubs = "<div class=\"some_class\" />" +
+                              "<div class=\"some_class another_one\" />" +
+                              "<div class=\"set_class some_class\" />" +
+                              "<div class=\"no_class\" />";
+            fixture.innerHTML = stubs;
+
+            divs = fixture.querySelectorAll("#qunit-fixture div");
+
+            for (var i = 0; i < divs.length; i++) {
+                App.removeClass(divs[i], "some_class");
+            };
+
+            equal(divs[0].className, "");
+            equal(divs[1].className, "another_one");
+            equal(divs[2].className, "set_class");
+            equal(divs[3].className, "no_class");
+            fixture.innerHTML = "";
+        });
     };
 
     return public;

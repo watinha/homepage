@@ -15,5 +15,14 @@ var App = (function () {
         return (classes.indexOf(className) >= 0);
     };
 
+    public.removeClass = function (element, className) {
+        var classes;
+        if ( ! App.hasClass(element, className))
+            return ;
+        classes = element.className.split(" ");
+        classes.splice(classes.indexOf(className), 1);
+        element.className = classes.join(" ").replace(/^\s+|\s+$/g, "");
+    };
+
     return public;
 })();
