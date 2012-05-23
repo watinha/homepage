@@ -19,7 +19,7 @@ var StandardView = function (params) {
         private.first_line.style.marginBottom = "3%";
     };
 
-    public.clear = function () {
+    public.clean = function () {
         var transform_attribute = Modernizr.prefixed("transform");
         for (var i = 0; i < private.base_elements.length; i++) {
             private.base_elements[i].style.left = "";

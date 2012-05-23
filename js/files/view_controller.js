@@ -12,7 +12,7 @@ var ViewController = function (params) {
     };
 
     public.render = function (view_index) {
-        for (var i = 0; i < private.layout_objs.length; i++) {
+        for (var i in private.layout_objs) {
             private.layout_objs[i].clean();
         };
         private.layout_objs[view_index].render();

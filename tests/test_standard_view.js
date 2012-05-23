@@ -71,7 +71,7 @@ var TestStandardView = function (fixture) {
                 first_line: hr_stub
             });
             standard.render();
-            standard.clear();
+            standard.clean();
 
             stubElements = document.querySelectorAll(".stub");
             equal(stubElements[0].style.left, "");
