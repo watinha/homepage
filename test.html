@@ -11,6 +11,10 @@
         <script type="text/javascript" charset="utf-8" src="tests/test_standard_view.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/files/view_controller.js"></script>
         <script type="text/javascript" charset="utf-8" src="tests/test_view_controller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/files/diagonal_view.js"></script>
+        <script type="text/javascript" charset="utf-8" src="tests/test_diagonal_view.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/files/app.js"></script>
+        <script type="text/javascript" charset="utf-8" src="tests/test_app.js"></script>
     </head>
     <body>
         <h1 id="qunit-header">QUnit testing for homepage</h1>
@@ -23,9 +27,11 @@
             window.onload = function () {
                 var fixture = document.getElementById("qunit-fixture"),
                     testSuites = [
-                    TestViewController(fixture),
-                    TestStandardView(fixture)
-                ];
+                        TestViewController(fixture),
+                        TestStandardView(fixture),
+                        TestApp(fixture),
+                        TestDiagonalView(fixture)
+                    ];
 
                 for (var cont = 0; cont < testSuites.length; cont++) {
                     testSuites[cont].execute();
