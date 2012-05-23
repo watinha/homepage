@@ -24,7 +24,7 @@ browser.visit(qunit_url).then(function () {
     }
 
     for (var i = 0; i < failed.length; i++) {
-        var strong = failed[i].querySelectorAll("strong")[0].textContent,
+        var strong = failed[i].querySelectorAll("li.fail > strong")[0].textContent,
             assertions = failed[i].querySelectorAll("ol > li.fail");
         for (var j = 0; j < assertions.length; j++) {
             var equals = assertions[i].querySelectorAll("tr.test-expected"),
