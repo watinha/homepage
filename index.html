@@ -248,22 +248,6 @@
     </div>
     <script type="text/javascript" charset="utf-8" src="js/files/standard_view.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/files/view_controller.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        window.onload = function () {
-            if (document.querySelectorAll) {
-                var first_line = document.querySelectorAll("body > div.header+hr")[0],
-                    controller = ViewController({
-                        body_element: document.body,
-                        first_line: first_line
-                    }),
-                    standard = StandardView({
-                        base_elements: document.querySelectorAll("body > div:not(.header)"),
-                        first_line: first_line
-                    });
-                controller.init();
-                standard.render();
-            }
-        }
-    </script>
+    <script type="text/javascript" charset="utf-8" src="js/files/init.js"></script>
 </body>
 </html>
