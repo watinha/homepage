@@ -6,15 +6,9 @@ var ViewController = function (params) {
             layout_objs: params.layout_objs
         };
 
-    private.addClass = function (element, className) {
-        var classes = element.className.split(" ");
-        classes.push(className);
-        element.className = classes.join(" ");
-    };
-
     public.init = function () {
-        private.addClass(private.body_element, "files");
-        private.addClass(private.first_line, "headerLongerLine");
+        App.addClass(private.body_element, "files");
+        App.addClass(private.first_line, "headerLongerLine");
     };
 
     public.render = function (view_index) {
