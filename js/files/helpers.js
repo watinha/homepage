@@ -1,9 +1,9 @@
-var App = (function () {
+var Helpers = (function () {
     var public = {};
 
     public.addClass = function (element, className) {
         var classes;
-        if (App.hasClass(element, className))
+        if (Helpers.hasClass(element, className))
             return ;
         classes = element.className.split(" ");
         classes.push(className);
@@ -17,7 +17,7 @@ var App = (function () {
 
     public.removeClass = function (element, className) {
         var classes;
-        if ( ! App.hasClass(element, className))
+        if ( ! Helpers.hasClass(element, className))
             return ;
         classes = element.className.split(" ");
         classes.splice(classes.indexOf(className), 1);

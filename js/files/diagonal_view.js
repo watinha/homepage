@@ -6,13 +6,13 @@ var DiagonalView = function (params) {
 
     public.render = function () {
         for (var i = 0; i < private.main_elements.length; i++) {
-            App.addClass(private.main_elements[i], 'diagonal');
+            Helpers.addClass(private.main_elements[i], 'diagonal');
         };
     };
 
     public.clean = function () {
         for (var i = 0; i < private.main_elements.length; i++) {
-            App.removeClass(private.main_elements[i], 'diagonal');
+            Helpers.removeClass(private.main_elements[i], 'diagonal');
         };
     };
 

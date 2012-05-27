@@ -7,8 +7,8 @@ var ViewController = function (params) {
         };
 
     public.init = function () {
-        App.addClass(private.body_element, "files");
-        App.addClass(private.first_line, "headerLongerLine");
+        Helpers.addClass(private.body_element, "files");
+        Helpers.addClass(private.first_line, "headerLongerLine");
     };
 
     public.render = function (view_index) {

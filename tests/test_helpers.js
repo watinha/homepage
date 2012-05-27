@@ -1,8 +1,8 @@
-var TestApp = function (fixture) {
+var TestHelpers = function (fixture) {
     var public = {};
 
     public.execute = function () {
-        module('App static class');
+        module('Helpers static class');
 
         test('init should set hasClass', function () {
             var divs, stubs = "<div />" +
@@ -15,12 +15,12 @@ var TestApp = function (fixture) {
 
             divs = fixture.querySelectorAll("#qunit-fixture div");
 
-            ok( ! App.hasClass(divs[0], 'set_class'));
-            ok( ! App.hasClass(divs[1], 'set_class'));
-            ok(App.hasClass(divs[2], 'set_class'));
-            ok(App.hasClass(divs[3], 'set_class'));
-            ok(App.hasClass(divs[4], 'set_class'));
-            ok( ! App.hasClass(divs[5], 'set_class'));
+            ok( ! Helpers.hasClass(divs[0], 'set_class'));
+            ok( ! Helpers.hasClass(divs[1], 'set_class'));
+            ok(Helpers.hasClass(divs[2], 'set_class'));
+            ok(Helpers.hasClass(divs[3], 'set_class'));
+            ok(Helpers.hasClass(divs[4], 'set_class'));
+            ok( ! Helpers.hasClass(divs[5], 'set_class'));
             fixture.innerHTML = "";
         });
 
@@ -34,7 +34,7 @@ var TestApp = function (fixture) {
             divs = fixture.querySelectorAll("#qunit-fixture div");
 
             for (var i = 0; i < divs.length; i++) {
-                App.addClass(divs[i], "set_class");
+                Helpers.addClass(divs[i], "set_class");
             };
 
             equal(divs[0].className, "set_class");
@@ -54,7 +54,7 @@ var TestApp = function (fixture) {
             divs = fixture.querySelectorAll("#qunit-fixture div");
 
             for (var i = 0; i < divs.length; i++) {
-                App.removeClass(divs[i], "some_class");
+                Helpers.removeClass(divs[i], "some_class");
             };
 
             equal(divs[0].className, "");
