@@ -8,8 +8,9 @@ fi
 if [ -z $QUNIT_URL ]; then
     QUNIT_URL=`cat $TMP_QUNIT_URL`
     if [ -z $QUNIT_URL ]; then
+        QUNIT_URL="http://localhost/~willianmassamiwatanabe/homepage/test.html"
         echo "*** server url for qunit tests required (QUNIT_URL)"
-        exit 1
+        echo " - using default qunit url"
     fi
 else
     echo $QUNIT_URL > $TMP_QUNIT_URL
