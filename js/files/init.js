@@ -1,7 +1,7 @@
 (function () {
     window.onload = function () {
         if (document.querySelectorAll) {
-            var first_line = document.querySelectorAll("body > div.header+hr")[0],
+            var first_line = document.querySelector("body > div.header+hr"),
                 base_elements = document.querySelectorAll("body > div:not(.header)"),
                 diagonal = DiagonalView({
                     main_elements: base_elements
