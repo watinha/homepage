@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 /* NodeJS script that runs qUnit tests with zombie */
 var Browser = require("zombie"),
     browser = new Browser(),

@@ -12,9 +12,9 @@ if [ -z $QUNIT_URL ]; then
         echo "*** server url for qunit tests required (QUNIT_URL)"
         echo " - using default qunit url"
     fi
-else
-    echo $QUNIT_URL > $TMP_QUNIT_URL
 fi
+
+echo $QUNIT_URL > $TMP_QUNIT_URL
 
 ${NODE} bin/run_js_unit.js
 
