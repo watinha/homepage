@@ -7,7 +7,7 @@ var Browser = require("zombie"),
 
 console.log("");
 console.log("executing QUnit tests:");
-browser.visit(qunit_url).then(function () {
+browser.visit(qunit_url, function () {
     var tests = browser.querySelectorAll("#qunit-tests > li"),
         failed = [];
     for (var i = 0; i < tests.length; i++) {
