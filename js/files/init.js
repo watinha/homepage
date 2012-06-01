@@ -19,12 +19,7 @@
                     }
                 });
             controller.init();
-            var current = "diagonal";
-            setInterval(function () {
-                console.log("changing layout to " + current);
-                controller.render(current);
-                current = (current == "diagonal" ? "standard" : "diagonal");
-            }, 7000);
+            controller.render('standard');
         }
     }
 })();
