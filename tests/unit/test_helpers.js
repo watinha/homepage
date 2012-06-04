@@ -1,69 +1,63 @@
-var TestHelpers = function (fixture) {
-    var public = {};
+describe('Helpers static class suite', function () {
+    var fixture = document.createElement('div');
 
-    public.execute = function () {
-        module('Helpers static class');
+    it('init should set hasClass', function () {
+        var divs, stubs = "<div />" +
+                          "<div class=\"some_class\" />" +
+                          "<div class=\"set_class some_class\" />" +
+                          "<div class=\"other_class set_class some_class\" />" +
+                          "<div class=\"with other classes set_class some_class\" />" +
+                          "<div class=\"\" />";
+        fixture.innerHTML = stubs;
 
-        test('init should set hasClass', function () {
-            var divs, stubs = "<div />" +
-                              "<div class=\"some_class\" />" +
-                              "<div class=\"set_class some_class\" />" +
-                              "<div class=\"other_class set_class some_class\" />" +
-                              "<div class=\"with other classes set_class some_class\" />" +
-                              "<div class=\"\" />";
-            fixture.innerHTML = stubs;
+        divs = fixture.querySelectorAll("div");
 
-            divs = fixture.querySelectorAll("#qunit-fixture div");
+        expect(Helpers.hasClass(divs[0], 'set_class')).not.toBe(true);
+        expect(Helpers.hasClass(divs[1], 'set_class')).not.toBe(true);
+        expect(Helpers.hasClass(divs[2], 'set_class')).toBe(true);
+        expect(Helpers.hasClass(divs[3], 'set_class')).toBe(true);
+        expect(Helpers.hasClass(divs[4], 'set_class')).toBe(true);
+        expect(Helpers.hasClass(divs[5], 'set_class')).not.toBe(true);
+        fixture.innerHTML = "";
+    });
 
-            ok( ! Helpers.hasClass(divs[0], 'set_class'));
-            ok( ! Helpers.hasClass(divs[1], 'set_class'));
-            ok(Helpers.hasClass(divs[2], 'set_class'));
-            ok(Helpers.hasClass(divs[3], 'set_class'));
-            ok(Helpers.hasClass(divs[4], 'set_class'));
-            ok( ! Helpers.hasClass(divs[5], 'set_class'));
-            fixture.innerHTML = "";
-        });
+    it('init should set addClass', function () {
+        var divs, stubs = "<div />" +
+                          "<div class=\"some_class\" />" +
+                          "<div class=\"set_class some_class\" />" +
+                          "<div class=\"\" />";
+        fixture.innerHTML = stubs;
 
-        test('init should set addClass', function () {
-            var divs, stubs = "<div />" +
-                              "<div class=\"some_class\" />" +
-                              "<div class=\"set_class some_class\" />" +
-                              "<div class=\"\" />";
-            fixture.innerHTML = stubs;
+        divs = fixture.querySelectorAll("div");
 
-            divs = fixture.querySelectorAll("#qunit-fixture div");
+        for (var i = 0; i < divs.length; i++) {
+            Helpers.addClass(divs[i], "set_class");
+        };
 
-            for (var i = 0; i < divs.length; i++) {
-                Helpers.addClass(divs[i], "set_class");
-            };
+        expect(divs[0].className).toBe("set_class");
+        expect(divs[1].className).toBe("some_class set_class");
+        expect(divs[2].className).toBe("set_class some_class");
+        expect(divs[3].className).toBe("set_class");
+        fixture.innerHTML = "";
+    });
 
-            equal(divs[0].className, "set_class");
-            equal(divs[1].className, "some_class set_class");
-            equal(divs[2].className, "set_class some_class");
-            equal(divs[3].className, "set_class");
-            fixture.innerHTML = "";
-        });
+    it('init should set removeClass', function () {
+        var divs, stubs = "<div class=\"some_class\" />" +
+                          "<div class=\"some_class another_one\" />" +
+                          "<div class=\"set_class some_class\" />" +
+                          "<div class=\"no_class\" />";
+        fixture.innerHTML = stubs;
 
-        test('init should set removeClass', function () {
-            var divs, stubs = "<div class=\"some_class\" />" +
-                              "<div class=\"some_class another_one\" />" +
-                              "<div class=\"set_class some_class\" />" +
-                              "<div class=\"no_class\" />";
-            fixture.innerHTML = stubs;
+        divs = fixture.querySelectorAll("div");
 
-            divs = fixture.querySelectorAll("#qunit-fixture div");
+        for (var i = 0; i < divs.length; i++) {
+            Helpers.removeClass(divs[i], "some_class");
+        };
 
-            for (var i = 0; i < divs.length; i++) {
-                Helpers.removeClass(divs[i], "some_class");
-            };
-
-            equal(divs[0].className, "");
-            equal(divs[1].className, "another_one");
-            equal(divs[2].className, "set_class");
-            equal(divs[3].className, "no_class");
-            fixture.innerHTML = "";
-        });
-    };
-
-    return public;
-};
+        expect(divs[0].className).toBe("");
+        expect(divs[1].className).toBe("another_one");
+        expect(divs[2].className).toBe("set_class");
+        expect(divs[3].className).toBe("no_class");
+        fixture.innerHTML = "";
+    });
+});

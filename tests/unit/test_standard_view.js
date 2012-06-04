@@ -1,102 +1,96 @@
-var TestStandardView = function (fixture) {
-    var public = {};
+describe('StandardView style class', function() {
+    var fixture = document.createElement('div');
 
-    public.execute = function () {
-        module('StandardView style class');
+    it('Files standard_layout should set left positioning for elements and scale accordingly', function () {
+        var stub = "<hr class=\"hr_stub\" />" +
+                   "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">5 div</div>",
+            standard,
+            stubElements,
+            transformAttribute,
+            hr_stub; // browser dependent
 
-        test('Files standard_layout should set left positioning for elements and scale accordingly', function () {
-            var stub = "<hr class=\"hr_stub\" />" +
-                       "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">5 div</div>",
-                standard,
-                stubElements,
-                transformAttribute,
-                hr_stub; // browser dependent
+        fixture.innerHTML = stub;
+        transformAttribute = Modernizr.prefixed('transform');
+        hr_stub = fixture.querySelectorAll(".hr_stub")[0];
 
-            fixture.innerHTML = stub;
-            transformAttribute = Modernizr.prefixed('transform');
-            hr_stub = document.querySelectorAll(".hr_stub")[0];
-
-            standard = StandardView({
-                base_elements: document.querySelectorAll(".stub"),
-                first_line: hr_stub
-            });
-            standard.render();
-
-            stubElements = document.querySelectorAll(".stub");
-            equal(stubElements[0].style.left, "0%", "left element should be zero");
-            equal(stubElements[1].style.left, "10%", "left element should be 10%");
-            equal(stubElements[2].style.left, "20%", "left element should be 20%");
-            equal(stubElements[3].style.left, "30%", "left element should be 30%");
-            equal(stubElements[4].style.left, "40%", "left element should be 40%");
-
-            equal(stubElements[0].style[transformAttribute], "scale(0.6) matrix(1, 0, 0, 1, 0, 0)");
-            equal(stubElements[1].style[transformAttribute], "scale(0.7) matrix(1, 0, 0, 1, 0, 0)");
-            equal(stubElements[2].style[transformAttribute], "scale(0.8) matrix(1, 0, 0, 1, 0, 0)");
-            equal(stubElements[3].style[transformAttribute], "scale(0.9) matrix(1, 0, 0, 1, 0, 0)");
-            equal(stubElements[4].style[transformAttribute], "scale(1) matrix(1, 0, 0, 1, 0, 0)");
-
-            equal(stubElements[0].style.marginTop, "-4%");
-            equal(stubElements[1].style.marginTop, "-4%");
-            equal(stubElements[2].style.marginTop, "-4%");
-            equal(stubElements[3].style.marginTop, "-4%");
-            equal(stubElements[4].style.marginTop, "-4%");
-
-            equal(hr_stub.style.marginBottom, "3%");
-
-            fixture.innerHTML = "";
+        standard = StandardView({
+            base_elements: fixture.querySelectorAll(".stub"),
+            first_line: hr_stub
         });
+        standard.render();
 
-        test('Files remove_standard_layout should clear all previous inline settings', function () {
-            var stub = "<hr class=\"hr_stub\" />" +
-                       "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
-                       "<div class=\"stub\" style=\"position:relative\">5 div</div>",
-                standard,
-                stubElements,
-                transformAttribute,
-                hr_stub; // browser dependent
+        stubElements = fixture.querySelectorAll(".stub");
+        expect(stubElements[0].style.left).toBe("0%", "left element should be zero");
+        expect(stubElements[1].style.left).toBe("10%", "left element should be 10%");
+        expect(stubElements[2].style.left).toBe("20%", "left element should be 20%");
+        expect(stubElements[3].style.left).toBe("30%", "left element should be 30%");
+        expect(stubElements[4].style.left).toBe("40%", "left element should be 40%");
 
-            fixture.innerHTML = stub;
-            transformAttribute = Modernizr.prefixed('transform');
-            hr_stub = document.querySelectorAll(".hr_stub")[0];
+        expect(stubElements[0].style[transformAttribute]).toBe("scale(0.6) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[1].style[transformAttribute]).toBe("scale(0.7) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[2].style[transformAttribute]).toBe("scale(0.8) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[3].style[transformAttribute]).toBe("scale(0.9) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[4].style[transformAttribute]).toBe("scale(1) matrix(1, 0, 0, 1, 0, 0)");
 
-            standard = StandardView({
-                base_elements: document.querySelectorAll(".stub"),
-                first_line: hr_stub
-            });
-            standard.render();
-            standard.clean();
+        expect(stubElements[0].style.marginTop).toBe("-4%");
+        expect(stubElements[1].style.marginTop).toBe("-4%");
+        expect(stubElements[2].style.marginTop).toBe("-4%");
+        expect(stubElements[3].style.marginTop).toBe("-4%");
+        expect(stubElements[4].style.marginTop).toBe("-4%");
 
-            stubElements = document.querySelectorAll(".stub");
-            equal(stubElements[0].style.left, "");
-            equal(stubElements[1].style.left, "");
-            equal(stubElements[2].style.left, "");
-            equal(stubElements[3].style.left, "");
-            equal(stubElements[4].style.left, "");
+        expect(hr_stub.style.marginBottom).toBe("3%");
 
-            equal(stubElements[0].style[transformAttribute], "");
-            equal(stubElements[1].style[transformAttribute], "");
-            equal(stubElements[2].style[transformAttribute], "");
-            equal(stubElements[3].style[transformAttribute], "");
-            equal(stubElements[4].style[transformAttribute], "");
+        fixture.innerHTML = "";
+    });
 
-            equal(stubElements[0].style.marginTop, "");
-            equal(stubElements[1].style.marginTop, "");
-            equal(stubElements[2].style.marginTop, "");
-            equal(stubElements[3].style.marginTop, "");
-            equal(stubElements[4].style.marginTop, "");
+    it('Files remove_standard_layout should clear all previous inline settings', function () {
+        var stub = "<hr class=\"hr_stub\" />" +
+                   "<div class=\"stub\" style=\"position:relative\">1 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">2 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">3 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">4 div</div>" +
+                   "<div class=\"stub\" style=\"position:relative\">5 div</div>",
+            standard,
+            stubElements,
+            transformAttribute,
+            hr_stub; // browser dependent
 
-            equal(hr_stub.style.marginBottom, "");
+        fixture.innerHTML = stub;
+        transformAttribute = Modernizr.prefixed('transform');
+        hr_stub = fixture.querySelectorAll(".hr_stub")[0];
 
-            fixture.innerHTML = "";
+        standard = StandardView({
+            base_elements: fixture.querySelectorAll(".stub"),
+            first_line: hr_stub
         });
-    }
+        standard.render();
+        standard.clean();
 
-    return public;
-};
+        stubElements = fixture.querySelectorAll(".stub");
+        expect(stubElements[0].style.left).toBe("");
+        expect(stubElements[1].style.left).toBe("");
+        expect(stubElements[2].style.left).toBe("");
+        expect(stubElements[3].style.left).toBe("");
+        expect(stubElements[4].style.left).toBe("");
+
+        expect(stubElements[0].style[transformAttribute]).toBe("");
+        expect(stubElements[1].style[transformAttribute]).toBe("");
+        expect(stubElements[2].style[transformAttribute]).toBe("");
+        expect(stubElements[3].style[transformAttribute]).toBe("");
+        expect(stubElements[4].style[transformAttribute]).toBe("");
+
+        expect(stubElements[0].style.marginTop).toBe("");
+        expect(stubElements[1].style.marginTop).toBe("");
+        expect(stubElements[2].style.marginTop).toBe("");
+        expect(stubElements[3].style.marginTop).toBe("");
+        expect(stubElements[4].style.marginTop).toBe("");
+
+        expect(hr_stub.style.marginBottom).toBe("");
+
+        fixture.innerHTML = "";
+    });
+});
