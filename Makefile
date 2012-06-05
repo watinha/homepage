@@ -7,6 +7,9 @@ export TMP_JASMINE_URL=/tmp/jasmine.tmp
 tests-unit:
 	@./bin/run_unit_tests.sh
 
+tests-acceptance:
+	jasmine-node tests/acceptance --matchall
+
 jslint:
 	@./bin/run_jslintr.sh
 
@@ -22,4 +25,4 @@ help:
 clean:
 	@$(RM) $(TMP_JASMINE_URL)
 
-.PHONY: tests-unit jslint help clean
+.PHONY: tests-unit jslint help clean tests-acceptance
