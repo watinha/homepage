@@ -1,5 +1,4 @@
 describe('Helpers static class suite', function () {
-    var fixture = document.createElement('div');
 
     it('init should set hasClass', function () {
         var divs, stubs = "<div />" +
@@ -7,10 +6,11 @@ describe('Helpers static class suite', function () {
                           "<div class=\"set_class some_class\" />" +
                           "<div class=\"other_class set_class some_class\" />" +
                           "<div class=\"with other classes set_class some_class\" />" +
-                          "<div class=\"\" />";
+                          "<div class=\"\" />",
+            fixture = document.createElement('div');
         fixture.innerHTML = stubs;
 
-        divs = fixture.querySelectorAll("div");
+        divs = fixture.querySelectorAll("div > div");
 
         expect(Helpers.hasClass(divs[0], 'set_class')).not.toBe(true);
         expect(Helpers.hasClass(divs[1], 'set_class')).not.toBe(true);
@@ -25,10 +25,11 @@ describe('Helpers static class suite', function () {
         var divs, stubs = "<div />" +
                           "<div class=\"some_class\" />" +
                           "<div class=\"set_class some_class\" />" +
-                          "<div class=\"\" />";
+                          "<div class=\"\" />",
+            fixture = document.createElement('div');
         fixture.innerHTML = stubs;
 
-        divs = fixture.querySelectorAll("div");
+        divs = fixture.querySelectorAll("div > div");
 
         for (var i = 0; i < divs.length; i++) {
             Helpers.addClass(divs[i], "set_class");
@@ -45,10 +46,11 @@ describe('Helpers static class suite', function () {
         var divs, stubs = "<div class=\"some_class\" />" +
                           "<div class=\"some_class another_one\" />" +
                           "<div class=\"set_class some_class\" />" +
-                          "<div class=\"no_class\" />";
+                          "<div class=\"no_class\" />",
+            fixture = document.createElement('div');
         fixture.innerHTML = stubs;
 
-        divs = fixture.querySelectorAll("div");
+        divs = fixture.querySelectorAll("div > div");
 
         for (var i = 0; i < divs.length; i++) {
             Helpers.removeClass(divs[i], "some_class");

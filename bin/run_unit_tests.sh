@@ -5,16 +5,16 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-if [ -z $QUNIT_URL ]; then
-    QUNIT_URL=`cat $TMP_QUNIT_URL`
-    if [ -z $QUNIT_URL ]; then
-        QUNIT_URL="http://localhost/~willianmassamiwatanabe/homepage/test.html"
-        echo "*** server url for qunit tests required (QUNIT_URL)"
-        echo " - using default qunit url"
+if [ -z $JASMINE_URL ]; then
+    JASMINE_URL=`cat $TMP_JASMINE_URL`
+    if [ -z $JASMINE_URL ]; then
+        JASMINE_URL="http://localhost/~willianmassamiwatanabe/homepage/tests/unit/jasmine.html"
+        echo "*** server url for jasmine tests required (JASMINE_URL)"
+        echo " - using default jasmine url"
     fi
 fi
 
-echo $QUNIT_URL > $TMP_QUNIT_URL
+echo $JASMINE_URL > $TMP_JASMINE_URL
 
 ${NODE} bin/run_js_unit.js
 

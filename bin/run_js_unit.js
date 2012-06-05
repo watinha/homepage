@@ -1,55 +1,71 @@
 #!/usr/local/bin/node
 
-/* NodeJS script that runs qUnit tests with zombie */
+/* NodeJS script that runs JASMINE tests with zombie */
 var Browser = require("zombie"),
     browser = new Browser(),
-    qunit_url = process.env["QUNIT_URL"];
+    jasmine_url = process.env["JASMINE_URL"];
 
 console.log("");
-console.log("executing QUnit tests:");
-browser.visit(qunit_url, function () {
-    var tests = browser.querySelectorAll("#qunit-tests > li"),
-        failed = [];
-    for (var i = 0; i < tests.length; i++) {
-        if (tests[i].className == "pass")
-            process.stdout.write(".");
-        else {
-            process.stdout.write("F");
-            failed.push(tests[i]);
-        }
-    };
-    console.log("");
-    if (failed.length == 0) {
-        console.log("OK.");
-        console.log("");
-        return ;
-    }
+console.log("executing JASMINE tests:");
 
-    for (var i = 0; i < failed.length; i++) {
-        var strong = failed[i].querySelectorAll("li.fail > strong")[0].textContent,
-            assertions = failed[i].querySelectorAll("ol > li.fail");
-        for (var j = 0; j < assertions.length; j++) {
-            var equals = assertions[i].querySelectorAll("tr.test-expected"),
-                ok = assertions[i].querySelectorAll("span.test-message");
+browser.visit(jasmine_url, function () {
+    var banner = browser.querySelector("#HTMLReporter > .banner > span:not(.duration)"),
+        duration = browser.querySelector("#HTMLReporter > .banner > .duration"),
+        tests_summary = browser.querySelectorAll("#HTMLReporter > ul.symbolSummary > li"),
+        complete_status = browser.querySelector("#HTMLReporter > .alert > .resultsMenu"),
+        details = browser.querySelectorAll("#details > .specDetail"),
+        i = 0,
+        stack;
 
-            if (equals.length > 0) {
-                var expected = equals[0].querySelectorAll("tr.test-expected")[0].textContent,
-                    actual = equals[0].querySelectorAll("tr.test-actual")[0].textContent,
-                    source = equals[0].querySelectorAll("tr.test-source")[0].textContent;
-                console.log("");
-                console.log("FAILED: " + strong);
-                console.log(expected);
-                console.log("  " + actual);
-                console.log(source);
-                return ;
-            }
-            if (ok.length > 0) {
-                var source = assertions[i].querySelectorAll("tr.test-source")[0].textContent;
-                console.log("");
-                console.log("FAILED: " + strong);
-                console.log(source);
-                return ;
-            }
-        };
+    console.log();
+    console.log(banner.textContent);
+    console.log("--------------------------------");
+    console.log();
+
+    for (i = 0; i < tests_summary.length; i++) {
+        var summary = (function () {
+                var index = i, checkStatus, printResults;
+
+                checkStatus = function () {
+                    return (tests_summary[index].className == "passed" || tests_summary[index].className == "failed");
+                };
+                printResults = function () {
+                    if (tests_summary[index].className == "passed")
+                        process.stdout.write(".");
+                    if (tests_summary[index].className == "failed")
+                        process.stdout.write("F");
+                };
+
+                return {
+                    checkStatus: checkStatus,
+                    printResults: printResults
+                };
+            })();
+        if (i == (tests_summary.length - 1)) {
+            browser.wait(summary.checkStatus, function () {
+                summary.printResults();
+
+                // final printings
+                console.log();
+                if (complete_status)
+                    console.log(complete_status.textContent);
+                else
+                    console.log("OK. All tests passed");
+                console.log("-------------------------------");
+                console.log();
+
+                for (i = 0; i < details.length; i++) {
+                    console.log(details[i].querySelector(".description").textContent);
+                    stack = details[i].querySelector(".stackTrace").textContent.split("@");
+                    for (var j = 0; j < stack.length; j++) {
+                        console.log(stack[j]);
+                    };
+                    console.log();
+                };
+
+            });
+        } else
+            browser.wait(summary.checkStatus, summary.printResults);
     };
+
 });

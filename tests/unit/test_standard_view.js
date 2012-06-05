@@ -43,7 +43,6 @@ describe('StandardView style class', function() {
         expect(stubElements[4].style.marginTop).toBe("-4%");
 
         expect(hr_stub.style.marginBottom).toBe("3%");
-
         fixture.innerHTML = "";
     });
 
@@ -90,7 +89,6 @@ describe('StandardView style class', function() {
         expect(stubElements[4].style.marginTop).toBe("");
 
         expect(hr_stub.style.marginBottom).toBe("");
-
         fixture.innerHTML = "";
     });
 });
