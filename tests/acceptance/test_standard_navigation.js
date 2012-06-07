@@ -49,9 +49,15 @@ describe("test standard navigation view", function () {
             expect(browser.success).toBe(true);
 
             browser.clickLink(".profile > h3 > a", function () {
-                for (var i = 0; i < main_elements.length; i++) {
+                var i, clicked_element;
+                for (i = 0; i < main_elements.length; i++) {
                     expect(main_elements[i].className).toContain("diagonal");
+                    if (main_elements[i].className.match(/(\s+|^)profile(\s+|$)/g)) {
+                        clicked_element = main_elements[i];
+                    }
                 };
+
+                expect(clicked_element.className).toContain("open");
 
                 waitForZombie = true;
             });

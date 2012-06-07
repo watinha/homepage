@@ -13,15 +13,20 @@ var ViewController = function (params) {
     };
 
     public.render = function (view_index) {
-        for (var i in private.layout_objs) {
-            private.layout_objs[i].clean();
-        };
+        private.clean_layouts();
         private.layout_objs[view_index].render();
     };
 
     public.click = function () {
-        public.render(private.click_handler.layout_name);
+        private.clean_layouts();
+        private.click_handler.render();
         private.click_handler.click();
+    };
+
+    private.clean_layouts = function () {
+        for (var i in private.layout_objs) {
+            private.layout_objs[i].clean();
+        };
     };
 
     return public;

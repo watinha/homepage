@@ -102,7 +102,7 @@ describe('ViewController class', function() {
     });
 
     it("controller should use strategy object to handle click events", function () {
-        var controller, i, layout_objs = {}, click_count = 0;
+        var controller, i, layout_objs = {}, click_count = 0, render_count = 0;
 
         for (i = 0; i < 7; i++) {
             var layout_mock = {
@@ -121,7 +121,9 @@ describe('ViewController class', function() {
             first_line: {},
             layout_objs: layout_objs,
             click_handler: {
-                layout_name: "some_string6",
+                render: function () {
+                    render_count = 1;
+                },
                 click: function () {
                     click_count = 1;
                 }
@@ -134,7 +136,8 @@ describe('ViewController class', function() {
         expect(layout_objs["some_string3"].clean_count).toBe(1);
         expect(layout_objs["some_string4"].clean_count).toBe(1);
         expect(layout_objs["some_string5"].clean_count).toBe(1);
-        expect(layout_objs["some_string6"].render_count).toBe(1);
+        expect(layout_objs["some_string6"].clean_count).toBe(1);
         expect(click_count).toBe(1);
+        expect(render_count).toBe(1);
     });
 });
