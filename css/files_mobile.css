@@ -12,6 +12,18 @@
     h1 {
         font-size: 26px;
     }
+    .files > div:not(.header) {
+        left: 0 !important;
+        width: 100% !important;
+        top: 30px;
+        margin-bottom: -15px;
+
+        -moz-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+        -webkit-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+        -o-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+        -ms-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+        transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    }
     .files > .diagonal {
         top: 0px;
         bottom: 0px;
