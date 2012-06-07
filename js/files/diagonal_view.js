@@ -17,8 +17,23 @@ var DiagonalView = function (params) {
     };
 
     public.click = function (ev) {
-        var ev = window.event || ev;
-        Helpers.addClass(ev.target, "open");
+        var ev = window.event || ev,
+            target = ev.target,
+            main_element_target = private.get_main_parent(target);
+
+        Helpers.addClass(main_element_target, "open");
+    };
+
+    private.get_main_parent = function (element) {
+        if (element.tagName == "BODY" || ! element.parentNode)
+            return false;
+
+        for (var i = 0; i < private.main_elements.length; i++) {
+            if (element == private.main_elements[i])
+                return element;
+        };
+
+        return private.get_main_parent(element.parentNode);
     };
 
     return public;
