@@ -17,10 +17,11 @@ var ViewController = function (params) {
         private.layout_objs[view_index].render();
     };
 
-    public.click = function () {
+    public.click = function (ev) {
+        var target = window.target || (ev && ev.target);
         private.clean_layouts();
         private.click_handler.render();
-        private.click_handler.click();
+        private.click_handler.click.apply(target, arguments);
     };
 
     private.clean_layouts = function () {

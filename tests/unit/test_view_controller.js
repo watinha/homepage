@@ -184,4 +184,39 @@ describe('ViewController class', function() {
         expect(click_count).toBe(0);
         expect(render_count).toBe(0);
     });
+
+    it("method click should pass click parameters to view", function () {
+        var controller, i, mock_args,
+            event_mock = {target: "something", type: "something"},
+            mock_args_1 = null, mock_args_2 = null,
+            layout_mock = {
+                clean: function () {
+                    this.clean_count = 1;
+                },
+                render: function () {
+                    this.render_count = 1;
+                },
+                click: function (args) {
+                    params = args;
+                }
+            },
+            layout_objs = {};
+        layout_objs["some_string1"] = layout_mock;
+
+        controller = ViewController({
+            body_element: {},
+            first_line: {},
+            layout_objs: layout_objs,
+            click_handler: {
+                render: function () {},
+                clean: function () {},
+                click: function (ev) {
+                    mock_args = ev;
+                }
+            }
+        });
+
+        controller.click(event_mock);
+        expect(mock_args.type).toBe("something");
+    });
 });
