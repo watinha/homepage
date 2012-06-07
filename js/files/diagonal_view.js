@@ -16,5 +16,10 @@ var DiagonalView = function (params) {
         };
     };
 
+    public.click = function (ev) {
+        var ev = window.event || ev;
+        Helpers.addClass(ev.target, "open");
+    };
+
     return public;
 };

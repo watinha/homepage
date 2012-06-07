@@ -40,4 +40,24 @@ describe('DiagonalView class', function () {
         expect(fixture.querySelectorAll(".some_div")[3].className).toBe('some_div');
         fixture.innerHTML = "";
     });
+
+    it("click should set open class to target", function () {
+        var view, clicked_element,
+            stub = "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"diagonal some_div\" id=\"clicked_element\"><span><a href=\"#\">clickable element</a></span></div>" +
+                   "<div class=\"some_div diagonal another_class\"></div>" +
+                   "<div class=\"some_div\"></div>";
+        fixture.innerHTML = stub;
+
+        view = DiagonalView({
+            main_elements: fixture.querySelectorAll(".some_div")
+        });
+        clicked_element = fixture.querySelector("#clicked_element");
+        view.click({
+            target: fixture.querySelector("#clicked_element")
+        });
+
+        expect(clicked_element.className).toContain("open");
+        fixture.innerHTML = "";
+   });
 });

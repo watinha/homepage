@@ -17,12 +17,7 @@
                         'standard': standard,
                         'diagonal': diagonal
                     },
-                    click_handler: {
-                        layout_name: "diagonal",
-                        click: function () {},
-                        render: function () {},
-                        clean: function () {}
-                    }
+                    click_handler: diagonal
                 });
             controller.init();
             controller.render('standard');
