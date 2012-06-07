@@ -20,6 +20,9 @@ var DiagonalView = function (params) {
         var ev = window.event || ev,
             target = ev.target,
             main_element_target = private.get_main_parent(target);
+        for (var i = 0; i < private.main_elements.length; i++) {
+            Helpers.removeClass(private.main_elements[i], "open");
+        };
 
         Helpers.addClass(main_element_target, "open");
     };

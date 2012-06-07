@@ -59,7 +59,7 @@ describe('DiagonalView class', function () {
 
         expect(clicked_element.className).toContain("open");
         fixture.innerHTML = "";
-   });
+    });
 
     it("click should set open class to respective main_element parent to target", function () {
         var view, clicked_element,
@@ -79,5 +79,27 @@ describe('DiagonalView class', function () {
 
         expect(clicked_element.className).toContain("open");
         fixture.innerHTML = "";
-   });
+    });
+
+    it("click should set open class to respective main_element parent to target and remove open class from others", function () {
+        var view, clicked_element, previous_element,
+            stub = "<div class=\"some_div diagonal open\" id=\"previous_element\"></div>" +
+                   "<div class=\"diagonal some_div\" id=\"clicked_element\"><span><a href=\"#\">clickable element</a></span></div>" +
+                   "<div class=\"some_div diagonal another_class\"></div>" +
+                   "<div class=\"some_div\"></div>";
+        fixture.innerHTML = stub;
+
+        view = DiagonalView({
+            main_elements: fixture.querySelectorAll(".some_div")
+        });
+        previous_element = fixture.querySelector("#previous_element");
+        clicked_element = fixture.querySelector("#clicked_element");
+        view.click({
+            target: fixture.querySelector("#clicked_element > span > a")
+        });
+
+        expect(clicked_element.className).toContain("open");
+        expect(previous_element.className).not.toContain("open");
+        fixture.innerHTML = "";
+    });
 });
