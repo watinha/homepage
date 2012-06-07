@@ -19,7 +19,9 @@
                     },
                     click_handler: {
                         layout_name: "diagonal",
-                        click: function () {}
+                        click: function () {},
+                        render: function () {},
+                        clean: function () {}
                     }
                 });
             controller.init();

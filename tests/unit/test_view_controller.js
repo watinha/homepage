@@ -140,4 +140,48 @@ describe('ViewController class', function() {
         expect(click_count).toBe(1);
         expect(render_count).toBe(1);
     });
+
+    it("method clean should also clear click_handler layout", function () {
+        var controller, i, layout_objs = {}, click_count = 0, render_count = 0, clean_count = 0;
+
+        for (i = 0; i < 7; i++) {
+            var layout_mock = {
+                clean: function () {
+                    this.clean_count = 1;
+                },
+                render: function () {
+                    this.render_count = 1;
+                }
+            };
+            layout_objs["some_string" + i] = layout_mock;
+        };
+
+        controller = ViewController({
+            body_element: {},
+            first_line: {},
+            layout_objs: layout_objs,
+            click_handler: {
+                render: function () {
+                    render_count = 1;
+                },
+                clean: function () {
+                    clean_count = 1;
+                },
+                click: function () {
+                    click_count = 1;
+                }
+            }
+        });
+
+        controller.render("some_string6");
+        expect(layout_objs["some_string1"].clean_count).toBe(1);
+        expect(layout_objs["some_string2"].clean_count).toBe(1);
+        expect(layout_objs["some_string3"].clean_count).toBe(1);
+        expect(layout_objs["some_string4"].clean_count).toBe(1);
+        expect(layout_objs["some_string5"].clean_count).toBe(1);
+        expect(layout_objs["some_string6"].clean_count).toBe(1);
+        expect(clean_count).toBe(1);
+        expect(click_count).toBe(0);
+        expect(render_count).toBe(0);
+    });
 });

@@ -27,6 +27,8 @@ var ViewController = function (params) {
         for (var i in private.layout_objs) {
             private.layout_objs[i].clean();
         };
+        if (private.click_handler && private.click_handler.clean)
+            private.click_handler.clean();
     };
 
     return public;
