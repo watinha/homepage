@@ -1,6 +1,6 @@
 describe("test standard navigation view", function () {
 
-    it("should be set as the page is loaded", function () {
+    it("scale and matrix should be set as the page is loaded", function () {
         var Browser = require("zombie"),
             browser = new Browser(),
             url = process.env["HOME_URL"],
