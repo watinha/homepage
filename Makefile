@@ -2,6 +2,7 @@
 export WHICH=/usr/bin/which
 export RM=/bin/rm
 export JASMINE_URL
+export HOME_URL=http://localhost/~willianmassamiwatanabe/homepage/
 export TMP_JASMINE_URL=/tmp/jasmine.tmp
 
 tests-unit:
