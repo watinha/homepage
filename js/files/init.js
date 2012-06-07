@@ -16,10 +16,18 @@
                     layout_objs: {
                         'standard': standard,
                         'diagonal': diagonal
+                    },
+                    click_handler: {
+                        layout_name: "diagonal",
+                        click: function () {}
                     }
                 });
             controller.init();
             controller.render('standard');
+
+            for (var i = 0; i < base_elements.length; i++) {
+                base_elements[i].addEventListener("click", controller.click, true);
+            };
         }
     }
 })();

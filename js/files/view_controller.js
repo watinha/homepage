@@ -3,7 +3,8 @@ var ViewController = function (params) {
         private = {
             body_element: params.body_element,
             first_line: params.first_line,
-            layout_objs: params.layout_objs
+            layout_objs: params.layout_objs,
+            click_handler: params.click_handler
         };
 
     public.init = function () {
@@ -16,6 +17,11 @@ var ViewController = function (params) {
             private.layout_objs[i].clean();
         };
         private.layout_objs[view_index].render();
+    };
+
+    public.click = function () {
+        public.render(private.click_handler.layout_name);
+        private.click_handler.click();
     };
 
     return public;

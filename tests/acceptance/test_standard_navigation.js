@@ -32,4 +32,32 @@ describe("test standard navigation view", function () {
             return waitForZombie;
         }, 3000);
     });
+
+    it("after click in a div the diagonal layout should be loaded", function () {
+        var Browser = require("zombie"),
+            browser = new Browser(),
+            url = process.env["HOME_URL"],
+            waitForZombie = false;
+
+        browser.visit(url, function () {
+            var body = browser.document.body,
+                main_elements = browser.document.querySelectorAll(".files > div:not(.header)"),
+                all_text_styles = "",
+                iterator,
+                ev = null;
+
+            expect(browser.success).toBe(true);
+
+            browser.clickLink(".profile > h3 > a", function () {
+                for (var i = 0; i < main_elements.length; i++) {
+                    expect(main_elements[i].className).toContain("diagonal");
+                };
+
+                waitForZombie = true;
+            });
+        });
+        waitsFor(function () {
+            return waitForZombie;
+        }, 3000);
+    });
 });
