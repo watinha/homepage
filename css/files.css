@@ -112,6 +112,8 @@
     float: right;
     position: relative;
     bottom: 100px;
+    width: 57%;
+    z-index: 1;
 
     /* transforms */
     -moz-transform: matrix(1, 0, 0, 1, 0, 0);
