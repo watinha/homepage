@@ -28,13 +28,28 @@
             for (var i = 0; i < base_elements.length; i++) {
                 base_elements[i].addEventListener("click", controller.click, true);
                 base_elements[i].addEventListener("keydown", function (ev) {
+                    console.log(ev.keyCode);
                     if (ev.keyCode == 13 || ev.keyCode == 32)
                         controller.click.apply(this, arguments);
                 }, true);
             };
             document.body.addEventListener("keydown", function (ev) {
-                if (ev.keyCode == 27)
-                    controller.render('standard');
+                var index;
+                switch (ev.keyCode) {
+                    case 27:
+                        controller.render('standard');
+                        break;
+                    case 40:
+                        index = -1;
+                        for (var i = 0; i < base_elements.length; i++) {
+                            if (base_elements[i] == document.activeElement) {
+                                index = i;
+                                break;
+                            }
+                        }
+                        base_elements[(index + 1) % base_elements.length].focus();
+                        break;
+                }
             }, true);
         }
     }
