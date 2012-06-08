@@ -2,9 +2,6 @@
 .body > div {
     opacity: 0;
 }
-.files {
-    min-width: 300px;
-}
 .files .hidden {
     height: 0;
     opacity: 0;
