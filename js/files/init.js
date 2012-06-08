@@ -18,6 +18,9 @@
                         'diagonal': diagonal
                     },
                     click_handler: diagonal
+                }),
+                keyboard_handler = KeyboardHandler({
+                    main_elements: base_elements
                 });
             controller.init();
             controller.render('standard');
@@ -35,14 +38,16 @@
                         controller.render('standard');
                         break;
                     case 40:
-                        index = -1;
-                        for (var i = 0; i < base_elements.length; i++) {
-                            if (base_elements[i] == document.activeElement) {
-                                index = i;
-                                break;
-                            }
-                        }
-                        base_elements[(index + 1) % base_elements.length].focus();
+                        keyboard_handler.move_down(document.activeElement);
+                        break;
+                    case 39:
+                        keyboard_handler.move_down(document.activeElement);
+                        break;
+                    case 38:
+                        keyboard_handler.move_up(document.activeElement);
+                        break;
+                    case 37:
+                        keyboard_handler.move_up(document.activeElement);
                         break;
                 }
             }, true);
