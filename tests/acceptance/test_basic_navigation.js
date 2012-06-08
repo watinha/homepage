@@ -8,7 +8,7 @@ describe("test standard navigation view", function () {
 
         browser.visit(url, function () {
             var body = browser.document.body,
-                main_elements = browser.document.querySelectorAll(".files > div:not(.header)"),
+                main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
                 all_text_styles = "",
                 iterator;
 
@@ -41,7 +41,7 @@ describe("test standard navigation view", function () {
 
         browser.visit(url, function () {
             var body = browser.document.body,
-                main_elements = browser.document.querySelectorAll(".files > div:not(.header)"),
+                main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
                 all_text_styles = "",
                 iterator,
                 ev = null;

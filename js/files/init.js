@@ -4,7 +4,7 @@
             var App = (function () {
                 var build_view_controller, setup_event_listeners, init, // methods
                     first_line = document.querySelector("body > div.header+hr"),
-                    base_elements = document.querySelectorAll("body > div:not(.header)"),
+                    base_elements = document.querySelectorAll("body > div > div:not(.header)"),
                     controller = null;
 
                 build_view_controller = function () {
