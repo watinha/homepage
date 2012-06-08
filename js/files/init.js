@@ -24,6 +24,10 @@
 
             for (var i = 0; i < base_elements.length; i++) {
                 base_elements[i].addEventListener("click", controller.click, true);
+                base_elements[i].addEventListener("keydown", function (ev) {
+                    if (ev.keyCode == 13 || ev.keyCode == 32)
+                        controller.click.apply(this, arguments);
+                }, true);
             };
         }
     }

@@ -66,4 +66,5 @@ describe("test standard navigation view", function () {
             return waitForZombie;
         }, 3000);
     });
+
 });
