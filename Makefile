@@ -11,6 +11,8 @@ tests-unit:
 tests-acceptance:
 	jasmine-node tests/acceptance --matchall
 
+tests-all: tests-unit tests-acceptance
+
 jslint:
 	@./bin/run_jslintr.sh
 
@@ -26,4 +28,4 @@ help:
 clean:
 	@$(RM) $(TMP_JASMINE_URL)
 
-.PHONY: tests-unit jslint help clean tests-acceptance
+.PHONY: tests-unit jslint help clean tests-acceptance tests-all
