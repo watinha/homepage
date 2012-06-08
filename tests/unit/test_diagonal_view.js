@@ -25,7 +25,7 @@ describe('DiagonalView class', function () {
         var view,
             stub = "<div class=\"some_div diagonal\" />" +
                    "<div class=\"diagonal some_div\" />" +
-                   "<div class=\"some_div diagonal another_class\" />" +
+                   "<div class=\"some_div diagonal another_class open\" style=\"bottom:25px\" />" +
                    "<div class=\"some_div\" />";
         fixture.innerHTML = stub;
 
@@ -37,6 +37,7 @@ describe('DiagonalView class', function () {
         expect(fixture.querySelectorAll(".some_div")[0].className).toBe('some_div');
         expect(fixture.querySelectorAll(".some_div")[1].className).toBe('some_div');
         expect(fixture.querySelectorAll(".some_div")[2].className).toBe('some_div another_class');
+        expect(fixture.querySelectorAll(".some_div")[2].style.bottom).toBe('');
         expect(fixture.querySelectorAll(".some_div")[3].className).toBe('some_div');
         fixture.innerHTML = "";
     });

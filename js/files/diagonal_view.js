@@ -13,6 +13,8 @@ var DiagonalView = function (params) {
     public.clean = function () {
         for (var i = 0; i < private.main_elements.length; i++) {
             Helpers.removeClass(private.main_elements[i], 'diagonal');
+            Helpers.removeClass(private.main_elements[i], "open");
+            private.main_elements[i].style.bottom = "";
         };
     };
 
