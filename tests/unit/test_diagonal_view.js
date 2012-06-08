@@ -102,4 +102,33 @@ describe('DiagonalView class', function () {
         expect(previous_element.className).not.toContain("open");
         fixture.innerHTML = "";
     });
+
+    it("click should adjust relative position accordingly to the element that has been clicked", function () {
+         var view, target,
+            stub = "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>" +
+                   "<div class=\"some_div diagonal\"></div>";
+        fixture.innerHTML = stub;
+        target = fixture.querySelectorAll(".some_div");
+
+        view = DiagonalView({
+            main_elements: target
+        });
+        for (var i = 0; i < target.length; i++) {
+            view.click({target: target[i]});
+            expect(target[i].style.bottom).toBe((10 + 50*i) + "px");
+            for (var j = 0; j < i; j++) {
+                expect(target[j].style.bottom).toBe("");
+            };
+        };
+
+        fixture.innerHTML = "";
+   });
 });

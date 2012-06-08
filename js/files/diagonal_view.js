@@ -22,6 +22,9 @@ var DiagonalView = function (params) {
             main_element_target = private.get_main_parent(target);
         for (var i = 0; i < private.main_elements.length; i++) {
             Helpers.removeClass(private.main_elements[i], "open");
+            private.main_elements[i].style.bottom = "";
+            if (private.main_elements[i] == main_element_target)
+                main_element_target.style.bottom = (10 + 50*i) + "px";
         };
 
         Helpers.addClass(main_element_target, "open");
