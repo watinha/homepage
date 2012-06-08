@@ -51,7 +51,9 @@
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.files > div:hover:not(.header) {
+.files > div:hover:not(.header),
+.files > div:focus:not(.header),
+.files > div:active:not(.header) {
     /* transforms */
     -moz-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
     -webkit-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
@@ -94,7 +96,9 @@
     -ms-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
     transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
 }
-.files > .diagonal:hover:not(.header) {
+.files > .diagonal:hover:not(.header),
+.files > .diagonal:active:not(.header),
+.files > .diagonal:focus:not(.header) {
     /* transforms */
     -moz-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
     -webkit-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
@@ -120,7 +124,9 @@
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.files > .open:hover:not(.header) {
+.files > .open:hover:not(.header),
+.files > .open:active:not(.header),
+.files > .open:focus:not(.header) {
     /* transforms */
     -moz-transform: matrix(1, 0, 0, 1, 0, 0) !important;
     -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
