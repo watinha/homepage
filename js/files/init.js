@@ -26,12 +26,7 @@
               * Setting up events that the application will respond to
               */
             for (var i = 0; i < base_elements.length; i++) {
-                base_elements[i].addEventListener("click", controller.click, true);
-                base_elements[i].addEventListener("keydown", function (ev) {
-                    console.log(ev.keyCode);
-                    if (ev.keyCode == 13 || ev.keyCode == 32)
-                        controller.click.apply(this, arguments);
-                }, true);
+                Helpers.activateListener(base_elements[i], controller.click);
             };
             document.body.addEventListener("keydown", function (ev) {
                 var index;

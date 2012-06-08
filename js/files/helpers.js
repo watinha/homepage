@@ -24,5 +24,13 @@ var Helpers = (function () {
         element.className = classes.join(" ").replace(/^\s+|\s+$/g, "");
     };
 
+    public.activateListener = function (element, callback) {
+        element.addEventListener("click", callback, true);
+        element.addEventListener("keydown", function (ev) {
+            if (ev.keyCode == 13 || ev.keyCode == 32)
+                callback.apply(this, arguments);
+        }, true);
+    };
+
     return public;
 })();

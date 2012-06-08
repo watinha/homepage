@@ -62,4 +62,5 @@ describe('Helpers static class suite', function () {
         expect(divs[3].className).toBe("no_class");
         fixture.innerHTML = "";
     });
+
 });
