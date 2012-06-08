@@ -12,11 +12,20 @@
     h1 {
         font-size: 26px;
     }
+    .files div p,
+    .files div ul {
+        font-size: 20px;
+        line-height: 150%;
+    }
+    .files div ul {
+        padding: 3px;
+    }
     .files {
         min-width: 300px;
         margin: auto;
     }
-    .files > div:not(.header) {
+    .files > div:not(.header),
+    .files > .diagonal:not(.header) {
         position: relative;
         width: 100% !important;
         height: 100px;
@@ -30,9 +39,18 @@
         -ms-transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
         transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
     }
-    .files .open {
+    .files > .open:not(.header) {
+        /* transforms */
+        -moz-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -o-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        transform: matrix(1, 0, 0, 1, 0, 0) !important;
         float: none;
-        margin: 50px 0;
+        margin: 20px 0;
+        cursor: text;
+        z-index: inherit;
+        height: 100%;
     }
     .files > .header {
         top: 0px;
