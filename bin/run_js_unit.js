@@ -13,6 +13,7 @@ browser.visit(jasmine_url, function () {
         duration = browser.querySelector("#HTMLReporter > .banner > .duration"),
         tests_summary = browser.querySelectorAll("#HTMLReporter > ul.symbolSummary > li"),
         complete_status = browser.querySelector("#HTMLReporter > .alert > .resultsMenu"),
+        passing_alert = browser.querySelector("#HTMLReporter > .alert > .passingAlert"),
         details = browser.querySelectorAll("#details > .specDetail"),
         i = 0,
         stack;
@@ -49,8 +50,10 @@ browser.visit(jasmine_url, function () {
                 console.log();
                 if (complete_status)
                     console.log(complete_status.textContent);
-                else
+                else {
+                    console.log(passing_alert.textContent);
                     console.log("OK. All tests passed");
+                }
                 console.log("-------------------------------");
                 console.log();
 
