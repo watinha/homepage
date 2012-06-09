@@ -24,7 +24,9 @@ var KeyboardHandler = function (params) {
 
     private.find_active = function (active_element) {
         for (var i = 0; i < private.main_elements.length; i++) {
-            if (private.main_elements[i] == active_element)
+            if (active_element &&
+                (private.main_elements[i] == active_element ||
+                private.main_elements[i] == active_element.parentNode))
                 return i;
         };
         return null;
