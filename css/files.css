@@ -38,11 +38,11 @@
     border-radius: 15px;
 
     /* transitions */
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     /* transforms */
     -moz-transform: matrix(1, 0, 0, 1, 0, 0);
@@ -83,11 +83,11 @@
     border-radius: 15px;
 
     /* transitions */
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     /* transforms */
     -moz-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
@@ -213,4 +213,15 @@
 
 .files .header+.headerLongerLine {
     width: 90%;
+}
+
+.files > .wrapper > .expertise+.open,
+.files > .wrapper > .software+.open,
+.files > .wrapper > .education+.open {
+    /* transitions */
+    -webkit-transition: opacity 0.3s linear !important;
+    -moz-transition: opacity 0.3s linear !important;
+    -ms-transition: opacity 0.3s linear !important;
+    -o-transition: opacity 0.3s linear !important;
+    transition: opacity 0.3s linear !important;
 }
