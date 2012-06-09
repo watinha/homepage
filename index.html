@@ -111,7 +111,7 @@
         <hr />
         <div class="profile">
             <h3 id="profile_header"><a name="profile">Professional profile</a></h3>
-            <ul>
+            <ul aria-labelledby="profile_header">
                 <li>Information Technology professional experienced in the use of different technologies, with the objective of allowing rich interactions for users in the Web.</li>
                 <li>Specialist in the development of web services patterns of communication, that allow an optimized communication protocol between applications and provide resources to the implementations of complex projects.</li>
                 <li>Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues.</li>
@@ -122,8 +122,8 @@
         <div class="expertise">
             <h3 id="expertise_header"><a name="expertise">Areas of expertise</a></h3>
             <div class="columns">
-                <h4>Web technologies</h4>
-                <ul>
+                <h4 id="technologies_header">Web technologies</h4>
+                <ul aria-labelledby="technologies_header">
                     <li>Web standards (HTML, CSS, XML and others )</li>
                     <li>XHTML+Voice (XHTML, VoiceXML and X+V)</li>
                     <li>Web services (SOAP, WSDL and UDDI)</li>
@@ -137,8 +137,8 @@
                 </ul>
             </div>
             <div class="columns">
-                <h4>Programming skills</h4>
-                <ul>
+                <h4 id="programming_header">Programming skills</h4>
+                <ul aria-labelledby="programming_header">
                     <li>JavaScript</li>
                     <li>Ajax Toolkits (JQuery, Prototype, Scriptaculous, Dojo, YUI)</li>
                     <li>PHP</li>
@@ -155,7 +155,7 @@
         </div>
         <div class="experience">
             <h3 id="experience_header"><a name="experience">Professional experience</a></h3>
-            <ul>
+            <ul aria-labelledby="experience_header">
                 <li><span class="bold">Software enginner at <a href="http://www.yahoo.com">Yahoo!</a>. Brazil 2011.</span>: working specifically on two applications: <a href="http://meme.yahoo.com">Meme</a> and <a href="http://profile.yahoo.com">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems.</li>
           <li><span class="bold">Ph.D. candidate CAPES Scholarship at <a href="http://www.icmc.usp.br/">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: currently is part of the of the Ph.D. program of ICMC-USP, with the project entitled "Development Strategies for Improving Usability in RIA with MDD". This research is financed by CAPES and works on the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project is being developed under the orientation of <a href="http://lattes.cnpq.br/7082447037374118">Prof. Dra. Renata Pontin de Mattos Fortes</a>.</li>
           <li><span class="bold">Master of Science FAPESP Scholarship at <a href="http://www.icmc.usp.br/">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2008-2010</span>: inserted at project <a href="http://caravelas.icmc.usp.br/wiki">PorSimples</a> which was financed by <a href="http://www.fapesp.br/">FAPESP</a> and <a href="http://research.microsoft.com/en-us/">Microsoft Research</a>, was responsible by the integration of text processing operations and interface design of the <a href="http://caravelas.icmc.usp.br:3003">Facilita</a>. The Facilita is a web application that works as an assistive technology facilitating portuguese reading activities on web pages through the use of automatic text summarization and simplification techniques. Simple interactions, usability and accessibility issues are essential requirements to the Facilita implementation and are the main themes of the research. JavaScript and AJAX characteristics provide some of the key features of design's simplicity and usability in Facilita. The project was developed under orientation of <a href="http://lattes.cnpq.br/7082447037374118">Prof. Dra. Renata Pontin de Mattos Fortes</a>.</li>
@@ -175,7 +175,7 @@
         </div>
         <div class="education">
             <h3 id="education_header"><a name="education">Education</a></h3>
-        <ul>
+        <ul aria-labelledby="education_header">
           <li>Ph.D. candidate in Computer Science, S&atilde;o Paulo University (<a href="http://www.icmc.usp.br">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Expected to 2013.</li>
                 <li>Master of Science in Computer Science, S&atilde;o Paulo University (<a href="http://www.icmc.usp.br">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Concluded in 2010.</li>
                 <li>Bachelor of Science in Computer Science, Londrina State University (<a href="http://www.uel.br">UEL</a>). Londrina - PR, Brazil, 2008.</li>
@@ -186,7 +186,7 @@
         </div>
         <div class="software">
             <h3 id="software_header"><a name="software">Scientific Software</a></h3>
-            <ul>
+            <ul aria-labelledby="software_header">
                 <li><span class="bold"><a href="https://github.com/watinha/Pyccuracy-Accessibility-Actions">Pyccuracy Accessibility Actions</a></span>: The main objective of this project is to implement accessibility actions for the <a href="http://pyccuracy.org">pyccuracy</a>, web acceptance testing application. <a href="http://pyccuracy.org">Pyccuracy</a> makes use of natural language expressions to generate user stories and acceptance scenarios that are automatically run in the browser, evaluating the behaviour of all layers of a web application (server and client side-scripting). However <a href="http://pyccuracy.org">pyccuracy</a> still have not implemented actions that can be classified as accessible for disabled users like "tabbing navigation", focus possibility for interactive elements, landmarks and header navigation, among other actions. The goal of implementing accessibility actions for pyccuracy is to be able to execute acceptance tests of web applications functionality, considering disabled users task completion with assistive technologies. These users do no rely on the same visual and interactive mechanisms such as mouse and link colors, for example. So pyccuracy actions must consider these characteristics to guarantee that the functionality of the web application is available for all users. From the development perspective, accessibility actions drive automatic accessibility evaluation tools into a Continuous Integration environment. Making it possible to include accessibility non-functional requirements into the development life-cycle of projects and assisting developers while coding solutions for them.</li>
                 <li><span class="bold"><a href="http://caravelas.icmc.usp.br:3003">Facilita</a></span>: a web application that aims to automatically provide users with accessible content, through the use of text processing techniques (textual summarization and simplification). This application is being developed among with the PorSimples project. Simplicity of interaction and usability are some of the key features of this application. This application makes use of lots of Ajax Design patterns (like Cross-Domain Proxy, Fat Client, Multi-Stage Download, On-Demand Javascript) in order to provide the user with the best possible interaction. Facilita also makes use of distributed programming in order to deliver its functionality. The distributed programming is made with the use of multiple services which are integrated through RESTFul Service on the server side of the application. The installation and how to use tutorials are available on <a href="http://caravelas.icmc.usp.br:3003">Facilita's page</a>.</li>
                 <li><span class="bold"><a href="http://www.watinha.com/educational-facilita">Educational Facilita</a></span>: another web application that aims to automatically provide users with accessible textual content, through the use of Named Entities Recognition (automatically identifying proper nouns and others entities in the text) and Lexical Elaboration (providing users with simplier versions of the same word) techniques. The application identifies named entities in the text and then it provides the user with additional information about those entities. The additional informations are extracted from <a href="http://www.wikipedia.org">Wikipedia</a>. The application also presents synonimous for words that are evaluated as complex or difficult to be understood. Educational Facilita was implemented as a <a href="https://jetpack.mozillalabs.com/">Jetpack extension</a>, and by doing so works as a browser plugin feature.</li>
@@ -199,7 +199,7 @@
         </div>
         <div class="publications">
             <h3 id="publications_header"><a name="publications">Publications</a></h3>
-            <ul>
+            <ul aria-labelledby="publications_header">
                 <li>Full paper: <span class="bold"><a href="http://dl.acm.org/citation.cfm?id=2207016.2207022&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356">Using Acceptance Tests to Validate Accessibility Requirements in RIA</a></span>. In W4A '12 Proceedings of the International Cross-Disciplinary Conference on Web Accessibility. New York, NY, US : ACM - Association for Computing Machinery, 2012. v. 1. p. 1-10. With Prof. Dra. Renata Pontin de Mattos Fortes and Ana Lu&iacute;za Dias.</li>
                 <li>Full paper: <span class="bold"><a href="http://dl.acm.org/citation.cfm?id=2038476.2038504&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356">Usability evaluation of horizontal navigation bar with drop-down menus by middle aged adults</a></span>. In Proceedings of the 29th ACM international conference on Design of communication (SIGDOC '11). New York, NY, US : ACM - Association for Computing Machinery, 2011. v. 1. p. 145-150. With Eduardo Pezutti Beletato dos Santos, Prof. Silvana Maria Affonso de Lara, M&aacute;rio Castro and Prof. Dra. Renata Pontin de Mattos Fortes.</li>
                 <li>Full paper: <span class="bold"><a href="http://www.springerlink.com/content/th6q7122g68562w3/?MUD=MP">The Link-Offset-Scale Mechanism for Improving the Usability of Touch Screen Displays on the Web</a></span>. Lecture Notes in Computer Science, v. 6948, p. 356-372, 2011. With Prof. Dra. Renata Pontin de Mattos Fortes and Maria da Gra&ccedil;a Campos Pimentel.</li>
@@ -222,7 +222,7 @@
         </div>
         <div class="presentations">
             <h3 id="presentations_header"><a name="presentations">Presentations</a></h3>
-            <ul>
+            <ul aria-labelledby="presentations_header">
                 <li>Oral presentation: <span class="bold">Adapting web content for low literacy readers by using lexical elaboration and named entities labeling</span>. In W4A 2010 - International Cross-Disciplinary Conference on Web Accessibility. ACM - Association of Computing Machinery, 2010, Raleigh - NC - US. This event was co-located with WWW 2010 - 19th International World Wide Web Conference.</li>
           <li>Oral presentation: <span class="bold">WCAG Conformance approach based on Model-Driven Development and WebML</span>. In SIGDOC 2010 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2010, S&atilde;o Carlos - SP - Brazil.</li>
           <li>Oral presentation: <span class="bold">Introduction to HTML5</span>. In <a href="http://www.enacomp.com.br/programacao">Enacomp 2010 - VIII Encontro Anual de Computação</a>, 2010, Catal&atilde;o, Goi&aacute;, Brazil.</li>
@@ -240,7 +240,7 @@
         </div>
       <div class="languages">
             <h3 id="languages_header"><a name="languages">Languages Speak</a></h3>
-            <ul>
+            <ul aria-labelledby="languages_header">
                 <li>English (<span class="bold">FCE - First Certificate in English, University of Cambridge, 2002)</span></li>
                 <li>Portuguese</li>
             </ul>
@@ -248,7 +248,7 @@
         </div>
         <div class="references">
             <h3 id="references_header"><a name="references">References</a></h3>
-            <ul>
+            <ul aria-labelledby="references_header">
                 <li>Prof. Dra. Jandira Palma Guenka. PD&I Manager of Guenka Software Development. E-mail: <a href="mailto:jgpalma @ uel.br">jgpalma @ uel.br</a>.</li>
                 <li>Prof. Dra. Renata Pontin de Mattos Fortes. Associate Professor of Computer Science at S&atilde;o Paulo University. E-mail: <a href="mailto:renata @ icmc.usp.br">renata @ icmc.usp.br</a>.</li>
             </ul>
