@@ -24,6 +24,30 @@ describe('KeyboardHandler class suite', function () {
         };
     });
 
+    it('navigate should go to the first focusable element', function () {
+        var elements = [], i,
+            handler, active_element,
+            expected = [1, 0, 0, 0, 0];
+
+        for (i = 0; i < 5; i++) {
+            elements[i] = {
+                focus_count: 0,
+                focus: function () {
+                    this.focus_count = 1;
+                }
+            };
+        };
+        active_element = null;
+        handler = KeyboardHandler({
+            main_elements: elements
+        });
+        handler.move_down(active_element);
+
+        for (i = 0; i < 5; i++) {
+            expect(elements[i].focus_count).toBe(expected[i]);
+        };
+    });
+
     it('navigate should go to next focusable element skipping opened element', function () {
         var elements = [], i,
             handler, active_element,

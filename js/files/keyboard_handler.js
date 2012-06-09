@@ -4,7 +4,8 @@ var KeyboardHandler = function (params) {
 
     public.move_down = function (active_element) {
         var current_index = private.find_active(active_element),
-            next_index = (current_index + 1) % private.main_elements.length;
+            next_index = current_index == null ?
+                0 : (current_index + 1) % private.main_elements.length;
         if (private.main_elements[next_index].className &&
             Helpers.hasClass(private.main_elements[next_index], "open"))
             next_index = (current_index + 2) % private.main_elements.length;
@@ -26,7 +27,7 @@ var KeyboardHandler = function (params) {
             if (private.main_elements[i] == active_element)
                 return i;
         };
-        return false;
+        return null;
     };
 
     return public;
