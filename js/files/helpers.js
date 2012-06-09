@@ -25,6 +25,7 @@ var Helpers = (function () {
     };
 
     public.activateListener = function (element, callback) {
+        element.tabIndex = 0;
         element.addEventListener("click", callback, true);
         element.addEventListener("keydown", function (ev) {
             if (ev.keyCode == 13 || ev.keyCode == 32)

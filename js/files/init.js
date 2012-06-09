@@ -2,9 +2,12 @@
     window.onload = function () {
         if (document.querySelectorAll) {
             var App = (function () {
-                var build_view_controller, setup_event_listeners, init, // methods
+                var build_view_controller, setup_event_listeners,
+                    setup_aria, // private methods
+                    init, // public methods
                     first_line = document.querySelector("body > div.header+hr"),
                     base_elements = document.querySelectorAll("body > div > div:not(.header)"),
+                    wrapper = document.querySelector("body > .wrapper"),
                     controller = null;
 
                 build_view_controller = function () {
@@ -61,9 +64,38 @@
                     }, true);
                 };
 
+                setup_aria = function () {
+                    var i;
+                    wrapper.setAttribute("role", "list");
+                    for (i = 0; i < base_elements.length; i++) {
+                        (function () {
+                            var className = base_elements[i].className,
+                                list_item = base_elements[i],
+                                list_header = list_item.querySelector("#" + className + "_header");
+                            list_item.setAttribute("aria-labelledby", className + "_header");
+                            list_item.setAttribute("role", "listitem");
+                            list_item.setAttribute("aria-controls", className + "_panel");
+                            list_item.addEventListener("focus", function () {
+                                list_header.tabIndex = -1;
+                            });
+                            list_item.addEventListener("click", function () {
+                                list_header.tabIndex = 0;
+                                list_header.focus();
+                            });
+                            list_item.addEventListener("keydown", function (ev) {
+                                if (ev.keyCode != 13 && ev.keyCode != 32)
+                                    return ;
+                                list_header.tabIndex = 0;
+                                list_header.focus();
+                            });
+                        })();
+                    };
+                };
+
                 init = function () {
                     build_view_controller();
                     setup_event_listeners();
+                    setup_aria();
                 };
 
                 return {
