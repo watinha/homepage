@@ -2,10 +2,8 @@
 .body > div {
     opacity: 0;
 }
-.files .hidden {
-    height: 0;
-    opacity: 0;
-    margin-bottom: 0px;
+.wrapper_hidden {
+    display: none;
 }
 /* hidding elements to clean interface*/
 .files .wrapper div p,
@@ -118,21 +116,21 @@
     z-index: 1;
 
     /* transforms */
-    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-    -o-transform: matrix(1, 0, 0, 1, 0, 0);
-    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
-    transform: matrix(1, 0, 0, 1, 0, 0);
+    -moz-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
 }
 .files > .wrapper > .open:hover:not(.header),
 .files > .wrapper > .open:active:not(.header),
 .files > .wrapper > .open:focus:not(.header) {
     /* transforms */
-    -moz-transform: matrix(1, 0, 0, 1, 0, 0) !important;
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
-    -o-transform: matrix(1, 0, 0, 1, 0, 0) !important;
-    -ms-transform: matrix(1, 0, 0, 1, 0, 0) !important;
-    transform: matrix(1, 0, 0, 1, 0, 0) !important;
+    -moz-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -o-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -ms-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
 }
 .files .wrapper .open p,
 .files .wrapper .open ul,
@@ -140,6 +138,19 @@
     display: block;
     height: 100%;
     opacity: 1;
+}
+.files > .wrapper > .hidden {
+    height: 0 !important;
+    opacity: 0;
+    margin: 30px;
+    z-index: 1;
+
+    /* transforms */
+    -moz-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -o-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -ms-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
 }
 .files .columns {
     width: 100%;
@@ -213,15 +224,4 @@
 
 .files .header+.headerLongerLine {
     width: 90%;
-}
-
-.files > .wrapper > .expertise+.open,
-.files > .wrapper > .software+.open,
-.files > .wrapper > .education+.open {
-    /* transitions */
-    -webkit-transition: opacity 0.3s linear !important;
-    -moz-transition: opacity 0.3s linear !important;
-    -ms-transition: opacity 0.3s linear !important;
-    -o-transition: opacity 0.3s linear !important;
-    transition: opacity 0.3s linear !important;
 }

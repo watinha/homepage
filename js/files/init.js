@@ -93,9 +93,9 @@
                 };
 
                 init = function () {
+                    setup_aria();
                     build_view_controller();
                     setup_event_listeners();
-                    setup_aria();
                 };
 
                 return {
