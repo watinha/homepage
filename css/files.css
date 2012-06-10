@@ -39,7 +39,7 @@
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    -o-transition: none;
     transition: all 0.3s ease;
 
     /* transforms */
@@ -84,7 +84,7 @@
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    -o-transition: none;
     transition: all 0.3s ease;
 
     /* transforms */
@@ -97,6 +97,9 @@
 .files > .wrapper > .diagonal:hover:not(.header),
 .files > .wrapper > .diagonal:active:not(.header),
 .files > .wrapper > .diagonal:focus:not(.header) {
+    /* transitions */
+    -o-transition: none;
+
     /* transforms */
     -moz-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
     -webkit-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
