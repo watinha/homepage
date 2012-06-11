@@ -41,4 +41,4 @@ clean:
 	-$(RM) package/index.html
 	-$(RM) package/favicon.ico
 
-.PHONY: tests-unit jslint help clean tests-acceptance tests-all
+.PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package
