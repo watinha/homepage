@@ -16,7 +16,7 @@ describe('KeyboardHandler class suite', function () {
         active_element = elements[2];
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_down(active_element);
 
         for (i = 0; i < 5; i++) {
@@ -42,7 +42,7 @@ describe('KeyboardHandler class suite', function () {
         };
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_down(active_element);
 
         for (i = 0; i < 5; i++) {
@@ -66,7 +66,7 @@ describe('KeyboardHandler class suite', function () {
         active_element = null;
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_down(active_element);
 
         for (i = 0; i < 5; i++) {
@@ -91,7 +91,7 @@ describe('KeyboardHandler class suite', function () {
         elements[3].className = "some classes open"; // skip open class it must (Yoda)
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_down(active_element);
 
         for (i = 0; i < 5; i++) {
@@ -115,7 +115,7 @@ describe('KeyboardHandler class suite', function () {
         active_element = elements[2];
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_up(active_element);
 
         for (i = 0; i < 5; i++) {
@@ -140,7 +140,7 @@ describe('KeyboardHandler class suite', function () {
         elements[3].className = "some classes open"; // skip open class it must (Yoda)
         handler = KeyboardHandler({
             main_elements: elements
-        });
+        }, Helpers);
         handler.move_up(active_element);
 
         for (i = 0; i < 5; i++) {

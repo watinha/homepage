@@ -20,7 +20,7 @@ describe('StandardView style class', function() {
         standard = StandardView({
             base_elements: fixture.querySelectorAll(".stub"),
             first_line: hr_stub
-        });
+        }, Modernizr);
         standard.render();
 
         stubElements = fixture.querySelectorAll(".stub");
@@ -65,7 +65,7 @@ describe('StandardView style class', function() {
         standard = StandardView({
             base_elements: fixture.querySelectorAll(".stub"),
             first_line: hr_stub
-        });
+        }, Modernizr);
         standard.render();
         standard.clean();
 

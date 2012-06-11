@@ -11,7 +11,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: fixture.querySelectorAll(".some_div")
-        });
+        }, Helpers, window);
         view.render();
 
         expect('some_div diagonal').toBe(fixture.querySelectorAll(".some_div")[0].className);
@@ -31,7 +31,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: fixture.querySelectorAll(".some_div")
-        });
+        }, Helpers, window);
         view.clean();
 
         expect(fixture.querySelectorAll(".some_div")[0].className).toBe('some_div');
@@ -52,7 +52,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: fixture.querySelectorAll(".some_div")
-        });
+        }, Helpers, window);
         clicked_element = fixture.querySelector("#clicked_element");
         view.click({
             target: fixture.querySelector("#clicked_element")
@@ -72,7 +72,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: fixture.querySelectorAll(".some_div")
-        });
+        }, Helpers, window);
         clicked_element = fixture.querySelector("#clicked_element");
         view.click({
             target: fixture.querySelector("#clicked_element > span > a")
@@ -92,7 +92,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: fixture.querySelectorAll(".some_div")
-        });
+        }, Helpers, window);
         previous_element = fixture.querySelector("#previous_element");
         clicked_element = fixture.querySelector("#clicked_element");
         view.click({
@@ -121,7 +121,7 @@ describe('DiagonalView class', function () {
 
         view = DiagonalView({
             main_elements: target
-        });
+        }, Helpers, window);
         for (var i = 0; i < target.length; i++) {
             view.click({target: target[i]});
             expect(target[i].style.bottom).toBe((10 + 50*i) + "px");

@@ -9,7 +9,7 @@ describe('ViewController class', function() {
         controller = ViewController({
             body_element: fixture,
             first_line: some_hr
-        });
+        }, Helpers, window);
         controller.init();
 
         expect(fixture.className.split(" ").indexOf("files")).not.toBeLessThan(0);
@@ -29,7 +29,7 @@ describe('ViewController class', function() {
         controller = ViewController({
             body_element: fixture,
             first_line: some_hr
-        });
+        }, Helpers, window);
         controller.init();
 
         expect(fixture.className).toBe("oi supimpa files");
@@ -59,7 +59,7 @@ describe('ViewController class', function() {
             body_element: {},
             first_line: {},
             layout_objs: layout_objs
-        });
+        }, Helpers, window);
 
         controller.render(6);
         expect(layout_objs[1].clean_count).toBe(1);
@@ -90,7 +90,7 @@ describe('ViewController class', function() {
             body_element: {},
             first_line: {},
             layout_objs: layout_objs
-        });
+        }, Helpers, window);
 
         controller.render("some_string6");
         expect(layout_objs["some_string1"].clean_count).toBe(1);
@@ -128,7 +128,7 @@ describe('ViewController class', function() {
                     click_count = 1;
                 }
             }
-        });
+        }, Helpers, window);
 
         controller.click();
         expect(layout_objs["some_string1"].clean_count).toBe(1);
@@ -171,7 +171,7 @@ describe('ViewController class', function() {
                     click_count = 1;
                 }
             }
-        });
+        }, Helpers, window);
 
         controller.render("some_string6");
         expect(layout_objs["some_string1"].clean_count).toBe(1);
@@ -214,7 +214,7 @@ describe('ViewController class', function() {
                     mock_args = ev;
                 }
             }
-        });
+        }, Helpers, window);
 
         controller.click(event_mock);
         expect(mock_args.type).toBe("something");
