@@ -16,18 +16,29 @@ tests-all: tests-unit tests-acceptance jslint
 jslint:
 	@./bin/run_jslintr.sh
 
+build-package:
+	./bin/build.sh
+
+tests-acceptance-package:
+	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
+
 help:
 	@echo "****************************************************"
 	@echo "***** \033[1;34mHomePage help\033[0;0m                           *****"
 	@echo "****************************************************"
-	@echo "    \033[32mtests-unit:\033[0m unit test for the JS code (JASMINE_URL optional parameter)"
+	@echo "    \033[32mtests-unit:\033[0m       unit test for the JS code (JASMINE_URL optional parameter)"
 	@echo "    \033[32mtests-acceptance:\033[0m acceptance test (HOME_URL optional parameter)"
-	@echo "    \033[32mtests-all:\033[0m run all tests-unit, tests-acceptance and jslint"
-	@echo "    \033[32mjslint:\033[0m     run js lint in the JS and test code"
-	@echo "    \033[32mclean:\033[0m      clean temporary files"
+	@echo "    \033[32mtests-all:\033[0m        run all tests-unit, tests-acceptance and jslint"
+	@echo "    \033[32mjslint:\033[0m           run js lint in the JS and test code"
+	@echo "    \033[32mbuild-package:\033[0m    build \"package\" with compressed css and js files"
+	@echo "    \033[32mclean:\033[0m            clean temporary files"
 	@echo "\n"
 
 clean:
-	@$(RM) $(TMP_JASMINE_URL)
+	-$(RM) $(TMP_JASMINE_URL)
+	-$(RM) -r package/js/*
+	-$(RM) package/css/*
+	-$(RM) package/index.html
+	-$(RM) package/favicon.ico
 
 .PHONY: tests-unit jslint help clean tests-acceptance tests-all
