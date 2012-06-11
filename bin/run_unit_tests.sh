@@ -8,7 +8,7 @@ fi
 if [ -z $JASMINE_URL ]; then
     JASMINE_URL=`cat $TMP_JASMINE_URL`
     if [ -z $JASMINE_URL ]; then
-        JASMINE_URL="http://localhost/~willianmassamiwatanabe/homepage/tests/unit/jasmine.html"
+        JASMINE_URL="$HOME_URL/tests/unit/jasmine.html"
         echo "*** server url for jasmine tests required (JASMINE_URL)"
         echo " - using default jasmine url"
     fi
