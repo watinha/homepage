@@ -6,3 +6,4 @@ bin/deploy.sh
 package/*
 package/css
 package/js
+homepage.tar
