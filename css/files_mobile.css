@@ -26,6 +26,12 @@
     }
     .files > .wrapper > div:not(.header),
     .files > .wrapper > .diagonal:not(.header) {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+
         position: relative;
         width: 100% !important;
         height: 100px;
