@@ -19,6 +19,9 @@ jslint:
 build-package:
 	./bin/build.sh
 
+deploy:
+	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
+
 tests-acceptance-package:
 	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
 
@@ -40,5 +43,6 @@ clean:
 	-$(RM) package/css/*
 	-$(RM) package/index.html
 	-$(RM) package/favicon.ico
+	-$(RM) homepage.tar
 
-.PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package
+.PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package deploy
