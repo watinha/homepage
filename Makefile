@@ -43,6 +43,6 @@ clean:
 	-$(RM) package/css/*
 	-$(RM) package/index.html
 	-$(RM) package/favicon.ico
-	-$(RM) homepage.tar
+	-$(RM) package/homepage.tar
 
 .PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package deploy
