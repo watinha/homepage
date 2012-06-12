@@ -41,6 +41,7 @@
     -ms-transition: all 0.3s ease;
     -o-transition: none;
     transition: all 0.3s ease;
+    -webkit-backface-visibility: hidden;
 
     /* transforms */
     -moz-transform: matrix(1, 0, 0, 1, 0, 0);
