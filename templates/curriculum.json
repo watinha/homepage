@@ -62,6 +62,34 @@
                 { "description": "C ANSI and C++" }
             ]
         }
-
-    }
+    },
+    "additional_information": [
+        {
+            "headline": "Professional experience",
+            "class": "experience",
+            "anchor": "experience",
+            "list": [
+                { "description": "<span class=\"bold\">Software enginner at <a href=\"http://www.yahoo.com\">Yahoo!</a>. Brazil 2011.</span>: working specifically on two applications: <a href=\"http://meme.yahoo.com\">Meme</a> and <a href=\"http://profile.yahoo.com\">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems." },
+                { "description": "<span class=\"bold\">Ph.D. candidate CAPES Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: currently is part of the of the Ph.D. program of ICMC-USP, with the project entitled \"Development Strategies for Improving Usability in RIA with MDD\". This research is financed by CAPES and works on the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project is being developed under the orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
+                { "description": "<span class=\"bold\">Master of Science FAPESP Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2008-2010</span>: inserted at project <a href=\"http://caravelas.icmc.usp.br/wiki\">PorSimples</a> which was financed by <a href=\"http://www.fapesp.br/\">FAPESP</a> and <a href=\"http://research.microsoft.com/en-us/\">Microsoft Research</a>, was responsible by the integration of text processing operations and interface design of the <a href=\"http://caravelas.icmc.usp.br:3003\">Facilita</a>. The Facilita is a web application that works as an assistive technology facilitating portuguese reading activities on web pages through the use of automatic text summarization and simplification techniques. Simple interactions, usability and accessibility issues are essential requirements to the Facilita implementation and are the main themes of the research. JavaScript and AJAX characteristics provide some of the key features of design's simplicity and usability in Facilita. The project was developed under orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
+                { "description": "<span class=\"bold\">Qualipso Scholarship</span> at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010-2010: the <a href=\"http://www.qualipso.org/\">Qualipso - Quality Platform for Open Source Software</a> project aims at elaboration a software maturity framework for Open Source Software (OMM - OpenSource Maturity Model). The Qualipso project has the objective of elaborating technologies, processes and policies that facilitate the development of Open Source quality assured software. The activities realized in the project involved the integration of different applications with the use of webservices technologies (RESTFul)." },
+                { "description": "<span class=\"bold\">IT Analyst at <a href=\"http://www.guenka.com.br/\">Guenka Software Development</a>. Brazil, 2007-2008</span>: Part of the team responsible by the remote marketing software implementation, through the use of mobile devices, an optimized communication protocol (due to limitations of the mobile platform) and databases server applications. Collaborated in the development of a server applications that allowed other applications remote update through the use of XML-RPC." },
+                { "description": "<span class=\"bold\">ITI (Information Technology Initiation) CNPq Scholarship at <a href=\"http://www.guenka.com.br/\">Guenka Software Development</a>. Brazil, 2006-2007</span>: collaborated in the development of a communication channel between mobile devices and web servers. The communication was made between Java Servlet containners and mobile devices (Handhelds) with the use of XML-RPC to exchange server persistent data." },
+                { "description": "<span class=\"bold\">Jetpack for Learning Design Challenge Leader</span>: managed a team participation on the <a href=\"http://design-challenge.mozillalabs.com/jetpack-for-learning/\">Jetpack for Learning Design Challenge</a> of Mozilla. In this design challenge, our team proposed the development of <a href=\"https://wiki.mozilla.org/Education/Projects/JetpackForLearning/Profiles/Educational_Facilita\">Educational Facilita</a> making use of teh Jetpack extensions framework for Firefox. We implemented a reading assistance browser extension using multiple Ajax technologies and other resources available in the Jetpack platform." },
+                { "description": "<span class=\"bold\"><a href=\"http://www.w4a.info/2010/submissions/studentawards.shtml\">Google Student Award</a></span>: success application in the Google Student Award for the <a href=\"http://www.w4a.info/2010/\">7th International Cross-Disciplinary Conference on Web Accessibility (W4A 2010)</a>, in Raleigh USA co-located with the <a href=\"http://www.www2010.org/\">Ninteenth International World Wide Web Conference</a>. The award granted financial support for the student to attend the W4A 2010 Conference." }
+            ]
+        },
+        {
+            "headline": "Education",
+            "class": "education",
+            "anchor": "education",
+            "list": [
+                { "description": "Ph.D. candidate in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Expected to 2013." },
+                { "description": "Master of Science in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Concluded in 2010." },
+                { "description": "Bachelor of Science in Computer Science, Londrina State University (<a href=\"http://www.uel.br\">UEL</a>). Londrina - PR, Brazil, 2008." },
+                { "description": "First Certificate in English, <a href=\"http://www.cam.ac.uk/\">University of Cambridge</a>, 2002." },
+                { "description": "Network and Computer building and maintenance, Technology Education Center, <a href=\"http://www.iapec.com.br/\">IAPEC</a>, Brazil, 2004." }
+            ]
+        }
+    ]
 }
