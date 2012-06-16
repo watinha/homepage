@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Willian Massami Watanabe is a Software Engineer at Yahoo! and Ph.D. candidate in Computer Sciences, who is specialized in the development of Web applications, making use of the great number of technologies now available. This webpage describes Willian's professional activities in a curriculum format." />
-    <meta name="Keywords" content="Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility" />
+    <meta name="Description" content="{{description}}" />
+    <meta name="Keywords" content="{{keywords}}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="Distribution" content="Global" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Willian Massami Watanabe - Curriculum</title>
-    <meta name="title" content="Willian Massami Watanabe - Curriculum" />
+    <title>{{title}}</title>
+    <meta name="title" content="{{title}}" />
     <meta name="robots" content="index, follow" />
-    <meta name="url" content="http://watinha.com" />
+    <meta name="url" content="{{url}}" />
     <meta name="charset" content="UTF-8" />
-    <meta name="author" content="Willian Massami Watanabe" />
+    <meta name="author" content="{{author}}" />
     <meta name="revisit-after" content="2" />
     <meta name="google-site-verification" content="sMUlC5tVxdXsao5JUraBvqS5AtQossLLxKQJ9K8J2lM" />
     <meta name="viewport" content="width=device-width" />
@@ -77,28 +77,24 @@
           overflow: hidden;
       }
     </style>
-    <link rel="stylesheet" href="css/files.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/files_mobile.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8" src="js/vendor/modernizr.js"></script>
+    {{#has_css}}
+        <link rel="stylesheet" href="css/files.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="css/files_mobile.css" type="text/css" media="screen" charset="utf-8" />
+    {{/has_css}}
+    {{#has_js}}
+        <script type="text/javascript" charset="utf-8" src="js/vendor/modernizr.js"></script>
+    {{/has_js}}
 </head>
 <body>
     <a class="anchor" href="#summary">Skip to summary</a>
     <div class="header">
-        <h1><a name="information" href="./">Willian Massami Watanabe</a></h1>
-        <p class="address">S&atilde;o Paulo - SP, Brazil. <span class="bold">E-mail: <a href="mailto:watanabe_willian@yahoo.com">watanabe_willian@yahoo.com</a></span></p>
+        <h1><a name="information" href="./">{{author}}</a></h1>
+        <p class="address">{{{address}}}</p>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
         <ul class="anchor">
-            <li><a href="#information">Information</a></li>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#profile">Professional profile</a></li>
-            <li><a href="#expertise">Areas of expertise</a></li>
-            <li><a href="#experience">Professional experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#software">Scientific Software</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#presentations">Presentations</a></li>
-            <li><a href="#languages">Languages speak</a></li>
-            <li><a href="#references">References</a></li>
+            {{#sections}}
+            <li><a href="{{anchor}}">{{title}}</a></li>
+            {{/sections}}
         </ul>
     </div>
     <hr />
@@ -255,11 +251,13 @@
          <a class="anchor" href="#summary">Back to summary</a>
         </div>
     </div>
+    {{#has_js}}
     <script type="text/javascript" charset="utf-8" src="js/files/helpers.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/files/standard_view.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/files/diagonal_view.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/files/view_controller.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/files/keyboard_handler.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/init.js"></script>
+    {{/has_js}}
 </body>
 </html>

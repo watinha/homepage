@@ -19,6 +19,10 @@ jslint:
 build-package:
 	./bin/build.sh
 
+build-index:
+	./bin/build_index.js > index2.html
+	diff -w -B -E -b index.html index2.html
+
 deploy:
 	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
 
@@ -42,7 +46,10 @@ clean:
 	-$(RM) -r package/js/*
 	-$(RM) package/css/*
 	-$(RM) package/index.html
+	-$(RM) package/curriculum.html
+	-$(RM) package/curriculum.json
 	-$(RM) package/favicon.ico
 	-$(RM) package/homepage.tar
+	-$(RM) index.html
 
 .PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package deploy

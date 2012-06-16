@@ -1,0 +1,21 @@
+{
+    "title": "Willian Massami Watanabe - Curriculum",
+    "description": "Willian Massami Watanabe is a Software Engineer at Yahoo! and Ph.D. candidate in Computer Sciences, who is specialized in the development of Web applications, making use of the great number of technologies now available. This webpage describes Willian's professional activities in a curriculum format.",
+    "keywords": "Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility",
+    "url": "http://watinha.com",
+    "author": "Willian Massami Watanabe",
+    "address": "S&atilde;o Paulo - SP, Brazil. <span class=\"bold\">E-mail: <a href=\"mailto:watanabe_willian@yahoo.com\">watanabe_willian@yahoo.com</a></span>",
+    "sections": [
+        {"title": "Information", "anchor": "#information"},
+        {"title": "Introduction", "anchor": "#introduction"},
+        {"title": "Professional profile", "anchor": "#profile"},
+        {"title": "Areas of expertise", "anchor": "#expertise"},
+        {"title": "Professional experience", "anchor": "#experience"},
+        {"title": "Education", "anchor": "#education"},
+        {"title": "Scientific Software", "anchor": "#software"},
+        {"title": "Publications", "anchor": "#publications"},
+        {"title": "Presentations", "anchor": "#presentations"},
+        {"title": "Languages speak", "anchor": "#languages"},
+        {"title": "References", "anchor": "#references"}
+    ]
+}
