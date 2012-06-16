@@ -17,5 +17,51 @@
         {"title": "Presentations", "anchor": "#presentations"},
         {"title": "Languages speak", "anchor": "#languages"},
         {"title": "References", "anchor": "#references"}
-    ]
+    ],
+    "introduction": {
+        "headline": "Front-end Web Engineer",
+        "paragraph": "As a Software Engineer at Yahoo! and a Ph.D. candidate in Computer Sciences, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web."
+    },
+    "profile": {
+        "headline": "Professional profile",
+        "paragraphs": [
+            {"paragraph": "Information Technology professional experienced in the use of different technologies, with the objective of allowing rich interactions for users in the Web."},
+            {"paragraph": "Specialist in the development of web services patterns of communication, that allow an optimized communication protocol between applications and provide resources to the implementations of complex projects."},
+            {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
+        ]
+    },
+    "expertise": {
+        "headline": "Areas of expertise",
+        "technologies": {
+            "headline": "Web technologies",
+            "list": [
+                { "description": "Web standards (HTML, CSS, XML and others)" },
+                { "description": "XHTML+Voice (XHTML, VoiceXML and X+V)" },
+                { "description": "Web services (SOAP, WSDL and UDDI)" },
+                { "description": "XML-RPC and JSON-RPC (Remote procedure call)" },
+                { "description": "RESTFul (Representational State Transfer)" },
+                { "description": "Ajax Design patterns" },
+                { "description": "WIDGETS Development" },
+                { "description": "SOA (Service Oriented Architecture)" },
+                { "description": "Web accessibility (WCAG 1.0, 2.0 and WAI-ARIA)" },
+                { "description": "Cloud Computing" }
+            ]
+        },
+        "programming": {
+            "headline": "Programming skills",
+            "list": [
+                { "description": "JavaScript" },
+                { "description": "Ajax Toolkits (JQuery, Prototype, Scriptaculous, Dojo, YUI)" },
+                { "description": "PHP" },
+                { "description": "Python and Django Framework" },
+                { "description": "Mozilla Addon SDK" },
+                { "description": "Design patterns" },
+                { "description": "JSE (Java Standard Edition) and JEE (Java Enterprise Edition)" },
+                { "description": "Ruby and RAILS Framework" },
+                { "description": "SQL - Structured query language" },
+                { "description": "C ANSI and C++" }
+            ]
+        }
+
+    }
 }
