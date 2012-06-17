@@ -4,6 +4,7 @@ export RM=/bin/rm
 export JASMINE_URL
 export HOME_URL=http://localhost/~willianmassamiwatanabe/homepage/
 export TMP_JASMINE_URL=/tmp/jasmine.tmp
+export WITH_CSS_JS="true"
 
 tests-unit:
 	@./bin/run_unit_tests.sh
@@ -20,7 +21,8 @@ build-package:
 	./bin/build.sh
 
 build-index:
-	./bin/build_index.js > index.html
+	./bin/build_index.js > curriculum.html # for the static curriculum with no CSS or JS
+	./bin/build_index.js dynamic_on > index.html # for the dynamic curriculum with CSS or JS
 
 deploy:
 	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
