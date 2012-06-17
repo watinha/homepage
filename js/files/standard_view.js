@@ -12,7 +12,7 @@ var StandardView = function (params, Modernizr) {
             i;
         for (i = 0; i < $private.base_elements.length; i = i + 1) {
             $private.base_elements[i].style.left = String(Math.ceil(i * 40 / ($private.base_elements.length - 1))) + "%";
-            scale_factor = Math.ceil(6 + 4 * i / ($private.base_elements.length - 1)) / 10;
+            scale_factor = (6 + 4 * i / ($private.base_elements.length - 1)) / 10;
             $private.base_elements[i].style[transform_attribute] = "scale(" +
                 String(scale_factor) + ") matrix(1, 0, 0, 1, 0, 0)";
             $private.base_elements[i].style.marginTop = "-4%";
