@@ -31,6 +31,9 @@ Builds index.html file and curriculum.html file from JSON data and [Mustache](ht
 This little make command copy the essential files (files to be put in production) to the packages folder of the project. In that folder, the command looks for CSS and JavaScript files that are inserted in the index.html file of the application. It removes all external CSS and JS files and replaces them with a single version of the files that contains all que source code compressed, using [YUI Compressor](http://developer.yahoo.com/yui/compressor/). Since there might be some problems with the CSS and JS files generated, we can optionally run the acceptance tests against the package created with the following command:
     make tests-acceptance
 
+### yslow
+This make rule runs a performance test, based on [yslow](http://yslow.org/) agains the production environment of the application. For the command-line, it is used the [PhantomJS](http://www.phantomjs.org/) version of the [yslow](https://github.com/marcelduran/yslow/wiki/PhantomJS) in order to make the assertions from the command line, no browser interfaces need to make available.
+
 ### deploy
 There is also some space left for the deploy command. Which is a secret file for the moment :)
 
