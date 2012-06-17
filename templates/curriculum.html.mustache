@@ -76,6 +76,25 @@
           width: 1px !important;
           overflow: hidden;
       }
+      .header .contact li{
+          display: block-inline;
+      }
+      .header .contact {
+          text-align: center;
+      }
+      .header .contact li {
+          display: inline-block;
+          margin: 0 7px;
+      }
+      .header .contact .icon {
+          position: relative;
+          top: 2px;
+          display: block;
+          float: left;
+          width: 18px;
+          height: 18px;
+          background-size: 100px 20px;
+      }
     </style>
     {{#has_css}}
         <link rel="stylesheet" href="css/files.css" type="text/css" media="screen" charset="utf-8" />
@@ -90,6 +109,16 @@
     <div class="header">
         <h1><a name="information" href="./">{{author}}</a></h1>
         <p class="address">{{{address}}}</p>
+        <ul class="contact" id="contact_list" aria-labelledby="contact_list_label">
+        {{#contacts}}
+            <li>
+            <a href="{{link}}">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:{{background_position}} 0;"></span>
+                <span class="label">{{label}}<span></a>
+            </li>
+        {{/contacts}}
+        </ul>
+        <div style="display:none" id="contact_list_label">Contact list</div>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
         <ul class="anchor">
             {{#sections}}

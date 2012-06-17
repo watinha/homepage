@@ -76,6 +76,25 @@
           width: 1px !important;
           overflow: hidden;
       }
+      .header .contact li{
+          display: block-inline;
+      }
+      .header .contact {
+          text-align: center;
+      }
+      .header .contact li {
+          display: inline-block;
+          margin: 0 7px;
+      }
+      .header .contact .icon {
+          position: relative;
+          top: 2px;
+          display: block;
+          float: left;
+          width: 18px;
+          height: 18px;
+          background-size: 100px 20px;
+      }
     </style>
     
         <link rel="stylesheet" href="css/files.css" type="text/css" media="screen" charset="utf-8" />
@@ -90,6 +109,40 @@
     <div class="header">
         <h1><a name="information" href="./">Willian Massami Watanabe</a></h1>
         <p class="address">S&atilde;o Paulo - SP, Brazil. <span class="bold">E-mail: <a href="mailto:watanabe_willian@yahoo.com">watanabe_willian@yahoo.com</a></span></p>
+        <ul class="contact" id="contact_list" aria-labelledby="contact_list_label">
+        
+            <li>
+            <a href="https://github.com/watinha">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:79px 0;"></span>
+                <span class="label">github<span></a>
+            </li>
+        
+            <li>
+            <a href="http://br.linkedin.com/pub/willian-watanabe/19/622/b90">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:-3px 0;"></span>
+                <span class="label">linkedin<span></a>
+            </li>
+        
+            <li>
+            <a href="http://lattes.cnpq.br/8946276875418151">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:60px 0;"></span>
+                <span class="label">lattes<span></a>
+            </li>
+        
+            <li>
+            <a href="http://twitter.com/#!/watinha">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:41px 0;"></span>
+                <span class="label">twitter<span></a>
+            </li>
+        
+            <li>
+            <a href="http://profile.yahoo.com/7HUMP657T6P7IHBNJJVUUI7DTM/">
+                <span class="icon" style="background-image:url(images/logos.png);background-position:20px 0;"></span>
+                <span class="label">yahoo!<span></a>
+            </li>
+        
+        </ul>
+        <div style="display:none" id="contact_list_label">Contact list</div>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
         <ul class="anchor">
             
