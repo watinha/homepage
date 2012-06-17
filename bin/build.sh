@@ -32,6 +32,9 @@ function copy_index(){
     echo "\033[1;34mCopy index.html\033[0;0m::"
     cp index.html package/index.html
     echo "  copy index.html....... \033[32mOK.\033[0m"
+    echo "\033[1;34mCopy curriculum.html\033[0;0m::"
+    cp curriculum.html package/curriculum.html
+    echo "  copy curriculum.html....... \033[32mOK.\033[0m"
 }
 
 function replace_script_tags(){

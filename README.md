@@ -22,6 +22,11 @@ In this project, we use [JSLintr](http://github.com/ccoria/JSLintr) which is a c
 You can run all unit-tests, acceptance-tests and JSLint with the following command:
     make tests-all
 
+### build-index
+Builds index.html file and curriculum.html file from JSON data and [Mustache](http://mustache.github.com/) templates. It uses NodeJS to generate the webpages statically hosted from the same data, helping in keeping consistency between different data presentations.
+* *index.html*: is the main webpage entry point with all JavaScript and CSS.
+* *curriculum.html*: is a simplier presentation file, which can be used to print the curriculum.
+
 ### build-package
 This little make command copy the essential files (files to be put in production) to the packages folder of the project. In that folder, the command looks for CSS and JavaScript files that are inserted in the index.html file of the application. It removes all external CSS and JS files and replaces them with a single version of the files that contains all que source code compressed, using [YUI Compressor](http://developer.yahoo.com/yui/compressor/). Since there might be some problems with the CSS and JS files generated, we can optionally run the acceptance tests against the package created with the following command:
     make tests-acceptance
