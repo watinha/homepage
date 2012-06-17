@@ -82,7 +82,7 @@
                                 list_header.tabIndex = 0;
                                 list_header.focus();
                             });
-                            list_item.addEventListener("keydown", function (ev) {
+                            list_item.addEventListener("keypress", function (ev) {
                                 if (ev.keyCode != 13 && ev.keyCode != 32)
                                     return ;
                                 list_header.tabIndex = 0;
