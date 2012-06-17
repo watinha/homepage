@@ -124,7 +124,7 @@ describe('DiagonalView class', function () {
         }, Helpers, window);
         for (var i = 0; i < target.length; i++) {
             view.click({target: target[i]});
-            expect(target[i].style.bottom).toBe((10 + 50*i) + "px");
+            expect(target[i].style.bottom).toBe((50*i - 10) + "px");
             for (var j = 0; j < i; j++) {
                 expect(target[j].style.bottom).toBe("");
             };

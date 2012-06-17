@@ -30,7 +30,7 @@ var DiagonalView = function (params, Helpers, window) {
             Helpers.removeClass($private.main_elements[i], "open");
             $private.main_elements[i].style.bottom = "";
             if ($private.main_elements[i] === main_element_target) {
-                main_element_target.style.bottom = String(10 + 50 * i) + "px";
+                main_element_target.style.bottom = String(50 * i - 10) + "px";
             }
         }
 
