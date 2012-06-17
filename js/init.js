@@ -6,7 +6,7 @@
                     setup_aria, // private methods
                     init, // public methods
                     first_line = document.querySelector("body > div.header+hr"),
-                    base_elements = document.querySelectorAll("body > div > div:not(.header)"),
+                    base_elements = document.querySelectorAll("body > div:not(.header) > div:not(.header)"),
                     wrapper = document.querySelector("body > .wrapper"),
                     controller = null;
 
