@@ -20,8 +20,7 @@ build-package:
 	./bin/build.sh
 
 build-index:
-	./bin/build_index.js > index2.html
-	diff -w -B -E -b index.html index2.html
+	./bin/build_index.js > index.html
 
 deploy:
 	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
