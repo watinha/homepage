@@ -30,6 +30,9 @@ deploy:
 tests-acceptance-package:
 	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
 
+yslow:
+	phantomjs bin/yslow.js -i all -f plain http://watinha.com
+
 help:
 	@echo "****************************************************"
 	@echo "***** \033[1;34mHomePage help\033[0;0m                           *****"
@@ -54,4 +57,4 @@ clean:
 	-$(RM) package/homepage.tar
 	-$(RM) index.html
 
-.PHONY: tests-unit jslint help clean tests-acceptance tests-all build-package deploy
+.PHONY: tests-unit jslint help clean tests-acceptance tests-all build-index build-package deploy yslow
