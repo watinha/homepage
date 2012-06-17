@@ -56,5 +56,6 @@ clean:
 	-$(RM) package/favicon.ico
 	-$(RM) package/homepage.tar
 	-$(RM) index.html
+	-$(RM) curricullum.html
 
 .PHONY: tests-unit jslint help clean tests-acceptance tests-all build-index build-package deploy yslow

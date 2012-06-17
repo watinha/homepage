@@ -51,7 +51,8 @@ browser.visit(jasmine_url, function () {
                 if (complete_status)
                     console.log(complete_status.textContent);
                 else {
-                    console.log(passing_alert.textContent);
+                    if (passing_alert)
+                        console.log(passing_alert.textContent);
                     console.log("OK. All tests passed");
                 }
                 console.log("-------------------------------");
