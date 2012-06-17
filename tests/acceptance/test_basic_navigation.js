@@ -25,7 +25,7 @@ describe("test standard navigation view", function () {
                 all_text_styles += " " + main_elements[iterator].style.false;
             };
             expect(all_text_styles).toMatch(/(\s+|^)scale\(1\)/g);
-            expect(all_text_styles).toMatch(/(\s+|^)scale\(0\.6\)/g);
+            expect(all_text_styles).toMatch(/(\s+|^)scale\(0\.6/g);
             waitForZombie = true;
         });
         waitsFor(function () {
