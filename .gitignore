@@ -3,6 +3,7 @@
 *.swo
 *.swn
 bin/deploy.sh
+bin/yslow.js
 package/*
 package/css
 package/js
