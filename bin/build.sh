@@ -67,6 +67,11 @@ function copy_favicon(){
     cp favicon.ico package/favicon.ico
 }
 
+function copy_images() {
+    echo "  copy images/logos.png ....... \033[32mOK.\033[0m"
+    cp images/logos.png package/images/logos.png
+}
+
 function copy_vendor(){
     cp -r js/vendor package/js/vendor
 }
@@ -74,6 +79,7 @@ function copy_vendor(){
 minimify_js
 minimify_css
 copy_index
+copy_images
 replace_script_tags
 replace_link_tags
 copy_favicon
