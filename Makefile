@@ -31,6 +31,9 @@ tests-acceptance-package:
 	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
 
 yslow:
+	phantomjs bin/yslow.js -i grade -f plain http://watinha.com
+
+yslow-verbose:
 	phantomjs bin/yslow.js -i all -f plain http://watinha.com
 
 help:
