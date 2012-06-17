@@ -67,4 +67,31 @@ describe("test standard navigation view", function () {
         }, 3000);
     });
 
+    it("after click link inside div you should go the href of that link", function () {
+        var Browser = require("zombie"),
+            browser = new Browser(),
+            url = process.env["HOME_URL"],
+            waitForZombie = false;
+
+        browser.visit(url, function () {
+            var body = browser.document.body,
+                main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
+                all_text_styles = "",
+                iterator,
+                ev = null;
+
+            expect(browser.success).toBe(true);
+
+            browser.clickLink(".software > h3 > a", function () {
+                var i, clicked_element;
+                browser.clickLink(".software > ul > li:last-child > span.bold:first-child > a", function () {
+                    expect(browser.document.title).toBe("Protótipo Interface - No Risk planning");
+                    waitForZombie = true;
+                });
+            });
+        });
+        waitsFor(function () {
+            return waitForZombie;
+        }, 3000);
+    });
 });
