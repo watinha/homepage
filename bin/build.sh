@@ -56,9 +56,9 @@ function replace_link_tags(){
     TMP_INDEX_WITH_NO_LINK="package/index.tmp2.html"
 
     # removes all link and replace it with a single css file
-    cat package/index.html | sed "s/\<link .* href=\"css\/files\.css\".* \/\>//" > $TMP_INDEX_WITH_ONE_LINK
-    cat $TMP_INDEX_WITH_ONE_LINK | sed "s/\<link .* href=\"css\/files_mobile\.css\".* \/\>/<link rel=\"stylesheet\" href=\"css\/all\.min\.css\" type=\"text\/css\" media=\"screen\" charset=\"utf-8\" \>/" > $TMP_INDEX_WITH_NO_LINK
-    echo "  replaces both css files (files.css files_mobile.css)....... \033[32mOK.\033[0m"
+    cat package/index.html | sed "s/\<link .* href=\"css\/files.*\.css\".* \/\>//" > $TMP_INDEX_WITH_ONE_LINK
+    cat $TMP_INDEX_WITH_ONE_LINK | sed "s/\<link .* href=\"css\/reset\.css\".* \/\>/<link rel=\"stylesheet\" href=\"css\/all\.min\.css\" type=\"text\/css\" media=\"screen\" charset=\"utf-8\" \>/" > $TMP_INDEX_WITH_NO_LINK
+    echo "  replaces css files (reset.css files.css files_mobile.css)....... \033[32mOK.\033[0m"
     cp $TMP_INDEX_WITH_NO_LINK package/index.html
     rm $TMP_INDEX_WITH_ONE_LINK $TMP_INDEX_WITH_NO_LINK
 }
