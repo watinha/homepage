@@ -31,7 +31,12 @@ tests-acceptance-package:
 	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
 
 yslow:
+	@echo ""
+	@echo "running against \033[1;34mwatinha.com\033[0;0m"
 	phantomjs bin/yslow.js -i grade -f plain http://watinha.com
+	@echo ""
+	@echo "running against \033[1;34mwwatana.be\033[0;0m"
+	phantomjs bin/yslow.js -i grade -f plain http://wwatana.be
 
 yslow-verbose:
 	phantomjs bin/yslow.js -i all -f plain http://watinha.com
