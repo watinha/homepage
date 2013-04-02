@@ -2,7 +2,7 @@
 export WHICH=/usr/bin/which
 export RM=/bin/rm
 export JASMINE_URL
-export HOME_URL=http://localhost/~willianmassamiwatanabe/homepage/
+export HOME_URL=http://localhost/~watinha/homepage/
 export TMP_JASMINE_URL=/tmp/jasmine.tmp
 export WITH_CSS_JS="true"
 
