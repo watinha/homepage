@@ -51,6 +51,7 @@ help:
 	@echo "    \033[32mjslint:\033[0m           run js lint in the JS and test code"
 	@echo "    \033[32mbuild-index:\033[0m    build \"index.html\" file from json data and mustache template"
 	@echo "    \033[32mbuild-package:\033[0m    build \"package\" with compressed css and js files"
+	@echo "    \033[32mtests-acceptance-package:\033[0m acceptance test (HOME_URL optional parameter)"
 	@echo "    \033[32mclean:\033[0m            clean temporary files"
 	@echo "\n"
 
