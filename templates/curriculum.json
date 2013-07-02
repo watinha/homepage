@@ -1,6 +1,6 @@
 {
     "title": "Willian Massami Watanabe - Curriculum",
-    "description": "Willian Massami Watanabe is a Software Engineer at Yahoo! and Ph.D. candidate in Computer Sciences, who is specialized in the development of Web applications, making use of the great number of technologies now available. This webpage describes Willian's professional activities in a curriculum format.",
+    "description": "As a Computer Science professor and a Ph.D. candidate in Computer Science, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web.",
     "keywords": "Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility",
     "url": "http://watinha.com",
     "author": "Willian Massami Watanabe",
@@ -47,12 +47,12 @@
     ],
     "introduction": {
         "headline": "Front-end Web Engineer",
-        "paragraph": "As a Software Engineer at Yahoo! and a Ph.D. candidate in Computer Sciences, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web."
+        "paragraph": "As a Computer Sciences professor and a Ph.D. candidate in Computer Sciences, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web."
     },
     "profile": {
         "headline": "Professional profile",
         "paragraphs": [
-            {"paragraph": "Information Technology professional experienced in the use of different technologies, with the objective of allowing rich interactions for users in the Web."},
+            {"paragraph": "Front-end developer professional experienced in the use of different technologies, with the objective of allowing rich interactions for users in the Web."},
             {"paragraph": "Specialist in the development of web services patterns of communication, that allow an optimized communication protocol between applications and provide resources to the implementations of complex projects."},
             {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
         ]
@@ -80,7 +80,7 @@
                 { "description": "JavaScript" },
                 { "description": "Ajax Toolkits (JQuery, Prototype, Scriptaculous, Dojo, YUI)" },
                 { "description": "PHP" },
-                { "description": "Python and Django Framework" },
+                { "description": "Python" },
                 { "description": "Mozilla Addon SDK" },
                 { "description": "Design patterns" },
                 { "description": "JSE (Java Standard Edition) and JEE (Java Enterprise Edition)" },
@@ -96,7 +96,8 @@
             "class": "experience",
             "anchor": "experience",
             "list": [
-                { "description": "<span class=\"bold\">Software enginner at <a href=\"http://www.yahoo.com\">Yahoo!</a>. Brazil 2011.</span>: working specifically on two applications: <a href=\"http://meme.yahoo.com\">Meme</a> and <a href=\"http://profile.yahoo.com\">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems." },
+                { "description": "<span class=\"bold\">Professor at <a href=\"http://utfpr.edu.br\">UTFPR</a>. Brazil 2011-2012.</span>: Computer Science professor with emphasis in Web Development, Software Engineering and Human-Computer Interaction." },
+                { "description": "<span class=\"bold\">Software enginner at <a href=\"http://www.yahoo.com\">Yahoo!</a>. Brazil 2011-2012.</span>: working specifically on two applications: <a href=\"http://meme.yahoo.com\">Meme</a> and <a href=\"http://profile.yahoo.com\">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems." },
                 { "description": "<span class=\"bold\">Ph.D. candidate CAPES Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: currently is part of the of the Ph.D. program of ICMC-USP, with the project entitled \"Development Strategies for Improving Usability in RIA with MDD\". This research is financed by CAPES and works on the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project is being developed under the orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
                 { "description": "<span class=\"bold\">Master of Science FAPESP Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2008-2010</span>: inserted at project <a href=\"http://caravelas.icmc.usp.br/wiki\">PorSimples</a> which was financed by <a href=\"http://www.fapesp.br/\">FAPESP</a> and <a href=\"http://research.microsoft.com/en-us/\">Microsoft Research</a>, was responsible by the integration of text processing operations and interface design of the <a href=\"http://caravelas.icmc.usp.br:3003\">Facilita</a>. The Facilita is a web application that works as an assistive technology facilitating portuguese reading activities on web pages through the use of automatic text summarization and simplification techniques. Simple interactions, usability and accessibility issues are essential requirements to the Facilita implementation and are the main themes of the research. JavaScript and AJAX characteristics provide some of the key features of design's simplicity and usability in Facilita. The project was developed under orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
                 { "description": "<span class=\"bold\">Qualipso Scholarship</span> at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010-2010: the <a href=\"http://www.qualipso.org/\">Qualipso - Quality Platform for Open Source Software</a> project aims at elaboration a software maturity framework for Open Source Software (OMM - OpenSource Maturity Model). The Qualipso project has the objective of elaborating technologies, processes and policies that facilitate the development of Open Source quality assured software. The activities realized in the project involved the integration of different applications with the use of webservices technologies (RESTFul)." },
