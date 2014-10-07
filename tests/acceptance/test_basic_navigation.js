@@ -6,6 +6,8 @@ describe("test standard navigation view", function () {
             url = process.env["HOME_URL"],
             waitForZombie = false;
 
+        if (url.search("index.html") == -1)
+            url += "/index.html"
         browser.visit(url, function () {
             var body = browser.document.body,
                 main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
@@ -39,6 +41,8 @@ describe("test standard navigation view", function () {
             url = process.env["HOME_URL"],
             waitForZombie = false;
 
+        if (url.search("index.html") == -1)
+            url += "/index.html"
         browser.visit(url, function () {
             var body = browser.document.body,
                 main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
@@ -73,6 +77,8 @@ describe("test standard navigation view", function () {
             url = process.env["HOME_URL"],
             waitForZombie = false;
 
+        if (url.search("index.html") == -1)
+            url += "/index.html"
         browser.visit(url, function () {
             var body = browser.document.body,
                 main_elements = browser.document.querySelectorAll(".files > .wrapper > div:not(.header)"),
@@ -85,7 +91,7 @@ describe("test standard navigation view", function () {
             browser.clickLink(".software > h3 > a", function () {
                 var i, clicked_element;
                 browser.clickLink(".software > ul > li:last-child > span.bold:first-child > a", function () {
-                    expect(browser.location._url.href).toBe("http://watinha.com/prototipohci/agenda.html");
+                    expect(browser.location._url.href).toBe("http://wwatana.be/prototipohci/agenda.html");
                     waitForZombie = true;
                 });
             });

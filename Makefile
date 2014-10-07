@@ -2,7 +2,7 @@
 export WHICH=/usr/bin/which
 export RM=/bin/rm
 export JASMINE_URL
-export HOME_URL=http://localhost/~watinha/homepage/
+export HOME_URL=file://`pwd`
 export TMP_JASMINE_URL=/tmp/jasmine.tmp
 export WITH_CSS_JS="true"
 
@@ -10,7 +10,7 @@ tests-unit:
 	@./bin/run_unit_tests.sh
 
 tests-acceptance:
-	jasmine-node tests/acceptance --matchall
+	HOME_URL=$(HOME_URL) jasmine-node tests/acceptance --matchall
 
 tests-all: tests-unit tests-acceptance jslint
 
