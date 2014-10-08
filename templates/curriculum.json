@@ -9,26 +9,31 @@
         {
             "link": "https://github.com/watinha",
             "label": "github",
+            "icon_label": "github",
             "background_position": "79px"
         },
         {
             "link": "http://br.linkedin.com/pub/willian-watanabe/19/622/b90",
             "label": "linkedin",
+            "icon_label": "linkedin",
             "background_position": "-3px"
         },
         {
             "link": "http://lattes.cnpq.br/8946276875418151",
             "label": "lattes",
+            "icon_label": "lattes",
             "background_position": "60px"
         },
         {
             "link": "http://twitter.com/#!/watinha",
             "label": "twitter",
+            "icon_label": "twitter",
             "background_position": "41px"
         },
         {
             "link": "http://profile.yahoo.com/7HUMP657T6P7IHBNJJVUUI7DTM/",
             "label": "yahoo!",
+            "icon_label": "yahoo",
             "background_position": "20px"
         }
     ],

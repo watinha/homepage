@@ -77,4 +77,20 @@ span.bold{
     width: 18px;
     height: 18px;
     background-size: 100px 20px;
+    background-image: url(../images/logos.png);
+}
+.header .contact .icon.linkedin {
+    background-position: -3px 0;
+}
+.header .contact .icon.github {
+    background-position: 77px 0;
+}
+.header .contact .icon.lattes {
+    background-position: -41px 0;
+}
+.header .contact .icon.twitter {
+    background-position: -59px 0;
+}
+.header .contact .icon.yahoo {
+    background-position: -79px 0;
 }
