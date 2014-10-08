@@ -1,10 +1,10 @@
 {
     "title": "Willian Massami Watanabe - Curriculum",
-    "description": "As a Computer Science professor and a Ph.D. candidate in Computer Science, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web.",
-    "keywords": "Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility",
+    "description": "As a Computer Science professor, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web.",
+    "keywords": "Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility, HTML5, Test-Driven Development, Continuous Integration, Continuous Delivery",
     "url": "http://watinha.com",
     "author": "Willian Massami Watanabe",
-    "address": "Ponta Grossa - PR, Brazil. <span class=\"bold\">E-mail: <a href=\"mailto:watanabe_willian@yahoo.com\">watanabe_willian@yahoo.com</a></span>",
+    "address": "Corn&eacute;lio Proc&oacute;pio - PR, Brazil. <span class=\"bold\">E-mail: <a href=\"mailto:wwatanabe@utfpr.edu.br\">wwatanabe@utfpr.edu.br</a></span>",
     "contacts": [
         {
             "link": "https://github.com/watinha",
@@ -47,7 +47,7 @@
     ],
     "introduction": {
         "headline": "Front-end Web Engineer",
-        "paragraph": "As a Computer Sciences professor and a Ph.D. candidate in Computer Sciences, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web."
+        "paragraph": "As a Computer Science professor, stands as a passionate Web developer, lecturing development practices associated to Web technologies and Web engineering practices (such as: eXtreme Programming, TDD - Test-Driven Design, Continuous Integration and Continuous Delivery). Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web."
     },
     "profile": {
         "headline": "Professional profile",
@@ -60,31 +60,28 @@
     "expertise": {
         "headline": "Areas of expertise",
         "technologies": {
-            "headline": "Web technologies",
+            "headline": "Web engineering skills",
             "list": [
-                { "description": "Web standards (HTML, CSS, XML and others)" },
-                { "description": "XHTML+Voice (XHTML, VoiceXML and X+V)" },
+                { "description": "Web standards (HTML, CSS, JS and others)" },
                 { "description": "Web services, RESTFul and RPC (Remote Procedure Calls)" },
-                { "description": "Ajax Design patterns" },
-                { "description": "Object Oriented JavaScript" },
-                { "description": "High Performance in the Web Platform" },
                 { "description": "SOA (Service Oriented Architecture)" },
-                { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" },
-                { "description": "Cloud Computing" }
+                { "description": "High Performance in the Web Platform" },
+                { "description": "Test-Driven Development, Continuous Integration and Continuous Delivery" },
+                { "description": "Cloud Computing (SaaS, PaaS and IaaS)" },
+                { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" }
             ]
         },
         "programming": {
             "headline": "Programming skills",
             "list": [
                 { "description": "JavaScript" },
+                { "description": "Ajax Design patterns" },
+                { "description": "Object Oriented JavaScript" },
                 { "description": "Ajax Toolkits (jQuery, Dojo, YUI)" },
                 { "description": "PHP" },
                 { "description": "Python" },
-                { "description": "Mozilla Addon SDK" },
-                { "description": "Design patterns" },
-                { "description": "Java" },
-                { "description": "SQL - Structured query language" },
-                { "description": "C ANSI and C++" }
+                { "description": "Java (JSE and JEE)" },
+                { "description": "Design patterns" }
             ]
         }
     },
@@ -96,7 +93,7 @@
             "list": [
                 { "description": "<span class=\"bold\">Professor at <a href=\"http://utfpr.edu.br\">UTFPR</a>. Brazil 2012.</span>: Computer Science professor with emphasis in Web Development, Software Engineering and Human-Computer Interaction." },
                 { "description": "<span class=\"bold\">Software enginner at <a href=\"http://www.yahoo.com\">Yahoo!</a>. Brazil 2011-2012.</span>: working specifically on two applications: <a href=\"http://meme.yahoo.com\">Meme</a> and <a href=\"http://profile.yahoo.com\">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems." },
-                { "description": "<span class=\"bold\">Ph.D. candidate CAPES Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: currently is part of the of the Ph.D. program of ICMC-USP, with the project entitled \"Development Strategies for Improving Usability in RIA with MDD\". This research is financed by CAPES and works on the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project is being developed under the orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
+                { "description": "<span class=\"bold\">Ph.D. CAPES Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: part of the of the Ph.D. program of ICMC-USP, with the project entitled \"Automatic Accessibility Evaluation in RIA - Rich Internet Applications\". This research was financed by CAPES and works in the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project was conducted under the orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
                 { "description": "<span class=\"bold\">Master of Science FAPESP Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2008-2010</span>: inserted at project <a href=\"http://caravelas.icmc.usp.br/wiki\">PorSimples</a> which was financed by <a href=\"http://www.fapesp.br/\">FAPESP</a> and <a href=\"http://research.microsoft.com/en-us/\">Microsoft Research</a>, was responsible by the integration of text processing operations and interface design of the <a href=\"http://caravelas.icmc.usp.br:3003\">Facilita</a>. The Facilita is a web application that works as an assistive technology facilitating portuguese reading activities on web pages through the use of automatic text summarization and simplification techniques. Simple interactions, usability and accessibility issues are essential requirements to the Facilita implementation and are the main themes of the research. JavaScript and AJAX characteristics provide some of the key features of design's simplicity and usability in Facilita. The project was developed under orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
                 { "description": "<span class=\"bold\">Qualipso Scholarship</span> at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010-2010: the <a href=\"http://www.qualipso.org/\">Qualipso - Quality Platform for Open Source Software</a> project aims at elaboration a software maturity framework for Open Source Software (OMM - OpenSource Maturity Model). The Qualipso project has the objective of elaborating technologies, processes and policies that facilitate the development of Open Source quality assured software. The activities realized in the project involved the integration of different applications with the use of webservices technologies (RESTFul)." },
                 { "description": "<span class=\"bold\">IT Analyst at <a href=\"http://www.guenka.com.br/\">Guenka Software Development</a>. Brazil, 2007-2008</span>: Part of the team responsible by the remote marketing software implementation, through the use of mobile devices, an optimized communication protocol (due to limitations of the mobile platform) and databases server applications. Collaborated in the development of a server applications that allowed other applications remote update through the use of XML-RPC." },
@@ -110,7 +107,7 @@
             "class": "education",
             "anchor": "education",
             "list": [
-                { "description": "Ph.D. candidate in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Expected to 2013." },
+                { "description": "Ph.D. in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil, 2014." },
                 { "description": "Master of Science in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Concluded in 2010." },
                 { "description": "Bachelor of Science in Computer Science, Londrina State University (<a href=\"http://www.uel.br\">UEL</a>). Londrina - PR, Brazil, 2008." },
                 { "description": "First Certificate in English, <a href=\"http://www.cam.ac.uk/\">University of Cambridge</a>, 2002." },
@@ -137,6 +134,8 @@
             "class": "publications",
             "anchor": "publications",
             "list": [
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2554850.2554947\">Keyboard navigation mechanisms in tab widgets: an investigation on ARIA's conformance</a></span>. In SAC '14 Proceedings of the 29th Annual ACM Symposium on Applied Computing. New York, NY, US : ACM - Association for Computing Machinery, 2014. v. 1. p. 721-726. With Prof. Dra. Renata Pontin de Mattos Fortes and Rafael Jos&eacute; Geraldo." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2507065.2507074\">An approach to improve accessibility and usability of existing web system</a></span>. In SIGDOC '13 Proceedings of the 31st ACM international conference on Design of communication. New York, NY, US : ACM - Association for Computing Machinery, 2013. v. 1. p. 39-48. With Prof. Dra. Renata Pontin de Mattos Fortes, Ana Lu&iacute;za Dias and Paulo Cesar Masieiro." },
                 { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=2207016.2207022&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Using Acceptance Tests to Validate Accessibility Requirements in RIA</a></span>. In W4A '12 Proceedings of the International Cross-Disciplinary Conference on Web Accessibility. New York, NY, US : ACM - Association for Computing Machinery, 2012. v. 1. p. 1-10. With Prof. Dra. Renata Pontin de Mattos Fortes and Ana Lu&iacute;za Dias." },
                 { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=2038476.2038504&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Usability evaluation of horizontal navigation bar with drop-down menus by middle aged adults</a></span>. In Proceedings of the 29th ACM international conference on Design of communication (SIGDOC '11). New York, NY, US : ACM - Association for Computing Machinery, 2011. v. 1. p. 145-150. With Eduardo Pezutti Beletato dos Santos, Prof. Silvana Maria Affonso de Lara, M&aacute;rio Castro and Prof. Dra. Renata Pontin de Mattos Fortes." },
                 { "description": "Full paper: <span class=\"bold\"><a href=\"http://www.springerlink.com/content/th6q7122g68562w3/?MUD=MP\">The Link-Offset-Scale Mechanism for Improving the Usability of Touch Screen Displays on the Web</a></span>. Lecture Notes in Computer Science, v. 6948, p. 356-372, 2011. With Prof. Dra. Renata Pontin de Mattos Fortes and Maria da Gra&ccedil;a Campos Pimentel." },
