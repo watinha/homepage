@@ -1,4 +1,4 @@
-describe("test standard navigation view", function () {
+xdescribe("test standard navigation view", function () {
 
     it("scale and matrix should be set as the page is loaded", function () {
         var Browser = require("zombie"),
