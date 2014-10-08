@@ -63,6 +63,7 @@ span.bold{
 }
 .header .contact {
     text-align: center;
+    padding-left: 0;
 }
 .header .contact li {
     display: inline-block;
