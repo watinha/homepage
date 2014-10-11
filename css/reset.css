@@ -94,3 +94,6 @@ span.bold{
 .header .contact .icon.yahoo {
     background-position: -79px 0;
 }
+.wrapper > div {
+    clear:both;
+}
