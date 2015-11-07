@@ -78,6 +78,7 @@ span.bold{
     height: 18px;
     background-size: 100px 20px;
     background-image: url(../images/logos.png);
+    margin-right: 3px;
 }
 .header .contact .icon.linkedin {
     background-position: -3px 0;
@@ -91,7 +92,7 @@ span.bold{
 .header .contact .icon.twitter {
     background-position: -59px 0;
 }
-.header .contact .icon.yahoo {
+.header .contact .icon.researchgate {
     background-position: -79px 0;
 }
 .wrapper > div {
