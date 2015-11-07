@@ -22,8 +22,8 @@ build-package:
 
 build-index:
 	./bin/build_index.js > curriculum.html # for the static curriculum with no CSS or JS
-	./bin/build_index.js > index.html # for the dynamic curriculum with CSS or JS
-	#./bin/build_index.js dynamic_on > index.html # for the dynamic curriculum with CSS or JS
+	#./bin/build_index.js > index.html # for the dynamic curriculum with CSS or JS
+	./bin/build_index.js dynamic_on > index.html # for the dynamic curriculum with CSS or JS
 
 deploy:
 	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
