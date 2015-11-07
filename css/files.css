@@ -233,3 +233,7 @@
 .files .header+.headerLongerLine {
     width: 90%;
 }
+
+.files > .wrapper > div {
+    clear: none;
+}
