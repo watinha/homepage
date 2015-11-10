@@ -10,7 +10,7 @@ tests-unit:
 	@./bin/run_unit_tests.sh
 
 tests-acceptance:
-	HOME_URL=$(HOME_URL) jasmine-node tests/acceptance --matchall
+	HOME_URL=$(HOME_URL) grunt jasmine_nodejs
 
 tests-all: tests-unit tests-acceptance jslint
 
