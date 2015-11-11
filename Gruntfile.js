@@ -41,6 +41,11 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jasmine-nodejs');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-blanket');
+    grunt.loadNpmTasks('grunt-yslow');
+    grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');
 
     grunt.registerTask('default', ['uglify', 'jasmine-nodejs', 'casperjs']);
