@@ -10,7 +10,7 @@ tests-unit:
 	@./bin/run_unit_tests.sh
 
 tests-acceptance:
-	HOME_URL=$(HOME_URL) grunt jasmine_nodejs
+	HOME_URL=index.html grunt casperjs
 
 tests-all: tests-unit tests-acceptance jslint
 
@@ -29,7 +29,7 @@ deploy:
 	@if [ -e "bin/deploy.sh" ]; then ./bin/deploy.sh; else echo "\033[32msecret deploy.sh file :)\033[0m"; fi
 
 tests-acceptance-package:
-	HOME_URL=$(HOME_URL)package/ jasmine-node tests/acceptance --matchall
+	HOME_URL=package/index.html grunt casperjs
 
 yslow:
 	@echo ""

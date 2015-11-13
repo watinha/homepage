@@ -32,6 +32,7 @@ module.exports = function (grunt) {
             }
         },
         casperjs: {
+            options: { casperjsOptions: "--url=" + process.env.HOME_URL },
             files: [ 'tests/casperjs/**' ]
         }
     });

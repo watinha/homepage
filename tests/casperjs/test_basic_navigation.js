@@ -1,6 +1,6 @@
 (function (casper) {
     casper.test.begin("scale and matrix should be set as the page is loaded", 24, function (test) {
-        casper.start("index.html", function () {
+        casper.start(casper.cli.options.url, function () {
             test.assertTitle("Willian Massami Watanabe - Curriculum");
         });
         casper.then(function () {
@@ -35,7 +35,7 @@
     });
 
     casper.test.begin("click should change layout style and open element", 13, function (test) {
-        casper.start("index.html", function () {
+        casper.start(casper.cli.options.url, function () {
             test.assertTitle("Willian Massami Watanabe - Curriculum");
         });
         casper.then(function () {
@@ -70,7 +70,7 @@
     });
 
     casper.test.begin("after click on link inside main div webpage should be reloaded", 2, function (test) {
-        casper.start("index.html", function () {
+        casper.start(casper.cli.options.url, function () {
             test.assertTitle("Willian Massami Watanabe - Curriculum");
         });
         casper.then(function () {
