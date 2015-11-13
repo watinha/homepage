@@ -32,9 +32,6 @@ module.exports = function (grunt) {
             }
         },
         casperjs: {
-            options: {
-                async: {parallel: false}
-            },
             files: [ 'tests/casperjs/**' ]
         }
     });

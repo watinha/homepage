@@ -12,6 +12,7 @@
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-jasmine-node": "~0.3.1",
+    "grunt-jasmine-nodejs": "^1.4.3",
     "grunt-yslow": "0.0.4"
   }
 }
