@@ -18,21 +18,21 @@
     .header .contact .icon {
         width: 36px;
         height: 36px;
-        background-size: 200px 40px;
+        background-size: 295px 40px;
     }
     .header .contact .icon.linkedin {
-        background-position: -6px 0;
+        background-position: -3px 0;
     }
     .header .contact .icon.github {
-        background-position: 154px 0;
+        background-position: 251px 0;
     }
     .header .contact .icon.lattes {
-        background-position: -79px 0;
+        background-position: -81px 0;
     }
     .header .contact .icon.twitter {
         background-position: -118px 0;
     }
-    .header .contact .icon.yahoo {
+    .header .contact .icon.researchgate {
         background-position: -158px 0;
     }
     div.columns{
@@ -43,5 +43,8 @@
     }
     .wrapper > div {
         padding: 0 9px;
+    }
+    .header .layout_switcher {
+        display: none;
     }
 }
