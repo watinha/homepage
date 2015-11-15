@@ -30,6 +30,11 @@ module.exports = function (grunt) {
                     'package/css/all.min.css': ['css/*.css']
                 }
             }
+        },
+        shell: {
+            target: {
+                command: './bin/build.sh'
+            }
         }
     });
 
@@ -42,6 +47,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('mu2');
 
     grunt.task.registerTask('tests-acceptance',
                             'Running acceptance tests via CasperJS',
@@ -57,4 +64,29 @@ module.exports = function (grunt) {
     });
     grunt.task.registerTask('tests-unit', 'Running unit tests on PhantomJS',
                             ['jasmine']);
+    grunt.task.registerTask('build-index',
+                            'Building index.html based on Mustache template',
+                            function () {
+        var mu = require('mu2'),
+            fs = require('fs');
+
+        mu.root = __dirname + '/../templates';
+        fs.readFile('templates/curriculum.json', function (err, data) {
+            var json_data = JSON.parse(data.toString()),
+                template_stream,
+                with_css_js = process.argv[2];
+            if (!err) {
+                if (with_css_js) {
+                    json_data.has_css = true;
+                    json_data.has_js = true;
+                }
+                template_stream = mu.compileAndRender('curriculum.html.mustache', json_data);
+                template_stream.on('data', function (rendered_template) {
+                    process.stdout.write(rendered_template.toString('utf-8'));
+                });
+            }
+});
+    });
+    grunt.task.registerTask('build-package', 'building package for deployment',
+                            ['cssmin', 'uglify', 'shell']);
 };
