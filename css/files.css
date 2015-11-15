@@ -173,7 +173,7 @@
     margin-bottom: 13px;
     height: auto;
     width: 100%;
-    position: static;
+    position: relative;
 
     /* box shadow */
     -webkit-box-shadow:  0 0 0 0 rgba(0, 0, 0, 0.5);

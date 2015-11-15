@@ -35,7 +35,10 @@
                 setup_event_listeners = function () {
                     var keyboard_handler = KeyboardHandler({
                             main_elements: base_elements
-                        }, Helpers);
+                        }, Helpers),
+                        header = document.querySelector(".header"),
+                        layout_switcher_link = document.createElement("button"),
+                        layout_switcher_icon = document.createElement("span");
                     /**
                       * Setting up events that the application will respond to
                       */
@@ -62,6 +65,17 @@
                                 break;
                         }
                     }, true);
+
+                    /* setting link that switches the layout */
+                    layout_switcher_link.appendChild(layout_switcher_icon);
+                    layout_switcher_link.className = "layout_switcher";
+                    layout_switcher_link.href = "#";
+                    layout_switcher_icon.className = "icon reset_layout";
+                    header.appendChild(layout_switcher_link);
+                    layout_switcher_link.addEventListener("click", function () {
+                        document.body.className = "";
+                        controller.clean_layouts();
+                    });
                 };
 
                 setup_aria = function () {

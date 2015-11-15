@@ -14,18 +14,18 @@ var ViewController = function (params, Helpers, window) {
     };
 
     $public.render = function (view_index) {
-        $private.clean_layouts();
+        $public.clean_layouts();
         $private.layout_objs[view_index].render();
     };
 
     $public.click = function (ev) {
         var target = window.target || (ev && ev.target);
-        $private.clean_layouts();
+        $public.clean_layouts();
         $private.click_handler.render();
         $private.click_handler.click.apply(target, arguments);
     };
 
-    $private.clean_layouts = function () {
+    $public.clean_layouts = function () {
         var i;
         for (i in $private.layout_objs) {
             if ($private.layout_objs.hasOwnProperty(i)) {

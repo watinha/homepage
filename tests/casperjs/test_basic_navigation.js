@@ -86,4 +86,34 @@
             test.done();
         });
     });
+
+    casper.test.begin("reset button should remove all inline styles and classes", 12, function (test) {
+        casper.start(casper.cli.options.url, function () {
+            test.assertTitle("Willian Massami Watanabe - Curriculum");
+        });
+        casper.then(function () {
+            casper.click(".layout_switcher");
+            test.assertEvalEquals(function () {
+                return __utils__.findOne("body").className;
+            }, "", "body element should not have className == files");
+            var main_elements = casper.evaluate(function () {
+                var transform_attribute = Modernizr.prefixed("transform"),
+                    main_elements = document.querySelectorAll(".wrapper > div:not(.header)"),
+                    i = 0, results = [];
+                for (i = 0; i < main_elements.length; i++) {
+                    results.push({
+                        transform: main_elements[i].style[transform_attribute]
+                    });
+                }
+                return results;
+            }, "files");
+            for (var i = 0; i < main_elements.length; i++) {
+                test.assertEquals(main_elements[i].transform, "",
+                    "element " + i + " should not have scale nor matrix transform attribute");
+            };
+        });
+        casper.run(function () {
+            test.done();
+        });
+    });
 })(casper);
