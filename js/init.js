@@ -68,25 +68,27 @@
                     var i;
                     wrapper.setAttribute("role", "list");
                     for (i = 0; i < base_elements.length; i++) {
-                        var className = base_elements[i].className,
-                            list_item = base_elements[i],
-                            list_header = list_item.querySelector("#" + className + "_header");
-                        list_item.setAttribute("aria-labelledby", className + "_header");
-                        list_item.setAttribute("role", "listitem");
-                        list_item.setAttribute("aria-controls", className + "_panel");
-                        list_item.addEventListener("focus", function () {
-                            list_header.tabIndex = -1;
-                        });
-                        list_item.addEventListener("click", function () {
-                            list_header.tabIndex = 0;
-                            list_header.focus();
-                        });
-                        list_item.addEventListener("keypress", function (ev) {
-                            if (ev.keyCode != 13 && ev.keyCode != 32)
-                                return ;
-                            list_header.tabIndex = 0;
-                            list_header.focus();
-                        });
+                        (function () {
+                            var className = base_elements[i].className,
+                                list_item = base_elements[i],
+                                list_header = list_item.querySelector("#" + className + "_header");
+                            list_item.setAttribute("aria-labelledby", className + "_header");
+                            list_item.setAttribute("role", "listitem");
+                            list_item.setAttribute("aria-controls", className + "_panel");
+                            list_item.addEventListener("focus", function () {
+                                list_header.tabIndex = -1;
+                            });
+                            list_item.addEventListener("click", function () {
+                                list_header.tabIndex = 0;
+                                list_header.focus();
+                            });
+                            list_item.addEventListener("keypress", function () {
+                                if (ev.keyCode != 13 && ev.keyCode != 32)
+                                    return ;
+                                list_header.tabIndex = 0;
+                                list_header.focus();
+                            });
+                        })(); // jshint ignore:line
                     }
                 };
 

@@ -66,6 +66,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('mu2');
 
+    grunt.task.registerTask('tests-all', 'Running all test suites',
+                            function () {
+        grunt.task.run(['jshint', 'tests-unit', 'tests-acceptance']);
+    });
+
     grunt.task.registerTask('tests-acceptance',
                             'Running acceptance tests via CasperJS',
                             function () {
