@@ -35,6 +35,22 @@ module.exports = function (grunt) {
             target: {
                 command: './bin/build.sh'
             }
+        },
+        yslow: {
+            options: {
+                thresholds: {
+                    weight: 180,
+                    speed: 1000,
+                    score: 80,
+                    requests: 15
+                }
+            },
+            pages: {
+                files: [
+                    { src: 'http://watinha.com' },
+                    { src: 'http://wwatana.be', }
+                ]
+            }
         }
     });
 
