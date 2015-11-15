@@ -168,7 +168,7 @@
 /* header specific styles */
 .files .header {
     border: none;
-    padding: 0 30px;
+    padding: 0;
     cursor: auto;
     margin-bottom: 13px;
     height: auto;
