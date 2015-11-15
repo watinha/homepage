@@ -32,7 +32,6 @@ module.exports = function (grunt) {
             }
         },
         casperjs: {
-            options: { casperjsOptions: "--url=" + process.env.HOME_URL },
             files: [ 'tests/casperjs/**' ]
         }
     });
@@ -46,5 +45,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');
 
-    grunt.registerTask('default', ['uglify', 'jasmine-nodejs', 'casperjs']);
+    grunt.task.registerTask('tests-acceptance',
+                            'Running acceptance tests via CasperJS',
+                            function () {
+        grunt.config.set('casperjs.options.casperjsOptions', '--url=./index.html');
+        grunt.task.run(['casperjs']);
+    });
+    grunt.task.registerTask('tests-acceptance-package',
+                            'Running acceptance tests on package via CasperJS',
+                            function () {
+        grunt.config.set('casperjs.options.casperjsOptions', '--url=package/index.html');
+        grunt.task.run(['casperjs']);
+    });
 };
