@@ -116,4 +116,44 @@
             test.done();
         });
     });
+
+    casper.test.begin("scale and matrix should be set after the reset link is clicked for the second time", 25, function (test) {
+        casper.start(casper.cli.options.url, function () {
+            test.assertTitle("Willian Massami Watanabe - Curriculum");
+        });
+        casper.then(function () {
+            casper.click(".layout_switcher");
+            test.assertEvalEquals(function () {
+                return __utils__.findOne("body").className;
+            }, "", "body element should not have className == files");
+            casper.click(".layout_switcher");
+            test.assertEvalEquals(function () {
+                return __utils__.findOne("body").className;
+            }, "files", "body element should have className == files");
+            var main_elements = casper.evaluate(function () {
+                var transform_attribute = Modernizr.prefixed("transform"),
+                    main_elements = document.querySelectorAll(".wrapper > div:not(.header)"),
+                    i = 0, results = [];
+                for (i = 0; i < main_elements.length; i++) {
+                    results.push({
+                        transform: main_elements[i].style[transform_attribute]
+                    });
+                }
+                return results;
+            }, "files");
+            for (var i = 0; i < main_elements.length; i++) {
+                test.assertMatch(main_elements[i].transform, /(\s+|^)scale\(/g,
+                    "element " + i + " should have scale transform attribute");
+                test.assertMatch(main_elements[i].transform, /(\s+|^)matrix\(1, 0, 0, 1, 0, 0\)/g,
+                    "element " + i + " should have matrix transform attribute");
+            };
+            test.assertMatch(main_elements[i - 1].transform, /(\s+|^)scale\(1\)/g,
+                "last element should have scale(1) transform");
+            test.assertMatch(main_elements[0].transform, /(\s+|^)scale\(0.6\)/g,
+                "first element should have scale(0.6) transform");
+        });
+        casper.run(function () {
+            test.done();
+        });
+    });
 })(casper);

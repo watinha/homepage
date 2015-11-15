@@ -73,8 +73,13 @@
                     layout_switcher_icon.className = "icon reset_layout";
                     header.appendChild(layout_switcher_link);
                     layout_switcher_link.addEventListener("click", function () {
-                        document.body.className = "";
-                        controller.clean_layouts();
+                        if (document.body.className === "files") {
+                            document.body.className = "";
+                            controller.clean_layouts();
+                        } else {
+                            controller.init();
+                            controller.render('standard');
+                        }
                     });
                 };
 
