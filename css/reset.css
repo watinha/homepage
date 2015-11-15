@@ -115,3 +115,11 @@ span.bold{
 .header {
     position: relative;
 }
+@media print {
+    .header .layout_switcher {
+        display: none;
+    }
+    .header .contact {
+        display: none;
+    }
+}
