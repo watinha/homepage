@@ -25,15 +25,16 @@ replace_script_tags(){
 
 replace_link_tags(){
     TMP_INDEX_WITH_ONE_LINK="package/index.tmp.html"
+    TMP_INDEX_WITH_TWO_LINK="package/index.tmp1.html"
     TMP_INDEX_WITH_NO_LINK="package/index.tmp2.html"
 
     # removes all link and replace it with a single css file
-    cat package/index.html | sed "s/<link .* href=\"css\/files.*\.css\".* \/>//" > $TMP_INDEX_WITH_ONE_LINK
-    cat package/index.html | sed "s/<link .* href=\"css\/reset_m\.css\".* \/>//" > $TMP_INDEX_WITH_ONE_LINK
+    cat package/index.html | sed "s/<link .* href=\"css\/files.*\.css\".* \/>//" > $TMP_INDEX_WITH_TWO_LINK
+    cat $TMP_INDEX_WITH_TWO_LINK | sed "s/<link .* href=\"css\/reset_m\.css\".* \/>//" > $TMP_INDEX_WITH_ONE_LINK
     cat $TMP_INDEX_WITH_ONE_LINK | sed "s/<link .* href=\"css\/reset\.css\".* \/>/<link rel=\"stylesheet\" href=\"css\/all\.min\.css\" type=\"text\/css\" charset=\"utf-8\" \/>/" > $TMP_INDEX_WITH_NO_LINK
     echo "  replaces css files (reset.css files.css files_mobile.css)....... \033[32mOK.\033[0m"
     cp $TMP_INDEX_WITH_NO_LINK package/index.html
-    rm $TMP_INDEX_WITH_ONE_LINK $TMP_INDEX_WITH_NO_LINK
+    rm $TMP_INDEX_WITH_ONE_LINK $TMP_INDEX_WITH_NO_LINK $TMP_INDEX_WITH_TWO_LINK
 }
 
 copy_favicon(){
