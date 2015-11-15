@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             },
             build: {
                 src: 'js/**/*.js',
-                dest: 'grunt_build/all.min.js'
+                dest: 'package/js/all.min.js'
             }
         },
         casperjs: {
@@ -23,6 +23,13 @@ module.exports = function (grunt) {
         },
         jshint: {
             all: ['js/files/*.js', 'js/init.js']
+        },
+        cssmin: {
+            target: {
+                files: {
+                    'package/css/all.min.css': ['css/*.css']
+                }
+            }
         }
     });
 
