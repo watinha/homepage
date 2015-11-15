@@ -110,4 +110,12 @@ module.exports = function (grunt) {
     });
     grunt.task.registerTask('build-package', 'building package for deployment',
                             ['cssmin', 'uglify', 'shell']);
+
+    grunt.task.registerTask('deploy',
+                            'deploying application',
+                            function () {
+        // this command is secured in some other place
+        grunt.config.set('shell.target.command', './bin/deploy.sh');
+        grunt.task.run(['shell']);
+    });
 };
