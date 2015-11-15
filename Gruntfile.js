@@ -64,7 +64,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-casperjs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('mu2');
 
     grunt.task.registerTask('tests-all', 'Running all test suites',
                             function () {
@@ -88,25 +87,8 @@ module.exports = function (grunt) {
     grunt.task.registerTask('build-index',
                             'Building index.html based on Mustache template',
                             function () {
-        var mu = require('mu2'),
-            fs = require('fs');
-
-        mu.root = __dirname + '/../templates';
-        fs.readFile('templates/curriculum.json', function (err, data) {
-            var json_data = JSON.parse(data.toString()),
-                template_stream,
-                with_css_js = process.argv[2];
-            if (!err) {
-                if (with_css_js) {
-                    json_data.has_css = true;
-                    json_data.has_js = true;
-                }
-                template_stream = mu.compileAndRender('curriculum.html.mustache', json_data);
-                template_stream.on('data', function (rendered_template) {
-                    process.stdout.write(rendered_template.toString('utf-8'));
-                });
-            }
-});
+        grunt.config.set('shell.target.command', 'node bin/build_index.js with_css_js > index.html');
+        grunt.task.run(['shell']);
     });
     grunt.task.registerTask('build-package', 'building package for deployment',
                             ['cssmin', 'uglify', 'shell']);
@@ -116,6 +98,12 @@ module.exports = function (grunt) {
                             function () {
         // this command is secured in some other place
         grunt.config.set('shell.target.command', './bin/deploy.sh');
+        grunt.task.run(['shell']);
+    });
+
+    grunt.task.registerTask('clean', 'clean up all generated files',
+                            function () {
+        grunt.config.set('shell.target.command', 'rm -r package/js/*; rm package/css/*; rm package/index.html; rm package/curriculum.html; rm package/curriculum.json; rm package/favicon.ico; rm package/homepage.tar; rm index.html; rm curricullum.html;');
         grunt.task.run(['shell']);
     });
 };
