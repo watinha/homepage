@@ -20,6 +20,9 @@ module.exports = function (grunt) {
                     specs: 'tests/unit/*.js'
                 }
             }
+        },
+        jshint: {
+            all: ['js/files/*.js', 'js/init.js']
         }
     });
 
@@ -31,6 +34,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-yslow');
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.task.registerTask('tests-acceptance',
                             'Running acceptance tests via CasperJS',
