@@ -22,7 +22,7 @@ var DiagonalView = function (params, Helpers, window) {
     };
 
     $public.click = function (ev) {
-        var event = window.event || ev,
+        var event = ev || window.event,
             target = event.target,
             main_element_target = $private.get_main_parent(target),
             i;

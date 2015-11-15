@@ -12,6 +12,14 @@ module.exports = function (grunt) {
         },
         casperjs: {
             files: [ 'tests/casperjs/**' ]
+        },
+        jasmine: {
+            customTemplate: {
+                src: ['js/files/*.js', 'js/vendor/modernizr.js'],
+                options: {
+                    specs: 'tests/unit/*.js'
+                }
+            }
         }
     });
 
@@ -36,4 +44,6 @@ module.exports = function (grunt) {
         grunt.config.set('casperjs.options.casperjsOptions', '--url=package/index.html');
         grunt.task.run(['casperjs']);
     });
+    grunt.task.registerTask('tests-unit', 'Running unit tests on PhantomJS',
+                            ['jasmine']);
 };
