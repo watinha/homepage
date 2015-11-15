@@ -97,10 +97,7 @@ span.bold{
     background-position: -79px 0;
 }
 .header .icon.reset_layout {
-    background-position: -104px 0;
-}
-.header .icon.files_layout {
-    background-position: -125px 0;
+    background-position: -125px -1px;
 }
 .wrapper > div {
     clear:both;
@@ -114,4 +111,7 @@ span.bold{
 }
 .header .layout_switcher .icon {
     margin-right: 0;
+}
+.header {
+    position: relative;
 }

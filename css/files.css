@@ -237,3 +237,6 @@
 .files > .wrapper > div {
     clear: none;
 }
+.files .header .icon.reset_layout {
+    background-position: -104px 0;
+}
