@@ -32,9 +32,7 @@
                 "first element should have scale(0.6) transform");
         });
         casper.run(function () {
-            this.wait(1000, function () {
-                casper.capture("bin/capture/standard_layout.png");
-            });
+            //casper.capture("bin/capture/standard_layout_test.png");
             test.done();
         });
     });
@@ -70,9 +68,7 @@
             }, "profile diagonal open", ".profile should be openned on click");
         });
         casper.run(function () {
-            this.wait(1000, function () {
-                casper.capture("bin/capture/diagonal_layout.png");
-            });
+            //casper.capture("bin/capture/diagonal_layout_test.png");
             test.done();
         });
     });
@@ -121,9 +117,7 @@
             };
         });
         casper.run(function () {
-            this.wait(1000, function () {
-                casper.capture("bin/capture/print_layout.png");
-            });
+            //casper.capture("bin/capture/print_layout_test.png");
             test.done();
         });
     });
