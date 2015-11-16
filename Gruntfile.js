@@ -90,7 +90,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jasmine-nodejs');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-template-jasmine-istanbul');
     grunt.loadNpmTasks('grunt-yslow');
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');
