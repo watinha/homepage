@@ -69,16 +69,18 @@
                     /* setting link that switches the layout */
                     layout_switcher_link.appendChild(layout_switcher_icon);
                     layout_switcher_link.className = "layout_switcher";
-                    layout_switcher_link.href = "#";
+                    layout_switcher_link.setAttribute("aria-label", "print version");
                     layout_switcher_icon.className = "icon reset_layout";
                     header.appendChild(layout_switcher_link);
                     layout_switcher_link.addEventListener("click", function () {
                         if (document.body.className === "files") {
                             document.body.className = "";
                             controller.clean_layouts();
+                            layout_switcher_link.setAttribute("aria-label", "dynamic version");
                         } else {
                             controller.init();
                             controller.render('standard');
+                            layout_switcher_link.setAttribute("aria-label", "print version");
                         }
                     });
                 };
