@@ -14,6 +14,23 @@ module.exports = function (grunt) {
             files: [ 'tests/casperjs/**' ]
         },
         jasmine: {
+            coverage: {
+                src: ['js/files/*.js', 'js/vendor/modernizr.js'],
+                options: {
+                    specs: ['tests/unit/*.js'],
+                    template: require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        coverage: 'bin/coverage/coverage.json',
+                        report: 'bin/coverage',
+                        thresholds: {
+                            lines: 75,
+                            statements: 75,
+                            branches: 75,
+                            functions: 90
+                        }
+                    }
+                }
+            },
             customTemplate: {
                 src: ['js/files/*.js', 'js/vendor/modernizr.js'],
                 options: {
@@ -58,9 +75,6 @@ module.exports = function (grunt) {
                 exclude: ['js/vendor/modernizr.js'],
                 options: {
                     breakOnErrors: true,
-                    jsLintXML: 'report.xml',         // create XML JSLint-like report
-                    checkstyleXML: 'checkstyle.xml', // create checkstyle report
-                    pmdXML: 'pmd.xml',               // create pmd report
                     errorsOnly: false,               // show only maintainability errors
                     cyclomatic: [3, 7, 12],          // or optionally a single value, like 3
                     halstead: [8, 13, 20],           // or optionally a single value, like 8
@@ -76,7 +90,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jasmine-nodejs');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-blanket');
+    grunt.loadNpmTasks('grunt-template-jasmine-istanbul');
     grunt.loadNpmTasks('grunt-yslow');
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-casperjs');

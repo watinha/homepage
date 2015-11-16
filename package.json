@@ -14,6 +14,7 @@
     "grunt-jasmine-node": "~0.3.1",
     "grunt-jasmine-nodejs": "^1.4.3",
     "grunt-shell": "^1.1.2",
+    "grunt-template-jasmine-istanbul": "^0.4.0",
     "grunt-yslow": "0.0.4",
     "mu2": "^0.5.20"
   }
