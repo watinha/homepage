@@ -83,7 +83,7 @@
             casper.waitForUrl(/github\.com/, function () {
                 test.assertEquals(casper.evaluate(function () {
                     return window.location.hostname + window.location.pathname;
-                }), "github.com/watinha/aria-check-menus");
+                }), "github.com/watinha/homepage");
             });
         });
         casper.run(function () {
