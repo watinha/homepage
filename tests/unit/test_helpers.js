@@ -63,4 +63,24 @@ describe('Helpers static class suite', function () {
         fixture.innerHTML = "";
     });
 
+    it('Helpers.activateListener should set listener', function () {
+        var mock = {
+                addEventListener: function (type, f) {
+                    if (type === "click") clickListener = f;
+                    else keydownListener = f;
+                }
+            },
+            clickListener, keydownListener, flag = false,
+            functionMock = function () { flag = !flag; };
+        Helpers.activateListener(mock, functionMock);
+        expect(mock.tabIndex).toBe(0);
+        expect(clickListener).toBe(functionMock);
+        keydownListener({ keyCode: 13 });
+        expect(flag).toBe(true);
+        keydownListener({ keyCode: 32 });
+        expect(flag).toBe(false);
+        keydownListener({ keyCode: 0 });
+        expect(flag).toBe(false);
+    })
+
 });
