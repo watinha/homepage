@@ -14,13 +14,18 @@ describe('StandardView style class', function() {
             hr_stub; // browser dependent
 
         fixture.innerHTML = stub;
-        transformAttribute = Modernizr.prefixed('transform');
+        transformAttribute = "transform";
         hr_stub = fixture.querySelectorAll(".hr_stub")[0];
 
         standard = StandardView({
             base_elements: fixture.querySelectorAll(".stub"),
             first_line: hr_stub
-        }, Modernizr);
+        }, {
+            prefixed: function (attribute) {
+                expect(attribute).toBe("transform");
+                return "transform";
+            }
+        });
         standard.render();
 
         stubElements = fixture.querySelectorAll(".stub");
@@ -59,13 +64,18 @@ describe('StandardView style class', function() {
             hr_stub; // browser dependent
 
         fixture.innerHTML = stub;
-        transformAttribute = Modernizr.prefixed('transform');
+        transformAttribute = "transform";
         hr_stub = fixture.querySelectorAll(".hr_stub")[0];
 
         standard = StandardView({
             base_elements: fixture.querySelectorAll(".stub"),
             first_line: hr_stub
-        }, Modernizr);
+        }, {
+            prefixed: function (attribute) {
+                expect(attribute).toBe("transform");
+                return "transform";
+            }
+        });
         standard.render();
         standard.clean();
 

@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         },
         jasmine: {
             coverage: {
-                src: ['js/files/*.js', 'js/vendor/modernizr.js'],
+                src: ['js/files/*.js'],
                 options: {
                     specs: ['tests/unit/*.js'],
                     template: require('grunt-template-jasmine-istanbul'),
