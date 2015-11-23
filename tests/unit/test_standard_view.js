@@ -29,16 +29,16 @@ describe('StandardView style class', function() {
         standard.render();
 
         stubElements = fixture.querySelectorAll(".stub");
-        expect(stubElements[0].style.left).toBe("0%", "left element should be zero");
-        expect(stubElements[1].style.left).toBe("10%", "left element should be 10%");
-        expect(stubElements[2].style.left).toBe("20%", "left element should be 20%");
-        expect(stubElements[3].style.left).toBe("30%", "left element should be 30%");
-        expect(stubElements[4].style.left).toBe("40%", "left element should be 40%");
+        expect(stubElements[0].style.left).toBe("7.7%", "left element should be 7.7");
+        expect(stubElements[1].style.left).toBe("10.4%", "left element should be 10.4");
+        expect(stubElements[2].style.left).toBe("13.1%", "left element should be 13.1");
+        expect(stubElements[3].style.left).toBe("15.8%", "left element should be 15.8");
+        expect(stubElements[4].style.left).toBe("18.5%", "left element should be 18.5");
 
-        expect(stubElements[0].style[transformAttribute]).toBe("scale(0.6) matrix(1, 0, 0, 1, 0, 0)");
-        expect(stubElements[1].style[transformAttribute]).toBe("scale(0.7) matrix(1, 0, 0, 1, 0, 0)");
-        expect(stubElements[2].style[transformAttribute]).toBe("scale(0.8) matrix(1, 0, 0, 1, 0, 0)");
-        expect(stubElements[3].style[transformAttribute]).toBe("scale(0.9) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[0].style[transformAttribute]).toBe("scale(0.68) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[1].style[transformAttribute]).toBe("scale(0.76) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[2].style[transformAttribute]).toBe("scale(0.84) matrix(1, 0, 0, 1, 0, 0)");
+        expect(stubElements[3].style[transformAttribute]).toBe("scale(0.92) matrix(1, 0, 0, 1, 0, 0)");
         expect(stubElements[4].style[transformAttribute]).toBe("scale(1) matrix(1, 0, 0, 1, 0, 0)");
 
         expect(stubElements[0].style.marginTop).toBe("-4%");

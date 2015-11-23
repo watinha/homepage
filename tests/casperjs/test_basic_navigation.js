@@ -28,8 +28,8 @@
             };
             test.assertMatch(main_elements[i - 1].transform, /(\s+|^)scale\(1\)/g,
                 "last element should have scale(1) transform");
-            test.assertMatch(main_elements[0].transform, /(\s+|^)scale\(0.6\)/g,
-                "first element should have scale(0.6) transform");
+            test.assertMatch(main_elements[0].transform, /(\s+|^)scale\(0.64\)/g,
+                "first element should have scale(0.64) transform");
         });
         casper.run(function () {
             //casper.capture("bin/capture/standard_layout_test.png");
@@ -154,7 +154,7 @@
             };
             test.assertMatch(main_elements[i - 1].transform, /(\s+|^)scale\(1\)/g,
                 "last element should have scale(1) transform");
-            test.assertMatch(main_elements[0].transform, /(\s+|^)scale\(0.6\)/g,
+            test.assertMatch(main_elements[0].transform, /(\s+|^)scale\(0.64\)/g,
                 "first element should have scale(0.6) transform");
         });
         casper.run(function () {
