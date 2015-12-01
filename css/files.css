@@ -127,6 +127,21 @@
     -o-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
     -ms-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
     transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+
+    /* transitions */
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+    /* animation */
+    animation-name: open;
+    animation-duration: 0.3s;
+}
+@keyframes open {
+    from { transform: translateX(500px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 .files > .wrapper > .open:hover:not(.header),
 .files > .wrapper > .open:active:not(.header),
