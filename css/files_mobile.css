@@ -2,7 +2,7 @@
 
 /* ipad fixes */
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    .files > .wrapper > div {
+    .files > .wrapper > * {
         bottom: 0px;
     }
 }
@@ -12,19 +12,19 @@
     h1 {
         font-size: 26px;
     }
-    .files .wrapper div p,
-    .files .wrapper div ul {
+    .files .wrapper * p,
+    .files .wrapper * ul {
         font-size: 20px;
         line-height: 150%;
     }
-    .files .wrapper div ul {
+    .files .wrapper * ul {
         padding: 3px;
     }
     .files {
         min-width: 300px;
         margin: auto;
     }
-    .files > .wrapper > div:not(.header),
+    .files > .wrapper > *:not(.header),
     .files > .wrapper > .diagonal:not(.header) {
         -webkit-transition: none !important;
         -moz-transition: none !important;

@@ -12,28 +12,28 @@ h1 > a {
     color: black;
     text-decoration: none;
 }
-div h1, h2{
+h1, h2{
     text-align:center;
 }
 p{
     text-align: justify;
 }
-div h1,h2,h3{
+h1,h2,h3{
     text-transform: uppercase;
 }
-div.columns{
+.columns{
     width: 50%;
     float: left;
     position: relative;
     bottom: 1em;
 }
-div.columns h4{
+.columns h4{
     background-color: #E3E3E3;
     padding: 0.2em 0;
     text-indent: 1em;
     border-right: solid #FFFFFF;
 }
-div.columns ul li{
+.columns ul li{
     width: 95%;
 }
 ul{
@@ -99,7 +99,7 @@ span.bold{
 .header .icon.reset_layout {
     background-position: -125px -1px;
 }
-.wrapper > div {
+.wrapper > * {
     clear:both;
 }
 .header .layout_switcher {

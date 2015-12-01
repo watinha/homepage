@@ -5,8 +5,8 @@
                 var build_view_controller, setup_event_listeners,
                     setup_aria, // private methods
                     init, // public methods
-                    first_line = document.querySelector("body > div.header+hr"),
-                    base_elements = document.querySelectorAll("body > div:not(.header) > div:not(.header)"),
+                    first_line = document.querySelector("body > .header+hr"),
+                    base_elements = document.querySelectorAll("body > *:not(.header) > section:not(.header)"),
                     wrapper = document.querySelector("body > .wrapper"),
                     controller = null;
 

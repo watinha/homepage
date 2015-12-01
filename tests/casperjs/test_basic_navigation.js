@@ -11,7 +11,7 @@
             }, "files", "body element should have className == files");
             var main_elements = casper.evaluate(function () {
                 var transform_attribute = Modernizr.prefixed("transform"),
-                    main_elements = document.querySelectorAll(".files > .wrapper > div:not(.header)"),
+                    main_elements = document.querySelectorAll(".files > .wrapper > section:not(.header)"),
                     i = 0, results = [];
                 for (i = 0; i < main_elements.length; i++) {
                     results.push({
@@ -46,7 +46,7 @@
                 return __utils__.findOne("body").className;
             }, "files", "body element should have className == files");
             var main_elements = casper.evaluate(function () {
-                var main_elements = document.querySelectorAll(".files > .wrapper > div:not(.header)"),
+                var main_elements = document.querySelectorAll(".files > .wrapper > section:not(.header)"),
                     i = 0, results = [];
                 for (i = 0; i < main_elements.length; i++) {
                     results.push({
@@ -73,7 +73,7 @@
         });
     });
 
-    casper.test.begin("after click on link inside main div webpage should be reloaded", 2, function (test) {
+    casper.test.begin("after click on link inside main section webpage should be reloaded", 2, function (test) {
         casper.start(casper.cli.options.url, function () {
             test.assertTitle("Willian Massami Watanabe - Curriculum");
         });
@@ -102,7 +102,7 @@
             }, "", "body element should not have className == files");
             var main_elements = casper.evaluate(function () {
                 var transform_attribute = Modernizr.prefixed("transform"),
-                    main_elements = document.querySelectorAll(".wrapper > div:not(.header)"),
+                    main_elements = document.querySelectorAll(".wrapper > section:not(.header)"),
                     i = 0, results = [];
                 for (i = 0; i < main_elements.length; i++) {
                     results.push({
@@ -137,7 +137,7 @@
             }, "files", "body element should have className == files");
             var main_elements = casper.evaluate(function () {
                 var transform_attribute = Modernizr.prefixed("transform"),
-                    main_elements = document.querySelectorAll(".wrapper > div:not(.header)"),
+                    main_elements = document.querySelectorAll(".wrapper > section:not(.header)"),
                     i = 0, results = [];
                 for (i = 0; i < main_elements.length; i++) {
                     results.push({

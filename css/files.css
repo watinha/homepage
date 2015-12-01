@@ -1,14 +1,14 @@
 /* All selectors here should only alter .files children classes */
-.body > div {
+.body > * {
     opacity: 0;
 }
 .wrapper_hidden {
     display: none;
 }
 /* hidding elements to clean interface*/
-.files .wrapper div p,
-.files .wrapper div ul,
-.files .wrapper div h4 {
+.files .wrapper * p,
+.files .wrapper * ul,
+.files .wrapper * h4 {
     display: none;
     height: 0;
     opacity: 0;
@@ -16,7 +16,7 @@
 }
 
 /* standard layout */
-.files > .wrapper > div {
+.files > .wrapper > * {
     border: medium solid rgb(187, 187, 187);
     padding: 0 30px;
     cursor: pointer;
@@ -50,9 +50,9 @@
     -ms-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.files > .wrapper > div:hover:not(.header),
-.files > .wrapper > div:focus:not(.header),
-.files > .wrapper > div:active:not(.header) {
+.files > .wrapper > *:hover:not(.header),
+.files > .wrapper > *:focus:not(.header),
+.files > .wrapper > *:active:not(.header) {
     /* transforms these need to be important to
      * override inline CSS definitions made via JavaScript*/
     -moz-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
@@ -249,7 +249,7 @@
     width: 80%;
 }
 
-.files > .wrapper > div {
+.files > .wrapper > * {
     clear: none;
 }
 .files .header .icon.reset_layout {
