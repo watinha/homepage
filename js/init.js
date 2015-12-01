@@ -49,7 +49,8 @@
                         var index;
                         switch (ev.keyCode) {
                             case 27:
-                                controller.render('standard');
+                                if (document.body.className !== "")
+                                    controller.render('standard');
                                 break;
                             case 40:
                                 keyboard_handler.move_down(document.activeElement);
