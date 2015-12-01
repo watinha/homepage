@@ -30,7 +30,7 @@
     <header class="header">
         <h1><a name="information" href="./">{{author}}</a></h1>
         <p class="address">{{{address}}}</p>
-        <ul class="contact" id="contact_list" aria-labelledby="contact_list_label">
+        <ul role="contentinfo" class="contact" id="contact_list" aria-labelledby="contact_list_label">
         {{#contacts}}
             <li>
             <a href="{{link}}">
@@ -41,14 +41,16 @@
         </ul>
         <div style="display:none" id="contact_list_label">Contact list</div>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
-        <ul class="anchor">
-            {{#sections}}
-            <li><a href="{{anchor}}">{{title}}</a></li>
-            {{/sections}}
-        </ul>
+        <nav role="navigation">
+            <ul class="anchor">
+                {{#sections}}
+                <li><a href="{{anchor}}">{{title}}</a></li>
+                {{/sections}}
+            </ul>
+        </nav>
     </header>
     <hr />
-    <div class="wrapper">
+    <div class="wrapper" role="main">
         {{#introduction}}
             <section class="introduction">
                 <h2 id="introduction_header"><a name="introduction">{{headline}}</a></h2>
