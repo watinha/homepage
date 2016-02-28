@@ -35,13 +35,13 @@
     .header .contact .icon.researchgate {
         background-position: -158px 0;
     }
-    div.columns{
+    .columns{
         width: 100%;
         float: none;
         position: relative;
         bottom: 1em;
     }
-    .wrapper > div {
+    .wrapper > * {
         padding: 0 9px;
     }
     .header .layout_switcher {

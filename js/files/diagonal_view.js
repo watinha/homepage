@@ -39,8 +39,9 @@ var DiagonalView = function (params, Helpers, window) {
 
     $private.get_main_parent = function (element) {
         var i;
+        /* istanbul ignore if */
         if (element.tagName === "BODY" || !element.parentNode) {
-            return false;
+            return false; // this is a safe approach to the code
         }
 
         for (i = 0; i < $private.main_elements.length; i = i + 1) {

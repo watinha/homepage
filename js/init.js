@@ -5,8 +5,8 @@
                 var build_view_controller, setup_event_listeners,
                     setup_aria, // private methods
                     init, // public methods
-                    first_line = document.querySelector("body > div.header+hr"),
-                    base_elements = document.querySelectorAll("body > div:not(.header) > div:not(.header)"),
+                    first_line = document.querySelector("body > .header+hr"),
+                    base_elements = document.querySelectorAll("body > *:not(.header) > section:not(.header)"),
                     wrapper = document.querySelector("body > .wrapper"),
                     controller = null;
 
@@ -49,7 +49,8 @@
                         var index;
                         switch (ev.keyCode) {
                             case 27:
-                                controller.render('standard');
+                                if (document.body.className !== "")
+                                    controller.render('standard');
                                 break;
                             case 40:
                                 keyboard_handler.move_down(document.activeElement);
@@ -87,15 +88,15 @@
 
                 setup_aria = function () {
                     var i;
-                    wrapper.setAttribute("role", "list");
+                    //wrapper.setAttribute("role", "list");
                     for (i = 0; i < base_elements.length; i++) {
                         (function () {
                             var className = base_elements[i].className,
                                 list_item = base_elements[i],
                                 list_header = list_item.querySelector("#" + className + "_header");
-                            list_item.setAttribute("aria-labelledby", className + "_header");
-                            list_item.setAttribute("role", "listitem");
-                            list_item.setAttribute("aria-controls", className + "_panel");
+                            //list_item.setAttribute("aria-labelledby", className + "_header");
+                            //list_item.setAttribute("role", "listitem");
+                            //list_item.setAttribute("aria-controls", className + "_panel");
                             list_item.addEventListener("focus", function () {
                                 list_header.tabIndex = -1;
                             });

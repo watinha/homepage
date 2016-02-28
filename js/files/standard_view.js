@@ -10,12 +10,13 @@ var StandardView = function (params, Modernizr) {
         var transform_attribute = Modernizr.prefixed("transform"),
             scale_factor,
             i;
-        for (i = 0; i < $private.base_elements.length; i = i + 1) {
-            $private.base_elements[i].style.left = String(Math.ceil(i * 40 / ($private.base_elements.length - 1))) + "%";
-            scale_factor = (6 + 4 * i / ($private.base_elements.length - 1)) / 10;
-            $private.base_elements[i].style[transform_attribute] = "scale(" +
-                String(scale_factor) + ") matrix(1, 0, 0, 1, 0, 0)";
-            $private.base_elements[i].style.marginTop = "-4%";
+        for (i = 1; i <= $private.base_elements.length; i = i + 1) {
+            $private.base_elements[i - 1].style.left =
+                String(Math.floor((5 + i * 0.9 * 3) * 10) / 10) + "%";
+            scale_factor = (6 + 4 * (i / ($private.base_elements.length))) / 10;
+            $private.base_elements[i - 1].style[transform_attribute] = "scale(" +
+                String(Math.floor(scale_factor * 100) / 100) + ") matrix(1, 0, 0, 1, 0, 0)";
+            $private.base_elements[i - 1].style.marginTop = "-4%";
         }
         $private.first_line.style.marginBottom = "3%";
     };

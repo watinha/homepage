@@ -27,10 +27,10 @@
 </head>
 <body>
     <a class="anchor" href="#summary">Skip to summary</a>
-    <div class="header">
+    <header class="header">
         <h1><a name="information" href="./">Willian Massami Watanabe</a></h1>
         <p class="address">Corn&eacute;lio Proc&oacute;pio - PR, Brazil. <span class="bold">E-mail: <a href="mailto:wwatanabe@utfpr.edu.br">wwatanabe@utfpr.edu.br</a></span></p>
-        <ul class="contact" id="contact_list" aria-labelledby="contact_list_label">
+        <ul role="contentinfo" class="contact" id="contact_list" aria-labelledby="contact_list_label">
         
             <li>
             <a href="https://github.com/watinha">
@@ -65,44 +65,46 @@
         </ul>
         <div style="display:none" id="contact_list_label">Contact list</div>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
-        <ul class="anchor">
-            
-            <li><a href="#information">Information</a></li>
-            
-            <li><a href="#introduction">Introduction</a></li>
-            
-            <li><a href="#profile">Professional profile</a></li>
-            
-            <li><a href="#expertise">Areas of expertise</a></li>
-            
-            <li><a href="#experience">Professional experience</a></li>
-            
-            <li><a href="#education">Education</a></li>
-            
-            <li><a href="#software">Scientific Software</a></li>
-            
-            <li><a href="#publications">Publications</a></li>
-            
-            <li><a href="#presentations">Presentations</a></li>
-            
-            <li><a href="#languages">Languages speak</a></li>
-            
-            <li><a href="#references">References</a></li>
-            
-        </ul>
-    </div>
+        <nav role="navigation">
+            <ul class="anchor">
+                
+                <li><a href="#information">Information</a></li>
+                
+                <li><a href="#introduction">Introduction</a></li>
+                
+                <li><a href="#profile">Professional profile</a></li>
+                
+                <li><a href="#expertise">Areas of expertise</a></li>
+                
+                <li><a href="#experience">Professional experience</a></li>
+                
+                <li><a href="#education">Education</a></li>
+                
+                <li><a href="#software">Scientific Software</a></li>
+                
+                <li><a href="#publications">Publications</a></li>
+                
+                <li><a href="#presentations">Presentations</a></li>
+                
+                <li><a href="#languages">Languages speak</a></li>
+                
+                <li><a href="#references">References</a></li>
+                
+            </ul>
+        </nav>
+    </header>
     <hr />
-    <div class="wrapper">
+    <div class="wrapper" role="main">
         
-            <div class="introduction">
+            <section class="introduction">
                 <h2 id="introduction_header"><a name="introduction">Front-end Web Engineer</a></h2>
                 <p class="introduction">As a Computer Science professor, stands as a passionate Web developer, lecturing development practices associated to Web technologies and Web engineering practices (such as: eXtreme Programming, TDD - Test-Driven Design, Continuous Integration and Continuous Delivery). Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintanability and multi-platform characteristic of the Web.</p>
              <a class="anchor" href="#summary">Back to summary</a>
-            </div>
+            </section>
         
         <hr />
         
-            <div class="profile">
+            <section class="profile">
                 <h3 id="profile_header"><a name="profile">Professional profile</a></h3>
                 <ul aria-labelledby="profile_header">
                     
@@ -114,11 +116,11 @@
                     
                 </ul>
              <a class="anchor" href="#summary">Back to summary</a>
-            </div>
+            </section>
         
         <hr />
         
-        <div class="expertise">
+        <section class="expertise">
             <h3 id="expertise_header"><a name="expertise">Areas of expertise</a></h3>
             
             <div class="columns">
@@ -153,7 +155,7 @@
                 
                     <li>Object Oriented JavaScript</li>
                 
-                    <li>Ajax Toolkits (jQuery, Dojo, YUI)</li>
+                    <li>Ajax Toolkits (jQuery, Angular.js, YUI)</li>
                 
                     <li>PHP</li>
                 
@@ -167,11 +169,11 @@
             </div>
             
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
 
         
-        <div class="experience">
+        <section class="experience">
             <h3 id="experience_header"><a name="experience">Professional experience</a></h3>
             <ul aria-labelledby="experience_header">
             
@@ -195,9 +197,9 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="education">
+        <section class="education">
             <h3 id="education_header"><a name="education">Education</a></h3>
             <ul aria-labelledby="education_header">
             
@@ -213,17 +215,15 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="software">
+        <section class="software">
             <h3 id="software_header"><a name="software">Example Apps</a></h3>
             <ul aria-labelledby="software_header">
             
                 <li><span class="bold"><a href="https://github.com/watinha/homepage">watinha.com homepage</a></span>: this is a presentation project, which makes use of different web technologies to improve the user experience in the curriculum. The source code is fully available in <a href="https://github.com/watinha/homepage">Github</a>. This project makes use of <a href="http://pivotal.github.com/jasmine/">Jasmine</a>, as a JavaScript Behavior Driven Development framework; <a href="http://casperjs.org/">CasperJS</a>, to simulate the browser environment during functional tests; <a href="http://jshint.com/">JSHint</a>, to validate the JavaScript source code against JS code standards; <a href="http://mustache.github.com/">Mustache</a> template engine, to generate the webpages from templates; <a href="https://www.npmjs.com/package/grunt-contrib-cssmin">CSS</a> and <a href="https://www.npmjs.com/package/grunt-contrib-uglify">JS</a> code compression techniques to generate faster webpages with compressed JavaScript and CSS files; performance testing with <a href="http://yslow.org/">yslow</a> on the production environment of the application; Halstead, Cyclomatic Complexity and Code-coverage metrics, using <a href="https://www.npmjs.com/package/grunt-complexity">grunt-complexity plugin</a> for the complexity metrics and <a href="https://gotwarlost.github.io/istanbul/">istanbul</a> for the code coverage; and finally, the complete build process of the project is managed through <a href="http://gruntjs.com/">Grunt task manager</a>.</li>
             
                 <li><span class="bold"><a href="https://github.com/watinha/aria-check-menus">aria-check-menus</a></span>: a Selenium WebDriver implementation which has the goal of automatically identifying Drop-down menu widgets in web applications. This project uses the Selenium WebDriver API, browser mutation observers and DOM attributes to navigate through web applications and identify menu widget implementations.</li>
-            
-                <li><span class="bold"><a href="https://github.com/watinha/jee-examples">jee-examples</a></span>: this project contains many web applications examples to be used in web development classes. The examples comprise mainly Java language web applications, using a variety of JEE - Java Enterprise Edition technologies such as: Servlets, Filters, JPA - Java Persistence API (Hibernate and OpenJPA), JSP - Java Server Pages, JDBC - Java DataBase Connectivity API, i18n Resource Bundlers, JSF - Java Server Faces and Angular.js. These example projects were structured with <a href="https://github.com/watinha/javacmd">JavaCMD project</a> or Maven.</li>
             
                 <li><span class="bold"><a href="https://github.com/watinha/javacmd">javacmd</a></span>: boilerplate structure for Java projects. It includes a single Makefile which automatically compile Java source code, generates jar executable files, calculates dependencies based in a single jar directory, runs <a href="http://junit.org/">JUnit</a> tests, generates <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">JPA - Java Persistence API</a> configuration files and generates <a href="http://www.oracle.com/technetwork/java/javaee/overview/index.html">JEE - Java Enterprise Edition</a> applications structure. The goal of this project is to ease the development of Java projects with no use of IDEs. It is similar to <a href="http://maven.apache.org/">Maven</a>, however much simplier, with no XML configuration files.</li>
             
@@ -233,11 +233,7 @@
             
                 <li><span class="bold"><a href="https://github.com/watinha/Pyccuracy-Accessibility-Actions">Pyccuracy Accessibility Actions</a></span>: The main objective of this project is to implement accessibility actions for the <a href="http://pyccuracy.org">pyccuracy</a>, web acceptance testing application. <a href="http://pyccuracy.org">Pyccuracy</a> makes use of natural language expressions to generate user stories and acceptance scenarios that are automatically run in the browser, evaluating the behaviour of all layers of a web application (server and client side-scripting). However <a href="http://pyccuracy.org">pyccuracy</a> still have not implemented actions that can be classified as accessible for disabled users like "tabbing navigation", focus possibility for interactive elements, landmarks and header navigation, among other actions. The goal of implementing accessibility actions for pyccuracy is to be able to execute acceptance tests of web applications functionality, considering disabled users task completion with assistive technologies. These users do no rely on the same visual and interactive mechanisms such as mouse and link colors, for example. So pyccuracy actions must consider these characteristics to guarantee that the functionality of the web application is available for all users. From the development perspective, accessibility actions drive automatic accessibility evaluation tools into a Continuous Integration environment. Making it possible to include accessibility non-functional requirements into the development life-cycle of projects and assisting developers while coding solutions for them.</li>
             
-                <li><span class="bold"><a href="http://caravelas.icmc.usp.br:3003">Facilita</a></span>: a web application that aims to automatically provide users with accessible content, through the use of text processing techniques (textual summarization and simplification). This application is being developed among with the PorSimples project. Simplicity of interaction and usability are some of the key features of this application. This application makes use of lots of Ajax Design patterns (like Cross-Domain Proxy, Fat Client, Multi-Stage Download, On-Demand Javascript) in order to provide the user with the best possible interaction. Facilita also makes use of distributed programming in order to deliver its functionality. The distributed programming is made with the use of multiple services which are integrated through RESTFul Service on the server side of the application. The installation and how to use tutorials are available on <a href="http://caravelas.icmc.usp.br:3003">Facilita's page</a>.</li>
-            
                 <li><span class="bold"><a href="http://www.watinha.com/educational-facilita">Educational Facilita</a></span>: another web application that aims to automatically provide users with accessible textual content, through the use of Named Entities Recognition (automatically identifying proper nouns and others entities in the text) and Lexical Elaboration (providing users with simplier versions of the same word) techniques. The application identifies named entities in the text and then it provides the user with additional information about those entities. The additional informations are extracted from <a href="http://www.wikipedia.org">Wikipedia</a>. The application also presents synonimous for words that are evaluated as complex or difficult to be understood. Educational Facilita was implemented as a <a href="https://jetpack.mozillalabs.com/">Jetpack extension</a>, and by doing so works as a browser plugin feature.</li>
-            
-                <li><span class="bold"><a href="http://www.watinha.com/50lines">50 lines contest - Scale Tabs</a></span>: Scale Tabs works as a browser extension that allows users find the browser tabs that they are looking for. This application was also developed using the <a href="https://jetpack.mozillalabs.com/">Jetpack extension</a> and makes use of the Browser layer of development in order to controll the tabs which are presented in the browser. It also uses Canvas in order to present snapshots of the tabs that are being accessed. This Firefox extension was implemented as part of the Jetpack 50 lines contest.</li>
             
                 <li><span class="bold"><a href="https://addons.mozilla.org/en-US/firefox/addon/scale-tabs/">Scale Tabs</a></span>: improved version of the 50 lines contest - Scale Tabs Jetpack addon. This addon release used the Addon-SDK (improved version and final release of the Jetpack prototype) and presents improved features (Address bar integration) and improved layout. Its source code is available in <a href="https://github.com/watinha/Scale-Tabs">github</a>.</li>
             
@@ -245,9 +241,9 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="publications">
+        <section class="publications">
             <h3 id="publications_header"><a name="publications">Publications</a></h3>
             <ul aria-labelledby="publications_header">
             
@@ -295,9 +291,9 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="presentations">
+        <section class="presentations">
             <h3 id="presentations_header"><a name="presentations">Presentations</a></h3>
             <ul aria-labelledby="presentations_header">
             
@@ -329,9 +325,9 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="languages">
+        <section class="languages">
             <h3 id="languages_header"><a name="languages">Languages Speak</a></h3>
             <ul aria-labelledby="languages_header">
             
@@ -341,9 +337,9 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
-        <div class="references">
+        <section class="references">
             <h3 id="references_header"><a name="references">References</a></h3>
             <ul aria-labelledby="references_header">
             
@@ -353,7 +349,7 @@
             
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         
     </div>
     

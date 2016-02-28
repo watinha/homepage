@@ -27,10 +27,10 @@
 </head>
 <body>
     <a class="anchor" href="#summary">Skip to summary</a>
-    <div class="header">
+    <header class="header">
         <h1><a name="information" href="./">{{author}}</a></h1>
         <p class="address">{{{address}}}</p>
-        <ul class="contact" id="contact_list" aria-labelledby="contact_list_label">
+        <ul role="contentinfo" class="contact" id="contact_list" aria-labelledby="contact_list_label">
         {{#contacts}}
             <li>
             <a href="{{link}}">
@@ -41,24 +41,26 @@
         </ul>
         <div style="display:none" id="contact_list_label">Contact list</div>
         <h2 class="anchor"><a name="summary">Summary</a></h2>
-        <ul class="anchor">
-            {{#sections}}
-            <li><a href="{{anchor}}">{{title}}</a></li>
-            {{/sections}}
-        </ul>
-    </div>
+        <nav role="navigation">
+            <ul class="anchor">
+                {{#sections}}
+                <li><a href="{{anchor}}">{{title}}</a></li>
+                {{/sections}}
+            </ul>
+        </nav>
+    </header>
     <hr />
-    <div class="wrapper">
+    <div class="wrapper" role="main">
         {{#introduction}}
-            <div class="introduction">
+            <section class="introduction">
                 <h2 id="introduction_header"><a name="introduction">{{headline}}</a></h2>
                 <p class="introduction">{{paragraph}}</p>
              <a class="anchor" href="#summary">Back to summary</a>
-            </div>
+            </section>
         {{/introduction}}
         <hr />
         {{#profile}}
-            <div class="profile">
+            <section class="profile">
                 <h3 id="profile_header"><a name="profile">{{headline}}</a></h3>
                 <ul aria-labelledby="profile_header">
                     {{#paragraphs}}
@@ -66,11 +68,11 @@
                     {{/paragraphs}}
                 </ul>
              <a class="anchor" href="#summary">Back to summary</a>
-            </div>
+            </section>
         {{/profile}}
         <hr />
         {{#expertise}}
-        <div class="expertise">
+        <section class="expertise">
             <h3 id="expertise_header"><a name="expertise">{{headline}}</a></h3>
             {{#technologies}}
             <div class="columns">
@@ -93,11 +95,11 @@
             </div>
             {{/programming}}
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         {{/expertise}}
 
         {{#additional_information}}
-        <div class="{{class}}">
+        <section class="{{class}}">
             <h3 id="{{class}}_header"><a name="{{anchor}}">{{headline}}</a></h3>
             <ul aria-labelledby="{{class}}_header">
             {{#list}}
@@ -105,7 +107,7 @@
             {{/list}}
             </ul>
          <a class="anchor" href="#summary">Back to summary</a>
-        </div>
+        </section>
         {{/additional_information}}
     </div>
     {{#has_js}}
