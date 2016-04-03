@@ -21,6 +21,7 @@ module.exports = function (grunt) {
                     template: require('grunt-template-jasmine-istanbul'),
                     templateOptions: {
                         coverage: 'bin/coverage/coverage.json',
+                        files: ['js/files/*.js', '!js/vendor/modernizr.js'],
                         report: 'bin/coverage',
                         thresholds: {
                             lines: 75,
