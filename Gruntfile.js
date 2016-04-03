@@ -123,7 +123,10 @@ module.exports = function (grunt) {
         grunt.task.run(['shell']);
     });
     grunt.task.registerTask('build-package', 'building package for deployment',
-                            ['cssmin', 'uglify', 'shell']);
+                            function () {
+        grunt.config.set('shell.target.command', 'cp -rf images package/images');
+        grunt.task.run(['cssmin', 'uglify', 'shell']);
+    });
 
     grunt.task.registerTask('deploy',
                             'deploying application',
