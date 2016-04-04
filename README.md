@@ -1,4 +1,4 @@
-watinha.com/wwatana.be homepage
+watinha.com/wwatana.be homepage ![Travis-CI build information](https://travis-ci.org/watinha/homepage.svg?branch=master)
 ====================
 This is a simple HTML, CSS and JS homepage that is to be put in watinha.com and wwatana.be domains.
 The project is build using [Grunt.js](http://gruntjs.com/) among with a set of plugins. It uses
