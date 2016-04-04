@@ -17,5 +17,8 @@
     "grunt-template-jasmine-istanbul": "^0.4.0",
     "grunt-yslow": "0.0.4",
     "mu2": "^0.5.20"
+  },
+  "scripts": {
+    "test": "grunt tests-all"
   }
 }
